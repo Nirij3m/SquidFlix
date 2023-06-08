@@ -76,10 +76,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/assets/hashTableDirectorList.c">
+			<Option target="c"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/assets/hashTableDirectorList.h">
+			<Option target="c"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/assets/listFilm.c">
 			<Option target="c"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/assets/listFilm.h">
+			<Option target="c"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/film.c">
+			<Option target="c"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/film.h">
 			<Option target="c"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/main.c">
