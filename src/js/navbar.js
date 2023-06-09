@@ -15,3 +15,5 @@ function openFooterModal(){
         }
     }
 }
+
+openFooterModal()
