@@ -21,50 +21,52 @@
                 <a class="button but_hover" href="index.html">ACCUEIL</a>
                 <a class="button but_hover" href="recherche.html">RECHERCHE</a>
                 <a class="button but_hover" href="films.html">FILMS</a>
-                <a id="Logo" href="index.html"><img src="src/images/Logo_test.png" alt="=Logo" id="logo"></a>
+                <a id="Logo" href="index.html"><img src="ressources/img/" alt="=Logo" id="logo"></a>
             </div>
         </header>
 
-        <div id="recherche">
-            <div id="search">
-                <input id="searchDirector" type="text" name="Director" placeholder="Réalisateur...">
-                <input id="searchTime" type="number" name="Time" placeholder="Durée...">
-                <select name="genre" id="select-genre">
-                    <option value="Genre"></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-                <button id="submit">Chercher</button>
-            </div>
+        <main id="main">
+            <div id="recherche">
+                <div id="search">
+                    <input id="searchDirector" type="text" name="Director" placeholder="Réalisateur...">
+                    <input id="searchTime" type="number" name="Time" placeholder="Durée...">
+                    <select name="genre" id="select-genre">
+                        <option value="Genre"></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                    <button id="submit">Chercher</button>
+                </div>
 
-            <div id="results">
-                <div class="items">
-                    <!-- Code d'une seule carte qu'on viendra duppliquer -->
-                    <h3 class="name-film"></h3>
-                    <h5 class="genre"></h5>
-                    <h5 class="time"></h5>
+                <div id="results">
+                    <div class="items">
+                        <!-- Code d'une seule carte qu'on viendra duppliquer -->
+                        <h3 class="name-film"></h3>
+                        <h5 class="genre"></h5>
+                        <h5 class="time"></h5>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="recommandation">
-            <div id="suggestion">
-                <h3>Suggestion qui pourraient vous plaire</h3>
-            </div>
-        
-            <div id="suggest">
-                <div class="items">
-                    <!-- Code d'une seule carte qu'on viendra duppliquer -->
-                    <h3 class="name-film"></h3>
-                    <h5 class="genre"></h5>
-                    <h5 class="time"></h5>
+            <div id="recommandation">
+                <div id="suggestion">
+                    <h3>Suggestion qui pourraient vous plaire</h3>
+                </div>
+            
+                <div id="suggest">
+                    <div class="items">
+                        <!-- Code d'une seule carte qu'on viendra duppliquer -->
+                        <h3 class="name-film"></h3>
+                        <h5 class="genre"></h5>
+                        <h5 class="time"></h5>
+                    </div>
                 </div>
             </div>
-        </div>
+        </main>
 
         <footer>
             <!-- Trigger/Open The Modal -->
