@@ -1,8 +1,11 @@
+/*All*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/*header*/
 
 header {
     background-color: #684655;
@@ -36,4 +39,9 @@ header {
     width: 170px;
     height: 70px;
 }
-  
+
+/* Footer */
+
+#footer {
+    background-color: #684655;
+}
