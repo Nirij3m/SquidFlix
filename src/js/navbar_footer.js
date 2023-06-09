@@ -15,3 +15,17 @@ function openFooterModal(){
         }
     }
 }
+
+function link_nirina(){
+    window.open("https://www.linkedin.com/in/nirina-macon-8b0692172/");
+}
+
+function link_lisa(){
+    window.open("https://www.linkedin.com/in/lisa-crusson-69158122b/");
+}
+
+function link_amaury(){
+    window.open("https://www.linkedin.com/in/amaury-77545725a/");
+}
+
+openFooterModal()
