@@ -1,0 +1,19 @@
+#submit-button {
+	background: #684665;
+	color: #F2EDEB;
+	border-style: outset;
+	border-color: #82587e;
+	height: 80%;
+	width: 5%;
+	text-shadow: none;
+
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    border-color: #FFFB0A;
+}
+
+#box-titre h3 {
+    color: #F2EDEB;
+}
