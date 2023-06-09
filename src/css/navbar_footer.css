@@ -126,3 +126,12 @@ p {
     cursor: pointer;
 
 }
+
+/* Logo */
+
+#logo {
+
+    width: 5%;
+    height: 80%;
+
+}
