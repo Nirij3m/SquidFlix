@@ -1,3 +1,19 @@
+.items-top {
+    background: #684655;
+    border-radius: 66px;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+#top-director, #top-number {
+    color: #F2EDEB;
+}
+
+
 #box-list {
     position: absolute;
     width: 92%;
