@@ -18,15 +18,15 @@
 
         <header>
             <div class="navbar">
-                <a class="but_hover" href="index.html">ACCUEIL</a>
-                <a class="but_hover" href="recherche.html">RECHERCHE</a>
-                <a class="but_hover" href="films.html">FILMS</a>
+                <a class="button but_hover" href="index.html">ACCUEIL</a>
+                <a class="button but_hover" href="recherche.html">RECHERCHE</a>
+                <a class="button but_hover" href="films.html">FILMS</a>
                 <a id="Logo" href="index.html"><img src="" alt="=Logo" id="logo"></a>
             </div>
         </header>
 
-        <div>
-            <div id="box-filtre">
+        <div id="recherche">
+            <div id="search">
                 <input id="searchDirector" type="text" name="Director" placeholder="Réalisateur...">
                 <input id="searchTime" type="number" name="Time" placeholder="Durée...">
                 <select name="genre" id="select-genre">
@@ -41,7 +41,7 @@
                 <button id="submit-button">Submit</button>
             </div>
 
-            <div id="box-resultat">
+            <div id="results">
                 <div class="items">
                     <!-- Code d'une seule carte qu'on viendra duppliquer -->
                     <h3 class="name-film"></h3>
@@ -51,12 +51,12 @@
             </div>
         </div>
 
-        <div>
-            <div id="box-titre">
+        <div id="recommandation">
+            <div id="suggestion">
                 <h3>Suggestion qui pourraient vous plaire</h3>
             </div>
         
-            <div id="box-suggest">
+            <div id="suggest">
                 <div class="items">
                     <!-- Code d'une seule carte qu'on viendra duppliquer -->
                     <h3 class="name-film"></h3>
@@ -68,7 +68,7 @@
 
         <footer>
             <!-- Trigger/Open The Modal -->
-            <button id="myButton" class="but_hover"></button>
+            <button id="myButton" class="button but_hover"></button>
 
             <!-- The Modal -->
             <div id="mineModal" class="classModal">
