@@ -1,9 +1,18 @@
+#main{
+
+	display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
 #recherche {
 
 	margin: 1%;
 
 	display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
 }
 
@@ -17,5 +26,18 @@
 #submit:hover {
 
 	border-color: #FFFB0A;
+
+}
+
+#results {
+
+	background-color: rgba(255, 255, 255, 0.03);;
+
+	margin: auto;
+	margin-top: 1%;
+	padding : 5%;
+
+	width: 80%;
+	height: 80%;
 
 }
