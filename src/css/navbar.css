@@ -22,7 +22,7 @@ header {
 .button {
     padding: 10px 20px;
     background-color: #684655;
-    color: white;
+    color: #F2EDEB;
     text-decoration: none;
     border-radius: 4px;
     margin: 0 5px;
@@ -32,12 +32,8 @@ header {
     text-align: right;
 }
   
-#FilmoLogo img {
+#FilmoLogo {
     width: 170px;
     height: 70px;
-}
-
-.hidden {
-    display: none;
 }
   
