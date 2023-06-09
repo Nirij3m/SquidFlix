@@ -1,47 +1,51 @@
-/*All*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+
+    margin: 0%;
+    padding: 0%;
+    background-color: #25181f;
+
 }
 
-/*header*/
+.navbar {
 
-header {
-    background-color: #684655;
-    margin: 0;
-    padding: 10px;
+    background-color: #684665;
+    margin-top: 0%;
+    text-align: center;
+
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
 }
-  
-.navbar-center {
+
+footer {
+
+    background-color: #684665;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 1%;
+    text-align: center;
+
     display: flex;
-    justify-content: center;
-    flex-grow: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
 }
-  
-.button {
-    padding: 10px 20px;
-    background-color: #684655;
+
+a {
+
     color: #F2EDEB;
     text-decoration: none;
-    border-radius: 4px;
-    margin: 0 5px;
-}
-  
-.navbar-right {
-    text-align: right;
-}
-  
-#FilmoLogo {
-    width: 170px;
-    height: 70px;
+
 }
 
-/* Footer */
+.button{
 
-#footer {
-    background-color: #684655;
+    box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.25);
+    margin: 0%;
+    padding: 1%;
+
 }
