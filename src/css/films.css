@@ -1,5 +1,21 @@
+#box-list {
+    position: absolute;
+    width: 92%;
+    height: 70%;
+    left: 4%;
+    top: 20%;
+    background: rgba(217, 217, 217, 0.03);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
 #fleche{
     padding: 1em;
-    width: 60px;
-    height: 60px;
+    position: fixed;
+    width: 10%;
+    height: 10%;
 }
