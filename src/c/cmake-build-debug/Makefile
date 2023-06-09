@@ -142,86 +142,113 @@ c/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/build
 .PHONY : c/fast
 
-assets/hashTableDirectorList.o: assets/hashTableDirectorList.c.o
+databaseInit.o: databaseInit.c.o
 
-.PHONY : assets/hashTableDirectorList.o
-
-# target to build an object file
-assets/hashTableDirectorList.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/assets/hashTableDirectorList.c.o
-.PHONY : assets/hashTableDirectorList.c.o
-
-assets/hashTableDirectorList.i: assets/hashTableDirectorList.c.i
-
-.PHONY : assets/hashTableDirectorList.i
-
-# target to preprocess a source file
-assets/hashTableDirectorList.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/assets/hashTableDirectorList.c.i
-.PHONY : assets/hashTableDirectorList.c.i
-
-assets/hashTableDirectorList.s: assets/hashTableDirectorList.c.s
-
-.PHONY : assets/hashTableDirectorList.s
-
-# target to generate assembly for a file
-assets/hashTableDirectorList.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/assets/hashTableDirectorList.c.s
-.PHONY : assets/hashTableDirectorList.c.s
-
-assets/listFilm.o: assets/listFilm.c.o
-
-.PHONY : assets/listFilm.o
+.PHONY : databaseInit.o
 
 # target to build an object file
-assets/listFilm.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/assets/listFilm.c.o
-.PHONY : assets/listFilm.c.o
+databaseInit.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/databaseInit.c.o
+.PHONY : databaseInit.c.o
 
-assets/listFilm.i: assets/listFilm.c.i
+databaseInit.i: databaseInit.c.i
 
-.PHONY : assets/listFilm.i
+.PHONY : databaseInit.i
 
 # target to preprocess a source file
-assets/listFilm.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/assets/listFilm.c.i
-.PHONY : assets/listFilm.c.i
+databaseInit.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/databaseInit.c.i
+.PHONY : databaseInit.c.i
 
-assets/listFilm.s: assets/listFilm.c.s
+databaseInit.s: databaseInit.c.s
 
-.PHONY : assets/listFilm.s
+.PHONY : databaseInit.s
 
 # target to generate assembly for a file
-assets/listFilm.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/assets/listFilm.c.s
-.PHONY : assets/listFilm.c.s
+databaseInit.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/databaseInit.c.s
+.PHONY : databaseInit.c.s
 
-film.o: film.c.o
+hashTableDirectorList.o: hashTableDirectorList.c.o
 
-.PHONY : film.o
+.PHONY : hashTableDirectorList.o
 
 # target to build an object file
-film.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/film.c.o
-.PHONY : film.c.o
+hashTableDirectorList.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/hashTableDirectorList.c.o
+.PHONY : hashTableDirectorList.c.o
 
-film.i: film.c.i
+hashTableDirectorList.i: hashTableDirectorList.c.i
 
-.PHONY : film.i
+.PHONY : hashTableDirectorList.i
 
 # target to preprocess a source file
-film.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/film.c.i
-.PHONY : film.c.i
+hashTableDirectorList.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/hashTableDirectorList.c.i
+.PHONY : hashTableDirectorList.c.i
 
-film.s: film.c.s
+hashTableDirectorList.s: hashTableDirectorList.c.s
 
-.PHONY : film.s
+.PHONY : hashTableDirectorList.s
 
 # target to generate assembly for a file
-film.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/film.c.s
-.PHONY : film.c.s
+hashTableDirectorList.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/hashTableDirectorList.c.s
+.PHONY : hashTableDirectorList.c.s
+
+listDirector.o: listDirector.c.o
+
+.PHONY : listDirector.o
+
+# target to build an object file
+listDirector.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/listDirector.c.o
+.PHONY : listDirector.c.o
+
+listDirector.i: listDirector.c.i
+
+.PHONY : listDirector.i
+
+# target to preprocess a source file
+listDirector.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/listDirector.c.i
+.PHONY : listDirector.c.i
+
+listDirector.s: listDirector.c.s
+
+.PHONY : listDirector.s
+
+# target to generate assembly for a file
+listDirector.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/listDirector.c.s
+.PHONY : listDirector.c.s
+
+listFilm.o: listFilm.c.o
+
+.PHONY : listFilm.o
+
+# target to build an object file
+listFilm.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/listFilm.c.o
+.PHONY : listFilm.c.o
+
+listFilm.i: listFilm.c.i
+
+.PHONY : listFilm.i
+
+# target to preprocess a source file
+listFilm.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/listFilm.c.i
+.PHONY : listFilm.c.i
+
+listFilm.s: listFilm.c.s
+
+.PHONY : listFilm.s
+
+# target to generate assembly for a file
+listFilm.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/listFilm.c.s
+.PHONY : listFilm.c.s
 
 main.o: main.c.o
 
@@ -259,15 +286,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... c"
-	@echo "... assets/hashTableDirectorList.o"
-	@echo "... assets/hashTableDirectorList.i"
-	@echo "... assets/hashTableDirectorList.s"
-	@echo "... assets/listFilm.o"
-	@echo "... assets/listFilm.i"
-	@echo "... assets/listFilm.s"
-	@echo "... film.o"
-	@echo "... film.i"
-	@echo "... film.s"
+	@echo "... databaseInit.o"
+	@echo "... databaseInit.i"
+	@echo "... databaseInit.s"
+	@echo "... hashTableDirectorList.o"
+	@echo "... hashTableDirectorList.i"
+	@echo "... hashTableDirectorList.s"
+	@echo "... listDirector.o"
+	@echo "... listDirector.i"
+	@echo "... listDirector.s"
+	@echo "... listFilm.o"
+	@echo "... listFilm.i"
+	@echo "... listFilm.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

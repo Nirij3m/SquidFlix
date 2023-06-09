@@ -76,22 +76,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/assets/hashTableDirectorList.c">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/databaseInit.c">
 			<Option target="c"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/assets/hashTableDirectorList.h">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/databaseInit.h">
 			<Option target="c"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/assets/listFilm.c">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableDirectorList.c">
 			<Option target="c"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/assets/listFilm.h">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableDirectorList.h">
 			<Option target="c"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/film.c">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listDirector.c">
 			<Option target="c"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/film.h">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listDirector.h">
+			<Option target="c"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.c">
+			<Option target="c"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.h">
 			<Option target="c"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/main.c">

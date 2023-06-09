@@ -5,6 +5,7 @@ struct CellFilm* createCellFilm(char* nomFilm, int duration, char* genre){
     struct CellFilm* c = malloc(sizeof(struct CellFilm));
     if(c == NULL){
         printf("Cell commited sepuku");
+        return c;
     }
     c -> nomFilm = malloc(sizeof(char)*(strlen(nomFilm)+1));
     strcpy(c->nomFilm, nomFilm);
@@ -20,14 +21,14 @@ struct CellFilm* createCellFilm(char* nomFilm, int duration, char* genre){
 
 }
 
-bool isListEmpty(struct ListFilm* l){
+bool isListEmptyFilm(struct ListFilm* l){
     if(l == NULL){
         return true;
     }
     else return false;
 }
 
-unsigned int listSize(struct ListFilm* l){
+unsigned int listSizeFilm(struct ListFilm* l){
     return l->size;
 }
 
@@ -61,7 +62,7 @@ void addFirstFilm(struct ListFilm* l, char* nomFilm, int duration, char* genre){
 
 struct CellFilm* getItemPosFilm(struct ListFilm* l, unsigned int position, bool* valid){
     //here, the position in the exact index of the cell in the lise. No need of -1 position
-    if(isListEmpty(l)){
+    if(isListEmptyFilm(l)){
         printf("list empty");
         *valid = false;
         return NULL;
@@ -84,7 +85,7 @@ struct CellFilm* getItemPosFilm(struct ListFilm* l, unsigned int position, bool*
 
 void deleteFirstFilm(struct ListFilm* l){
 
-    if (!isListEmpty(l)) {
+    if (!isListEmptyFilm(l)) {
         struct CellFilm* newHead = l->head->next;
         free(l->head->nomFilm);
         free(l->head->genre);
@@ -97,7 +98,7 @@ void deleteFirstFilm(struct ListFilm* l){
 
 void printListFilm(struct ListFilm* l){
 
-    if(isListEmpty(l)){
+    if(isListEmptyFilm(l)){
         printf("List is empty :(\n");
         return;
     }
@@ -116,7 +117,7 @@ void printListFilm(struct ListFilm* l){
 
 void addItemPosFilm(struct ListFilm* l, char* nomFilm, int duration, char* genre, unsigned int position, bool* valid){
 
-    unsigned int size = listSize(l);
+    unsigned int size = listSizeFilm(l);
 
     if(position > size){
         printf("List empty :( or out of range");
@@ -126,7 +127,7 @@ void addItemPosFilm(struct ListFilm* l, char* nomFilm, int duration, char* genre
 
     if(position==0){
         addFirstFilm(l, nomFilm, duration, genre);
-        if(size == listSize(l)){
+        if(size == listSizeFilm(l)){
             *valid = false;
             return;
         } //même taille, addFrist n'a pas marché
@@ -165,7 +166,7 @@ void addItemPosFilm(struct ListFilm* l, char* nomFilm, int duration, char* genre
 
 void deleteItemPosFilm(struct ListFilm* l, unsigned int position, bool* valid){
 
-    if(isListEmpty(l) || position > listSize(l)){
+    if(isListEmptyFilm(l) || position > listSizeFilm(l)){
         printf("Error, list empty or position out of range");
         *valid = false;
         return;
@@ -194,11 +195,11 @@ void deleteItemPosFilm(struct ListFilm* l, unsigned int position, bool* valid){
 
 void deleteListFilm(struct ListFilm** l){
 
-        if(isListEmpty(*l)){
+        if(isListEmptyFilm(*l)){
             free(*l);
             return;
         }
-        unsigned int size = listSize(*l);
+        unsigned int size = listSizeFilm(*l);
         for(int i = 0; i < size; i++){
             deleteFirstFilm(*l);
         }
@@ -208,12 +209,12 @@ void deleteListFilm(struct ListFilm** l){
 }
 
 struct CellFilm* filmBelongs(struct ListFilm* l, char* nomFilm, int duration, char* genre){
-    if(isListEmpty(l)){
+    if(isListEmptyFilm(l)){
         printf("List empty man");
         return l->head;
     }
 
-    unsigned int size = listSize(l);
+    unsigned int size = listSizeFilm(l);
     struct CellFilm* iter = l->head;
 
     for(int i = 0; i < size; i++){
@@ -229,7 +230,7 @@ struct CellFilm* filmBelongs(struct ListFilm* l, char* nomFilm, int duration, ch
 
 
 /*int getPosItem(struct ListFilm* l, int value){
-    if(isListEmpty(l)){
+    if(isListEmptyFilm(l)){
         printf("list empty");
         return l->size;
     }
