@@ -1,0 +1,21 @@
+#recherche {
+
+	margin: 1%;
+
+	display: flex;
+    flex-direction: row;
+
+}
+
+#submit {
+
+	color: #F2EDEB;
+	color: #25181F;
+
+}
+
+#submit:hover {
+
+	border-color: #FFFB0A;
+
+}
