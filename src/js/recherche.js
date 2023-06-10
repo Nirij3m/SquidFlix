@@ -72,20 +72,12 @@ function writeFile(counter, id_form,func) {
 
    // text1.submit();
 }
+
 // -------------------------
-
-function findDirector(){
-
-    //let director = document.getElementById("searchDirector").value;
-    //console.log("director : " + director);
-    writeFile('searchDirector',"findByDirector");
-
-}
 
 function main(){
 
     console.log("poulpe");
-    recup();
 
     if ( recup() == "000" ){
         console.log("Veuillez entrez quelque chose avant de rechercher\nPour voir l'intégralité de notre tacalogue vous pouvez aller dans la catégorie Films.")
@@ -114,5 +106,3 @@ function main(){
     }
 
 }
-
-main();
