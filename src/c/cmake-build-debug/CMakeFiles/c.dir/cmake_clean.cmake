@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/c.dir/databaseInit.c.o"
   "CMakeFiles/c.dir/hashTableDirectorList.c.o"
+  "CMakeFiles/c.dir/hashTableFilmList.c.o"
   "CMakeFiles/c.dir/listDirector.c.o"
   "CMakeFiles/c.dir/listFilm.c.o"
   "CMakeFiles/c.dir/main.c.o"

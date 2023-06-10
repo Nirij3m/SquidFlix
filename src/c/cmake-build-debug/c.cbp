@@ -88,6 +88,12 @@
 		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableDirectorList.h">
 			<Option target="c"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableFilmList.c">
+			<Option target="c"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableFilmList.h">
+			<Option target="c"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listDirector.c">
 			<Option target="c"/>
 		</Unit>

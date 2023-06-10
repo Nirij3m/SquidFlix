@@ -199,7 +199,7 @@ void deleteListDirector(struct ListDirector** l){
 struct Director* directorBelongs(struct ListDirector* l, char* name){
     if(isListEmptyDirector(l)){
         printf("List empty man");
-        return l->head;
+        return NULL;
     }
 
     unsigned int size = listSizeDirector(l);
@@ -212,7 +212,7 @@ struct Director* directorBelongs(struct ListDirector* l, char* name){
         else{
             iter = iter->next;
         }
-    }
+    }// rien n'est trouvé
     return NULL;
 }
 
@@ -236,3 +236,7 @@ int getPosItemDirector(struct ListDirector* l, char* name){
     }
     return i;
 }
+
+
+
+

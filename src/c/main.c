@@ -1,13 +1,24 @@
 #include "hashTableDirectorList.h"
+#include "hashTableFilmList.h"
 #include "databaseInit.h"
 #define BUCKET_SIZE 5
 void testHashTableIDirector();
 
 int main() {
-    struct HashTable* tableDirectors = readDirectors("BD_medium.txt");
-    printHashTable(tableDirectors);
-    printListFilm(tableDirectors->table[1198]->head->films);
 
+    //printHashTable(directors);
+    //printf("\n");
+    //printTimeArray(timeArray);
+    //printf("\n");
+    //printHashTableFilm(genreTable);
+    //printf("\n");
+    //printHashTableFilm(filmTable);
+
+    //findByDirector("Yeung");
+    //randomFilm();
+    findByDuration(132);
+
+return 0;
 }
 
 void testHashTableIDirector(){
