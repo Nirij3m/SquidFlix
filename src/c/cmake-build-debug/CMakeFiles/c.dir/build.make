@@ -76,22 +76,9 @@ include CMakeFiles/c.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/c.dir/flags.make
 
-CMakeFiles/c.dir/main.c.o: CMakeFiles/c.dir/flags.make
-CMakeFiles/c.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/c.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c.dir/main.c.o -c /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/main.c
-
-CMakeFiles/c.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/main.c > CMakeFiles/c.dir/main.c.i
-
-CMakeFiles/c.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/main.c -o CMakeFiles/c.dir/main.c.s
-
 CMakeFiles/c.dir/listFilm.c.o: CMakeFiles/c.dir/flags.make
 CMakeFiles/c.dir/listFilm.c.o: ../listFilm.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/c.dir/listFilm.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/c.dir/listFilm.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c.dir/listFilm.c.o -c /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.c
 
 CMakeFiles/c.dir/listFilm.c.i: cmake_force
@@ -104,7 +91,7 @@ CMakeFiles/c.dir/listFilm.c.s: cmake_force
 
 CMakeFiles/c.dir/databaseInit.c.o: CMakeFiles/c.dir/flags.make
 CMakeFiles/c.dir/databaseInit.c.o: ../databaseInit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/c.dir/databaseInit.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/c.dir/databaseInit.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c.dir/databaseInit.c.o -c /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/databaseInit.c
 
 CMakeFiles/c.dir/databaseInit.c.i: cmake_force
@@ -117,7 +104,7 @@ CMakeFiles/c.dir/databaseInit.c.s: cmake_force
 
 CMakeFiles/c.dir/listDirector.c.o: CMakeFiles/c.dir/flags.make
 CMakeFiles/c.dir/listDirector.c.o: ../listDirector.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/c.dir/listDirector.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/c.dir/listDirector.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c.dir/listDirector.c.o -c /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listDirector.c
 
 CMakeFiles/c.dir/listDirector.c.i: cmake_force
@@ -128,35 +115,48 @@ CMakeFiles/c.dir/listDirector.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c.dir/listDirector.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listDirector.c -o CMakeFiles/c.dir/listDirector.c.s
 
-CMakeFiles/c.dir/hashTableDirectorList.c.o: CMakeFiles/c.dir/flags.make
-CMakeFiles/c.dir/hashTableDirectorList.c.o: ../hashTableDirectorList.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/c.dir/hashTableDirectorList.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c.dir/hashTableDirectorList.c.o -c /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableDirectorList.c
+CMakeFiles/c.dir/nodeTrie.c.o: CMakeFiles/c.dir/flags.make
+CMakeFiles/c.dir/nodeTrie.c.o: ../nodeTrie.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/c.dir/nodeTrie.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c.dir/nodeTrie.c.o -c /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/nodeTrie.c
 
-CMakeFiles/c.dir/hashTableDirectorList.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c.dir/hashTableDirectorList.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableDirectorList.c > CMakeFiles/c.dir/hashTableDirectorList.c.i
+CMakeFiles/c.dir/nodeTrie.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c.dir/nodeTrie.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/nodeTrie.c > CMakeFiles/c.dir/nodeTrie.c.i
 
-CMakeFiles/c.dir/hashTableDirectorList.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c.dir/hashTableDirectorList.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableDirectorList.c -o CMakeFiles/c.dir/hashTableDirectorList.c.s
+CMakeFiles/c.dir/nodeTrie.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c.dir/nodeTrie.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/nodeTrie.c -o CMakeFiles/c.dir/nodeTrie.c.s
+
+CMakeFiles/c.dir/main.c.o: CMakeFiles/c.dir/flags.make
+CMakeFiles/c.dir/main.c.o: ../main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/c.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c.dir/main.c.o -c /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/main.c
+
+CMakeFiles/c.dir/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c.dir/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/main.c > CMakeFiles/c.dir/main.c.i
+
+CMakeFiles/c.dir/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c.dir/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/main.c -o CMakeFiles/c.dir/main.c.s
 
 # Object files for target c
 c_OBJECTS = \
-"CMakeFiles/c.dir/main.c.o" \
 "CMakeFiles/c.dir/listFilm.c.o" \
 "CMakeFiles/c.dir/databaseInit.c.o" \
 "CMakeFiles/c.dir/listDirector.c.o" \
-"CMakeFiles/c.dir/hashTableDirectorList.c.o"
+"CMakeFiles/c.dir/nodeTrie.c.o" \
+"CMakeFiles/c.dir/main.c.o"
 
 # External object files for target c
 c_EXTERNAL_OBJECTS =
 
-c : CMakeFiles/c.dir/main.c.o
 c : CMakeFiles/c.dir/listFilm.c.o
 c : CMakeFiles/c.dir/databaseInit.c.o
 c : CMakeFiles/c.dir/listDirector.c.o
-c : CMakeFiles/c.dir/hashTableDirectorList.c.o
+c : CMakeFiles/c.dir/nodeTrie.c.o
+c : CMakeFiles/c.dir/main.c.o
 c : CMakeFiles/c.dir/build.make
 c : CMakeFiles/c.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable c"

@@ -3,11 +3,11 @@
 #define C_FILM_H
 #include "listDirector.h"
 #include "listFilm.h"
-#include "hashTableDirectorList.h"
+#include "nodeTrie.h"
+#include <string.h>
 
 
-bool addFilm(struct CellFilm* film, struct Director* d);
-struct ListDirector* readDatabase(char* nameFile);
+
 void findByDirector(char* name);
 void findByGenre(char* genre);
 void findByDuration(int duration);

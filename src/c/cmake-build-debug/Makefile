@@ -169,33 +169,6 @@ databaseInit.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/databaseInit.c.s
 .PHONY : databaseInit.c.s
 
-hashTableDirectorList.o: hashTableDirectorList.c.o
-
-.PHONY : hashTableDirectorList.o
-
-# target to build an object file
-hashTableDirectorList.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/hashTableDirectorList.c.o
-.PHONY : hashTableDirectorList.c.o
-
-hashTableDirectorList.i: hashTableDirectorList.c.i
-
-.PHONY : hashTableDirectorList.i
-
-# target to preprocess a source file
-hashTableDirectorList.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/hashTableDirectorList.c.i
-.PHONY : hashTableDirectorList.c.i
-
-hashTableDirectorList.s: hashTableDirectorList.c.s
-
-.PHONY : hashTableDirectorList.s
-
-# target to generate assembly for a file
-hashTableDirectorList.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/hashTableDirectorList.c.s
-.PHONY : hashTableDirectorList.c.s
-
 listDirector.o: listDirector.c.o
 
 .PHONY : listDirector.o
@@ -277,6 +250,33 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/main.c.s
 .PHONY : main.c.s
 
+nodeTrie.o: nodeTrie.c.o
+
+.PHONY : nodeTrie.o
+
+# target to build an object file
+nodeTrie.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/nodeTrie.c.o
+.PHONY : nodeTrie.c.o
+
+nodeTrie.i: nodeTrie.c.i
+
+.PHONY : nodeTrie.i
+
+# target to preprocess a source file
+nodeTrie.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/nodeTrie.c.i
+.PHONY : nodeTrie.c.i
+
+nodeTrie.s: nodeTrie.c.s
+
+.PHONY : nodeTrie.s
+
+# target to generate assembly for a file
+nodeTrie.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/nodeTrie.c.s
+.PHONY : nodeTrie.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -289,9 +289,6 @@ help:
 	@echo "... databaseInit.o"
 	@echo "... databaseInit.i"
 	@echo "... databaseInit.s"
-	@echo "... hashTableDirectorList.o"
-	@echo "... hashTableDirectorList.i"
-	@echo "... hashTableDirectorList.s"
 	@echo "... listDirector.o"
 	@echo "... listDirector.i"
 	@echo "... listDirector.s"
@@ -301,6 +298,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... nodeTrie.o"
+	@echo "... nodeTrie.i"
+	@echo "... nodeTrie.s"
 .PHONY : help
 
 
