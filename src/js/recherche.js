@@ -106,11 +106,7 @@ function writeFile(counter, id_form,func) {
    // text1.submit();
 }
 
-// -------------------------
-
-function main(){
-
-    console.log("poulpe");
+function find(){
 
     let counter = recup();
 
@@ -152,5 +148,13 @@ function main(){
             }
         }
     }
+
+}
+
+// -------------------------
+
+function main(){
+
+    console.log("poulpe");
 
 }
