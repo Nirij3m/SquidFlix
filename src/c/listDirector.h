@@ -6,12 +6,13 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
+#include "listFilm.h"
 
 
 struct Director {
     char* name;
     int nmbFilm;
-    struct ListFilm** films;
+    struct ListFilm* films;
     struct Director* next;
 };
 

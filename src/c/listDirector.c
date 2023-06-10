@@ -34,7 +34,6 @@ void addFirstDirector(struct ListDirector* l, char* name){
     newLHead -> next = l->head;
     l->head = newLHead;
     l->size++;
-
 }
 
 bool isListEmptyDirector(struct ListDirector* l){
@@ -72,6 +71,8 @@ void deleteFirstDirector(struct ListDirector* l){
 
     if (!isListEmptyDirector(l)) {
         struct Director* newHead = l->head->next;
+        deleteListFilm(&l->head->films);
+        free(l->head->name);
         free(l->head);
         l->head = newHead;
         l->size--;
@@ -212,7 +213,7 @@ struct Director* directorBelongs(struct ListDirector* l, char* name){
             iter = iter->next;
         }
     }
-    return l->head;
+    return NULL;
 }
 
 struct Director* topDirector(struct ListDirector* ld){

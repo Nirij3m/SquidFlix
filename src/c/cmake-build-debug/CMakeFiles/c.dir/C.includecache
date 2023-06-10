@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/databaseInit.h
+listDirector.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listDirector.h
+listFilm.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.h
+hashTableDirectorList.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableDirectorList.h
+string.h
+-
+
 /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableDirectorList.h
 listDirector.h
 /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listDirector.h
@@ -23,6 +33,8 @@ stdlib.h
 -
 string.h
 -
+listFilm.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.h
 
 /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.h
 stdio.h
@@ -35,10 +47,8 @@ string.h
 -
 
 /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/main.c
-listFilm.h
-/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.h
-listDirector.h
-/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listDirector.h
 hashTableDirectorList.h
 /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableDirectorList.h
+databaseInit.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/databaseInit.h
 

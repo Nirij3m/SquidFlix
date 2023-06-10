@@ -4,10 +4,9 @@
 #include "listDirector.h"
 #include "listFilm.h"
 #include "hashTableDirectorList.h"
+#include <string.h>
 
-
-bool addFilm(struct CellFilm* film, struct Director* d);
-struct ListDirector* readDatabase(char* nameFile);
+struct HashTable* readDirectors(char* fileName);
 void findByDirector(char* name);
 void findByGenre(char* genre);
 void findByDuration(int duration);
