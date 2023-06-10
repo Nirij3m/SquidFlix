@@ -3,18 +3,25 @@
 
 CMakeFiles/c.dir/databaseInit.c.o: ../databaseInit.c
 CMakeFiles/c.dir/databaseInit.c.o: ../databaseInit.h
+CMakeFiles/c.dir/databaseInit.c.o: ../hashTableDirectorList.h
 CMakeFiles/c.dir/databaseInit.c.o: ../listDirector.h
 CMakeFiles/c.dir/databaseInit.c.o: ../listFilm.h
 
+CMakeFiles/c.dir/hashTableDirectorList.c.o: ../hashTableDirectorList.c
+CMakeFiles/c.dir/hashTableDirectorList.c.o: ../hashTableDirectorList.h
+CMakeFiles/c.dir/hashTableDirectorList.c.o: ../listDirector.h
+CMakeFiles/c.dir/hashTableDirectorList.c.o: ../listFilm.h
+
 CMakeFiles/c.dir/listDirector.c.o: ../listDirector.c
 CMakeFiles/c.dir/listDirector.c.o: ../listDirector.h
+CMakeFiles/c.dir/listDirector.c.o: ../listFilm.h
 
 CMakeFiles/c.dir/listFilm.c.o: ../listFilm.c
 CMakeFiles/c.dir/listFilm.c.o: ../listFilm.h
 
+CMakeFiles/c.dir/main.c.o: ../databaseInit.h
+CMakeFiles/c.dir/main.c.o: ../hashTableDirectorList.h
+CMakeFiles/c.dir/main.c.o: ../listDirector.h
+CMakeFiles/c.dir/main.c.o: ../listFilm.h
 CMakeFiles/c.dir/main.c.o: ../main.c
-CMakeFiles/c.dir/main.c.o: ../nodeTrie.h
-
-CMakeFiles/c.dir/nodeTrie.c.o: ../nodeTrie.c
-CMakeFiles/c.dir/nodeTrie.c.o: ../nodeTrie.h
 

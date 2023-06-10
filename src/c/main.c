@@ -1,60 +1,28 @@
-#include "nodeTrie.h"
+#include "hashTableDirectorList.h"
+#include "databaseInit.h"
+#define BUCKET_SIZE 5
+void testHashTableIDirector();
 
 int main() {
+    struct HashTable* tableDirectors = readDirectors("BD_medium.txt");
+    printHashTable(tableDirectors);
+    printListFilm(tableDirectors->table[1198]->head->films);
 
-    //creates an empty trie that will act as our dictionaries
+}
 
-    char filename[] = "BD_small.txt";
-    struct NodeTrie *root = readDict(filename);
-    char prefix[32];
-    prefix[0] = '\0';
-    char exit[1] = "#";
-    char del[1] = "*";
+void testHashTableIDirector(){
 
-    //displays the trie
+    struct HashTable* h1 = createEmptyHashTable(BUCKET_SIZE);
+    insert(h1, "Bob", "Vroum", 150, "Comedy");
+    insert(h1, "Bob", "Papacito", 11, "Drouate");
+    insert(h1, "Alex", "Malo", 2, "Drama");
+    insert(h1, "Roger", "camp", 2, "Drama");
+    insert(h1, "Mina", "rat", 2, "Drama");
+    insert(h1, "Jeanne", "papr", 2, "Drama");
 
-    char letter;
-    char wordLetters[32];
-    bool isTrue = true;
-    bool isDel = false;
+    printHashTable(h1);
+    printListFilm(h1->table[4]->head->films);
 
-    displayDict(root, wordLetters, prefix, 0);
+    deleteHashTable(&h1);
 
-    while (isTrue == true) {
-        isDel = false;
-        printf("\n\nYour word: %s\n", wordLetters);
-        printf("\n* to delete or # to exit");
-        printf("\nEnter a letter to add: ");
-        scanf("\n%c", &letter);
-
-        //if the latest letter is # then the program ends
-        if (letter == exit[0]) {
-            printf("\n\nThank you for using my program!\n");
-            printf("\nI also want to give a special thanks to Achille, who helped me add the missing letters to the dictionary words!\n\n");
-            isTrue = false;
-            break;
-        }
-        //if the latest letter is * then the program deletes the last letter from wordLetters and displays the words that start with the new wordLetters
-        if (letter == del[0]) {
-            // will have to delete the last letter from wordLetters and the star included
-            wordLetters[strlen(wordLetters) - 1] = '\0';
-            prefix[strlen(prefix) - 1] = '\0';
-            strcpy(prefix, wordLetters);
-            isDel = true;
-            findWords(root, wordLetters, prefix, 0);
-            printf("\n\nA letter has been deleted from your word!");
-
-        }
-        //the isDel boolean is helpful to know if the person has deleted a letter start from the beginning of the loop
-        if (isDel == false) {
-            wordLetters[strlen(wordLetters)] = letter;
-            wordLetters[strlen(wordLetters)] = '\0';
-            strcpy(prefix, wordLetters);
-            findWords(root, wordLetters, prefix, 0);
-        }
-    }
-
-    //free the memory
-    deleteNodeTrie(&root);
-    return 0;
 }
