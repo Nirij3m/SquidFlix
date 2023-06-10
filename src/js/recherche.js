@@ -1,31 +1,60 @@
 function recup(){
 
-    console.log("octopus");
+    //console.log("octopus");
+
+    let counter = 0 ;
 
     let director = document.getElementById("searchDirector").value;
-    console.log("length : " + director.length);
-    console.log(director);
+    //console.log("length : " + director.length);
+    //console.log(director);
+
+    if(director != ''){
+        counter += 1 ;
+    }
 
     let time = document.getElementById("searchTime").value;
-    console.log(time);
+    //console.log(time);
+
+    if(time != ''){
+        counter += 1 ;
+    }
 
     let genre = document.getElementById("searchGenre").value;
-    console.log(genre);
+    //console.log(genre);
 
+    if(genre != 'None'){
+        counter += 1 ;
+    }
+
+    return counter ;
 }
 
 // ------- WRITE FILE -------
 // ------- WRITE FILE -------
-function writeFile(id_form,func) {
+function writeFile(counter, id_form,func) {
+
+    //console.log("Poulpe");
 
     var element = document.createElement('a');
 
-    let text1 = document.getElementById(id_form);
-    let count = text1.elements.length;
-    let textToSave = func;
-    for(let i = 0;i<count-1;i++){
-        textToSave += ";" + text1[i].value;
+    //console.log("element : " + element);
+    //console.log("id_form : " + id_form);
+
+    let text1 = document.getElementById(id_form).value;
+    //console.log("text : " + text1);
+
+    let count = text1.length;
+    //console.log("count : " + count);
+
+    let textToSave = counter + "\n" + func + ";";
+
+    for(let i = 0;i<=count-1;i++){
+        textToSave += text1[i];
+        //console.log("TextToSave_1 : " + textToSave);
+        //console.log("text1[i] : " + text1[i]);
     }
+
+    //console.log(textToSave);
 
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(textToSave));
     element.setAttribute('download', 'request.txt');
@@ -41,9 +70,9 @@ function writeFile(id_form,func) {
 
 function findDirector(){
 
-    let director = document.getElementById("searchDirector").value;
-    console.log("director : " + director);
-    writeFile(searchDirector,"findByDirector");
+    //let director = document.getElementById("searchDirector").value;
+    //console.log("director : " + director);
+    writeFile('searchDirector',"findByDirector");
 
 }
 
@@ -51,6 +80,19 @@ function main(){
 
     console.log("poulpe");
     recup();
+
+    if ( recup() == 0 ){
+        console.log("Veuillez entrez quelque chose avant de rechercher\nPour voir l'intégralité de notre tacalogue vous pouvez aller dans la catégorie Films.")
+    }
+    if ( recup() == 1 ){
+        
+    }
+    if ( recup() == 2 ){
+        
+    }
+    if ( recup() == 3 ){
+        
+    }
 
 }
 
