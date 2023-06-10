@@ -2,6 +2,7 @@
     background: #684655;
     border-radius: 66px;
     position: absolute;
+    align-items: center;
     margin-top: 2%;
     margin-left: 30%;
 
@@ -11,6 +12,11 @@
     flex-wrap: wrap;
     justify-content: space-around;
 
+}
+
+.items-top:hover {
+    background-color: #745361;
+    box-shadow: 0 0 9px #684665;
 }
 
 #trophy-item {
