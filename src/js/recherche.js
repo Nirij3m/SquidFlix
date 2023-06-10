@@ -2,28 +2,28 @@ function recup(){
 
     //console.log("octopus");
 
-    let counter = 0 ;
+    let counter = "000" ;
 
     let director = document.getElementById("searchDirector").value;
     //console.log("length : " + director.length);
     //console.log(director);
 
     if(director != ''){
-        counter += 1 ;
+        counter[0] += 1 ;
     }
 
     let time = document.getElementById("searchTime").value;
     //console.log(time);
 
     if(time != ''){
-        counter += 1 ;
+        counter[1] += 1 ;
     }
 
     let genre = document.getElementById("searchGenre").value;
     //console.log(genre);
 
     if(genre != 'None'){
-        counter += 1 ;
+        counter[2] += 1 ;
     }
 
     return counter ;
