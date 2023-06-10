@@ -81,16 +81,29 @@ function main(){
     console.log("poulpe");
     recup();
 
-    if ( recup() == 0 ){
+    if ( recup() == "000" ){
         console.log("Veuillez entrez quelque chose avant de rechercher\nPour voir l'intégralité de notre tacalogue vous pouvez aller dans la catégorie Films.")
     }
-    if ( recup() == 1 ){
+    if ( recup() == "100" ){
+        writeFile(1,'searchDirector',"findByDirector");
+    }
+    if ( recup() == "010" ){
+        writeFile(1,'searchTime',"findByDirector");
+    }
+    if ( recup() == "001" ){
+        writeFile(1,'searchGenre',"findByDirector");
+    }
+    if ( recup() == "110" ){
         
     }
-    if ( recup() == 2 ){
+    if ( recup() == "101" ){
         
     }
-    if ( recup() == 3 ){
+    if ( recup() == "011" ){
+        
+    }
+    
+    if ( recup() == "111" ){
         
     }
 
