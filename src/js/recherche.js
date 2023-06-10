@@ -38,23 +38,29 @@ function writeFile(counter, id_form,func) {
     var element = document.createElement('a');
 
     //console.log("element : " + element);
-    //console.log("id_form : " + id_form);
 
-    let text1 = document.getElementById(id_form).value;
-    //console.log("text : " + text1);
+    for(let i = 0; i <= counter ; i ++){
 
-    let count = text1.length;
-    //console.log("count : " + count);
+        //console.log("id_form : " + id_form[i]);
 
-    let textToSave = counter + "\n" + func + ";";
+        let text1 = document.getElementById(id_form[i]).value;
+        //console.log("text : " + text1);
 
-    for(let i = 0;i<=count-1;i++){
-        textToSave += text1[i];
-        //console.log("TextToSave_1 : " + textToSave);
-        //console.log("text1[i] : " + text1[i]);
+        let count = text1.length;
+        //console.log("count : " + count);
+
+        let textToSave = counter + "\n" + func + ";";
+
+        for(let i = 0;i<=count-1;i++){
+            textToSave += text1[i];
+            //console.log("TextToSave_1 : " + textToSave);
+            //console.log("text1[i] : " + text1[i]);
+        }
+
+        textToSave = "\n"
+
+        //console.log(textToSave);
     }
-
-    //console.log(textToSave);
 
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(textToSave));
     element.setAttribute('download', 'request.txt');
@@ -85,13 +91,13 @@ function main(){
         console.log("Veuillez entrez quelque chose avant de rechercher\nPour voir l'intégralité de notre tacalogue vous pouvez aller dans la catégorie Films.")
     }
     if ( recup() == "100" ){
-        writeFile(1,'searchDirector',"findByDirector");
+        writeFile(0,['searchDirector'],"findByDirector");
     }
     if ( recup() == "010" ){
-        writeFile(1,'searchTime',"findByDirector");
+        writeFile(0,['searchTime'],"findByDirector");
     }
     if ( recup() == "001" ){
-        writeFile(1,'searchGenre',"findByDirector");
+        writeFile(0,['searchGenre'],"findByDirector");
     }
     if ( recup() == "110" ){
         
