@@ -205,5 +205,3 @@ function main(){
     console.log(myResults);
 
 }
-
-main();
