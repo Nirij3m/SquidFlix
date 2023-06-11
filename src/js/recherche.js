@@ -198,7 +198,11 @@ function main(){
 
     console.log("poulpe");
 
+    find();
+
     //readFile();
+    let myResults = readFile();
+    console.log(myResults);
 
 }
 
