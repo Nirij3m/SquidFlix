@@ -8,9 +8,6 @@ body {
 
     background-color: #ff82af;
 
-    margin-top: 100px;
-    margin-left: 100px;
-
     width: 200px;
     height: 300px;
 
@@ -19,9 +16,5 @@ body {
 #cache {
 
     background-color: rgba(0, 0, 0, 0.65);
-    width: 200px;
-    height: 100px;
-    
-    margin-top: 200px;
 
 }
