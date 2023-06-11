@@ -18,9 +18,11 @@ struct HashTableFilm {
 struct HashTableFilm* createEmptyHashTableFilm(unsigned int buckets);
 bool isHashTableEmptyFilm(struct HashTableFilm* ht);
 unsigned int hashTableElementsFilm(struct HashTableFilm* ht);
-int hash_functionFilm(struct HashTableFilm* ht, char* genre);
+int hash_functionFilm(struct HashTableFilm* ht, char* title);
+int hash_functionGenre(struct HashTableFilm* ht, char* genre);
 // Inserts "value" in the table. If no collision, it returns True, otherwise False
 bool insertFilmRead(struct HashTableFilm* ht, char* title, int duration, char* genre);
+bool insertFilmGenre(struct HashTableFilm* ht, char* genre, int duration, char* title);
 
 bool existsFilm(struct HashTableFilm* ht, char* genre);
 void printHashTableFilm(struct HashTableFilm* ht);

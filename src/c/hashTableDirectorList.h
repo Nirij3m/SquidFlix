@@ -11,6 +11,7 @@ struct HashTable {
     unsigned int items;
     unsigned int buckets;
     struct ListDirector** table;
+    struct Director* topDirector;
 };
 
 
@@ -19,7 +20,7 @@ bool isHashTableEmpty(struct HashTable* ht);
 unsigned int hashTableElements(struct HashTable* ht);
 int hash_function(struct HashTable* ht, char* director);
 // Inserts "value" in the table. If no collision, it returns True, otherwise False
-bool insert(struct HashTable* ht, char* director, char* title, int duration, char* genre);
+bool insert(struct HashTable* ht, char* director, char* title, int duration, char* genre, int* maxFilm);
 
 bool exists(struct HashTable* ht, char* director);
 void printHashTable(struct HashTable* ht);

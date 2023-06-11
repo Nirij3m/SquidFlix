@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "listFilm.h"
+#include "hashTableDirectorList.h"
 
 
 struct Director {
@@ -19,7 +20,6 @@ struct Director {
 struct ListDirector{
     int size;
     struct Director* head;
-    struct Director* topDirector;
 };
 
 struct Director* createCellDirector(char* name);
@@ -34,7 +34,7 @@ void addItemPosDirector(struct ListDirector* l, char* name, unsigned int positio
 void deleteItemPosDirector(struct ListDirector* l, unsigned int position, bool* valid);
 void deleteListDirector(struct ListDirector** l);
 struct Director* directorBelongs(struct ListDirector* l, char* name);
-struct Director* topDirector(struct ListDirector* ld);
+struct Director* topDirector(struct HashTable* ht);
 int getPosItemDirector(struct ListDirector*l, char* name);
 
 
