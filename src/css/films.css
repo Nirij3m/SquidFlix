@@ -3,6 +3,7 @@
     border-radius: 66px;
     position: absolute;
     align-items: center;
+    text-align: center;
     margin-top: 2%;
     margin-left: 30%;
 
@@ -29,18 +30,12 @@
 }
 
 
-#box-list {
+.box-list {
     position: absolute;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    width: 92%;
-    height: 65%;
-    left: 4%;
-    top: 20%;
     background: rgba(217, 217, 217, 0.03);
-    
+    margin: 10% 15%;
 
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;

@@ -22,10 +22,11 @@
                 <a class="button but_hover" href="index.html">ACCUEIL</a>
                 <a class="button but_hover" href="recherche.html">RECHERCHE</a>
                 <a class="button but_hover" href="films.html">FILMS</a>
+                <a class="button but_hover" href="compte.html">COMPTE</a>
             </div>
         </header>
 
-        <main id="main">
+
             <div id="recherche">
                 <div id="search">
                     <input id="searchDirector" type="text" name="Director" placeholder="Réalisateur...">
@@ -40,7 +41,7 @@
                         <option value="Romance">Romance</option>
                         <option value="Educational">Educational</option>
                         <option value="Adventure">Adventure</option>
-                        <option value="SuperHero">SuperHero</option>
+                        <option value="Superhero">SuperHero</option>
                         <option value="Parody">Parody</option>
                         <option value="Western">Western</option>
                         <option value="Thriller">Thriller</option>
@@ -57,29 +58,28 @@
                     </select>
                     <button id="submit" onclick="main()">Chercher</button>
                 </div>
-
-                <div id="results">
-                    <p></p>
-                    <div class="movies">
-                    </div>
+            </div>
+        <div id="container">
+            <div class="box-list">
+                <div class="items">
+                    <!-- Code d'une seule carte qu'on viendra duppliquer -->
+                    <h3 class="name-film">JEAN</h3>
+                    <h5 class="genre"></h5>
+                    <h5 class="time"></h5>
                 </div>
             </div>
 
-            <div id="recommandation">
-                <div id="suggestion">
-                    <h3>Suggestion qui pourraient vous plaire</h3>
-                </div>
-            
-                <div id="suggest">
-                    <div class="items">
-                        <!-- Code d'une seule carte qu'on viendra duppliquer -->
-                        <h3 class="name-film"></h3>
-                        <h5 class="genre"></h5>
-                        <h5 class="time"></h5>
-                    </div>
+            <h4 id="title">Suggestions qui pourraient vous plaire</h4>
+
+            <div class="box-list">
+                <div class="items">
+                    <!-- Code d'une seule carte qu'on viendra duppliquer -->
+                    <h3 class="name-film">JEAN</h3>
+                    <h5 class="genre"></h5>
+                    <h5 class="time"></h5>
                 </div>
             </div>
-        </main>
+        </div>
 
         <footer>
             <!-- Trigger/Open The Modal -->
