@@ -1,0 +1,22 @@
+body {
+
+    margin: 0;
+
+}
+
+#card {
+
+    background-color: #ff82af;
+    width: 100px;
+    height: 150px;
+
+}
+
+#cache {
+
+    background-color: rgba(0, 0, 0, 0.65);
+    width: 100px;
+    height: 50px;
+    bottom: 0;
+
+}
