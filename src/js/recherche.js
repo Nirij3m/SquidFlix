@@ -81,7 +81,7 @@ function writeFile(counter, id_form,func) {
     //console.log("Poulpe");
 
     var element = document.createElement('a');
-    let save = counter + "\n";
+    let save = "";
     //console.log(save);
     //console.log("element : " + element);
 
