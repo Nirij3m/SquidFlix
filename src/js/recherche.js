@@ -170,6 +170,8 @@ function find(){
 // ------- READ FILE -------
 function readFileByName(fileName){
 
+    console.log(window.location.pathname);
+
     //console.log("poulpe");
 
     let xhr = new XMLHttpRequest();
@@ -187,8 +189,8 @@ function readFileByName(fileName){
 }
 
 function readFile(){
-    readFileByName("ready.txt");
-    return readFileByName("results.txt");
+    readFileByName("/src/js/ready.txt");
+    return readFileByName("/src/js/results.txt");
 }
 // -------------------------
 
@@ -201,7 +203,7 @@ function main(){
     find();
 
     //readFile();
-    //let myResults = readFile();
-    //console.log(myResults);
+    let myResults = readFile();
+    console.log(myResults);
 
 }

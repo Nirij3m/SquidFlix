@@ -7,17 +7,21 @@ body {
 #card {
 
     background-color: #ff82af;
-    width: 100px;
-    height: 150px;
+
+    margin-top: 100px;
+    margin-left: 100px;
+
+    width: 200px;
+    height: 300px;
 
 }
 
 #cache {
 
     background-color: rgba(0, 0, 0, 0.65);
-    width: 100px;
-    height: 50px;
-    position: relative;
-    bottom: 0;
+    width: 200px;
+    height: 100px;
+    
+    margin-top: 200px;
 
 }
