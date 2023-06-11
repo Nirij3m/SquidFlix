@@ -197,6 +197,7 @@ void deleteListFilm(struct ListFilm** l){
 
         if(isListEmptyFilm(*l)){
             free(*l);
+            *l = NULL;
             return;
         }
         unsigned int size = listSizeFilm(*l);
@@ -211,7 +212,7 @@ void deleteListFilm(struct ListFilm** l){
 struct CellFilm* filmBelongs(struct ListFilm* l, char* nomFilm, int duration, char* genre){
     if(isListEmptyFilm(l)){
         printf("List empty man");
-        return l->head;
+        return NULL;
     }
 
     unsigned int size = listSizeFilm(l);
@@ -225,8 +226,49 @@ struct CellFilm* filmBelongs(struct ListFilm* l, char* nomFilm, int duration, ch
             iter = iter->next;
         }
     }
-    return l->head;
+    return NULL;
 }
+
+struct ListFilm** createTimeArray(){
+    struct ListFilm** timeArray = malloc(500*sizeof(struct ListFilm*));
+    for(int i =0; i < 500; i++){
+        timeArray[i] = malloc(sizeof(struct ListFilm));
+    }
+    return timeArray;
+}
+
+bool insertFilm(struct ListFilm** timeArray, char* title, int duration, char* genre){
+    if(isListEmptyFilm(timeArray)){
+        return false;
+    }
+    if(timeArray[duration] == NULL){
+        timeArray[duration] = createEmptyListFilm();
+        addFirstFilm(timeArray[duration], title, duration, genre);
+    }
+    else{
+        addFirstFilm(timeArray[duration],title, duration, genre);
+    }
+
+}
+
+void freeTimeArray(struct ListFilm** timeArray){
+    for(int i = 0; i < 500; i++){
+        deleteListFilm(&timeArray[i]);
+    }
+    free(timeArray);
+    timeArray = NULL;
+}
+
+void printTimeArray(struct ListFilm** timeArray){
+    for(int i = 0; i < 500; i++) {
+        if (timeArray[i] != NULL) {
+            printf("%d: ", i);
+            printListFilm(timeArray[i]);
+        }
+        else printf("NONE");
+    }
+}
+
 
 
 /*int getPosItem(struct ListFilm* l, int value){

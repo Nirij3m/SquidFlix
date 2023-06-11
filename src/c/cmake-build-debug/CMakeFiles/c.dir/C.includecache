@@ -13,7 +13,13 @@ listFilm.h
 /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.h
 hashTableDirectorList.h
 /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableDirectorList.h
+hashTableFilmList.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableFilmList.h
 string.h
+-
+time.h
+-
+stdlib.h
 -
 
 /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableDirectorList.h
@@ -21,6 +27,16 @@ listDirector.h
 /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listDirector.h
 listFilm.h
 /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.h
+time.h
+-
+
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableFilmList.h
+listDirector.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listDirector.h
+listFilm.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.h
+hashTableDirectorList.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableDirectorList.h
 time.h
 -
 
@@ -49,6 +65,8 @@ string.h
 /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/main.c
 hashTableDirectorList.h
 /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableDirectorList.h
+hashTableFilmList.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableFilmList.h
 databaseInit.h
 /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/databaseInit.h
 
