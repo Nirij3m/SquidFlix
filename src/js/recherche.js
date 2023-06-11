@@ -1,19 +1,36 @@
+//Ecriture dans un fichier
+
 function recup(){
 
     //console.log("octopus");
 
     let counter = "000" ;
-    console.log(counter);
+    //console.log(counter);
 
     let director = document.getElementById("searchDirector").value;
-    //console.log("length : " + director.length);
-    console.log(director);
+    let size = director.length ;
+    //console.log("length : " + size);
+    //console.log(director);
+
+    if(director != ''){
+        let director2 = "";
+        for( let i = 0 ; i < size ; i ++ ){
+            if ( i == 0 ){
+                director2 += director[i].toUpperCase();
+            }
+            else{
+                director2 += director[i].toLowerCase();
+            }
+        }
+        //console.log(director2);
+        document.getElementById("searchDirector").value = director2 ;
+    }
 
     let time = document.getElementById("searchTime").value;
-    console.log(time);
+    //console.log(time);
 
     let genre = document.getElementById("searchGenre").value;
-    console.log(genre);
+    //console.log(genre);
 
     if(director == '' && time == "" && genre == "None"){
         counter = "000";
@@ -54,11 +71,10 @@ function recup(){
         }
     }
 
-    console.log(counter);
+    //console.log(counter);
     return counter ;
 }
 
-// ------- WRITE FILE -------
 // ------- WRITE FILE -------
 function writeFile(counter, id_form,func) {
 
@@ -66,22 +82,22 @@ function writeFile(counter, id_form,func) {
 
     var element = document.createElement('a');
     let save = counter + "\n";
-    console.log(save);
+    //console.log(save);
     //console.log("element : " + element);
 
     for(let j = 0; j < counter ; j ++){
 
-        console.log("id_form : " + id_form[j]);
+        //console.log("id_form : " + id_form[j]);
 
         let text1 = document.getElementById(id_form[j]).value;
-        console.log("text : " + text1);
+        //console.log("text : " + text1);
 
         let count = text1.length;
-        console.log("count : " + count);
+        //console.log("count : " + count);
 
-        console.log(func[j]);
+        //console.log(func[j]);
         let textToSave = func[j] + ";";
-        console.log(textToSave);
+        //console.log(textToSave);
 
         for(let i = 0;i<=count-1;i++){
             textToSave += text1[i];
@@ -90,10 +106,10 @@ function writeFile(counter, id_form,func) {
         }
 
         save += textToSave + "\n"
-        console.log(save);
+        //console.log(save);
     }
 
-    console.log(save);
+    //console.log(save);
 
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(save));
     element.setAttribute('download', 'request.txt');
@@ -151,10 +167,39 @@ function find(){
 
 }
 
+// ------- READ FILE -------
+function readFileByName(fileName){
+
+    //console.log("poulpe");
+
+    let xhr = new XMLHttpRequest();
+    do {
+        xhr.open("GET", fileName, false);
+        xhr.send(null);
+        //console.log("bloup");
+
+    }while(xhr.status === 404);
+
+    // assumes status 200
+    //console.log(xhr.responseText)
+    //console.log("octopus");
+    return xhr.responseText;
+}
+
+function readFile(){
+    readFileByName("ready.txt");
+    return readFileByName("results.txt");
+}
+// -------------------------
+
 // -------------------------
 
 function main(){
 
     console.log("poulpe");
 
+    //readFile();
+
 }
+
+main();
