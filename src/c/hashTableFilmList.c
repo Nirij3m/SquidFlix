@@ -31,14 +31,18 @@ unsigned int hashTableElementsFilm(struct HashTableFilm* ht){
     
 }
 
-int hash_functionFilm(struct HashTableFilm* ht, char* genre){
+int hash_functionFilm(struct HashTableFilm* ht, char* title){
     unsigned long hash = 5381;
     int c;
 
-    while (c = *genre++)
+    while (c = *title++)
         hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
 
     return hash%ht->buckets;
+}
+
+int hash_functionGenre(struct HashTableFilm* ht, char* genre){
+    return genre[0];
 }
 
 bool insertFilmRead(struct HashTableFilm* ht, char* title, int duration, char* genre){
@@ -54,9 +58,40 @@ bool insertFilmRead(struct HashTableFilm* ht, char* title, int duration, char* g
         return true;
 
     }
-    else { //Il y a collision mais le directeur n'appartient pas
+    else { //Il y a collision
         addFirstFilm(ht->table[hashedValue], title, duration, genre);
         return true;
+    }
+    return false;
+}
+
+bool insertFilmGenre(struct HashTableFilm* ht, char* genre, int duration, char* title){ //Fonction insertion pour le genre
+    if(isHashTableEmptyFilm(ht)){
+        return false;
+    }
+    int hashedValue = hash_functionGenre(ht, genre);
+    if(ht->table[hashedValue] == NULL){ //vide, créer la liste et insérer la valeur
+
+        ht->table[hashedValue] = createEmptyListFilm();
+        addFirstFilm(ht->table[hashedValue], title, duration, genre);
+        ht->items++;
+        return true;
+
+    }
+    else { //Il y a collision, je dois ajouter le film de manière triée, il n'y a pas de mélange de genre ayant le même hash
+        struct CellFilm* iter = ht->table[hashedValue]->head;
+        int pos = 0;
+        while(strcmp(iter->genre, genre) != 0 && iter->next != NULL){ //Je cherche la première occurence du genre
+            iter = iter->next;
+            pos++;
+        }
+        if(pos == 0){ //La genre recherché est au début de la liste
+            addFirstFilm(ht->table[hashedValue], title, duration, genre);
+        }
+        else{ //Le genre recherché est à la position "pos" dans la liste
+            bool valid = true;
+            addItemPosFilm(ht->table[hashedValue], title, duration, genre, pos, &valid);
+        }
     }
     return false;
 }

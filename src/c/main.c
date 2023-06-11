@@ -1,39 +1,94 @@
 #include "hashTableDirectorList.h"
 #include "hashTableFilmList.h"
 #include "databaseInit.h"
-#define BUCKET_SIZE 5
-void testHashTableIDirector();
+
 
 int main() {
 
-    //printHashTable(directors);
-    //printf("\n");
-    //printTimeArray(timeArray);
-    //printf("\n");
-    //printHashTableFilm(genreTable);
-    //printf("\n");
-    //printHashTableFilm(filmTable);
+    //INITI DATABASE
+    double time_spent = 0.0;
+    clock_t begin = clock();
+    struct ListFilm** timeArray = createTimeArray();
+    struct HashTableFilm* films = createEmptyHashTableFilm(1000);
+    struct HashTableFilm* genres = createEmptyHashTableFilm(130);
+    struct HashTable* lib = readDirectors("BD_medium.txt", timeArray, genres, films);
+    clock_t end = clock();
+    time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
+    printf("Database initialized in: %fs\n", time_spent);
+    //END
 
-    //findByDirector("Yeung");
-    //randomFilm();
-    findByDuration(132);
+    //printHashTableFilm(genres);
+
+    //findByDuration(499, timeArray);
+    //findByDirector("Haam", lib);
+    //randomFilm(films);
+    //allDirectors(lib);
+    //findByGenre("Western", genres);
+
+    //LISTNER INCOMMING REQUESTS
+    bool stopInit = false;
+    remove("request.txt");
+    remove("results.txt");
+    remove("ready.txt");
+
+    while(!stopInit) {
+        printf("Listenning for incomming request...\n");
+        FILE *request;
+        request = fopen("request.txt", "r");
+        char functionCalled[32];
+        char parameter[32];
+
+        while (request == NULL) { //Tant qu'un fichier request.txt n'est pas arrivée, je continue de le chercher
+            request = fopen("request.txt", "r");
+        }
+        while (!feof(request)) { //Requête arrivée
+            printf("Request found!\n");
+            fscanf(request, "%[^;];%[^\n]\n", functionCalled, parameter);
+            parameter[strcspn(parameter, "\r")] = '\0'; //retire l'éventuel "\n"
+
+            //Je teste toutes les fonctions possibles à appeler
+            if (strcmp(functionCalled, "findByDirector") == 0) {
+                findByDirector(parameter, lib);
+                clearInput(); //removes the ready.txt and the results.txt
+            }
+            if (strcmp(functionCalled, "findByGenre") == 0) {
+                findByGenre(parameter, genres);
+                clearInput();
+            }
+            if (strcmp(functionCalled, "findByDuration") == 0) {
+                findByDuration(atoi(parameter), timeArray);
+                clearInput();
+            }
+            if (strcmp(functionCalled, "randomFilm") == 0) {
+                randomFilm(films);
+                clearInput();
+            }
+            if (strcmp(functionCalled, "allDirectors") == 0) {
+                allDirectors(lib);
+                clearInput();
+            }
+            if (strcmp(functionCalled, "printTopDirector") == 0) {
+                printTopDirector(lib);
+                clearInput();
+            }
+            if (strcmp(functionCalled, "deleteDatabase") == 0){
+                printf("Databsase clear procedure intialized");
+                stopInit = true; //will stop the infinite loop after the database have been cleared
+                freeTimeArray(timeArray);
+                deleteHashTableFilm(&films);
+                deleteHashTableFilm(&genres);
+                deleteHashTable(&lib);
+            }
+            //Clear the input to avoid artefacts
+            memset(functionCalled, '\0', sizeof(char) * 32);
+            memset(parameter, '\0', sizeof(char) * 32);
+        }
+        //J'ai lu toute la requête, je peux la supprimer
+        remove("request.txt");
+        fclose(request);
+    }
+    //END
 
 return 0;
 }
 
-void testHashTableIDirector(){
-
-    struct HashTable* h1 = createEmptyHashTable(BUCKET_SIZE);
-    insert(h1, "Bob", "Vroum", 150, "Comedy");
-    insert(h1, "Bob", "Papacito", 11, "Drouate");
-    insert(h1, "Alex", "Malo", 2, "Drama");
-    insert(h1, "Roger", "camp", 2, "Drama");
-    insert(h1, "Mina", "rat", 2, "Drama");
-    insert(h1, "Jeanne", "papr", 2, "Drama");
-
-    printHashTable(h1);
-    printListFilm(h1->table[4]->head->films);
-
-    deleteHashTable(&h1);
-
-}

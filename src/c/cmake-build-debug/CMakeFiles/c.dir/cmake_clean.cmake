@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/c.dir/accountManagement.c.o"
   "CMakeFiles/c.dir/databaseInit.c.o"
   "CMakeFiles/c.dir/hashTableDirectorList.c.o"
   "CMakeFiles/c.dir/hashTableFilmList.c.o"

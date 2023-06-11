@@ -76,6 +76,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/accountManagement.c">
+			<Option target="c"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/accountManagement.h">
+			<Option target="c"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/databaseInit.c">
 			<Option target="c"/>
 		</Unit>

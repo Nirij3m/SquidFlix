@@ -142,6 +142,33 @@ c/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/build
 .PHONY : c/fast
 
+accountManagement.o: accountManagement.c.o
+
+.PHONY : accountManagement.o
+
+# target to build an object file
+accountManagement.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/accountManagement.c.o
+.PHONY : accountManagement.c.o
+
+accountManagement.i: accountManagement.c.i
+
+.PHONY : accountManagement.i
+
+# target to preprocess a source file
+accountManagement.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/accountManagement.c.i
+.PHONY : accountManagement.c.i
+
+accountManagement.s: accountManagement.c.s
+
+.PHONY : accountManagement.s
+
+# target to generate assembly for a file
+accountManagement.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/accountManagement.c.s
+.PHONY : accountManagement.c.s
+
 databaseInit.o: databaseInit.c.o
 
 .PHONY : databaseInit.o
@@ -313,6 +340,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... c"
+	@echo "... accountManagement.o"
+	@echo "... accountManagement.i"
+	@echo "... accountManagement.s"
 	@echo "... databaseInit.o"
 	@echo "... databaseInit.i"
 	@echo "... databaseInit.s"

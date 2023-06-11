@@ -233,12 +233,13 @@ struct ListFilm** createTimeArray(){
     struct ListFilm** timeArray = malloc(500*sizeof(struct ListFilm*));
     for(int i =0; i < 500; i++){
         timeArray[i] = malloc(sizeof(struct ListFilm));
+
     }
     return timeArray;
 }
 
 bool insertFilm(struct ListFilm** timeArray, char* title, int duration, char* genre){
-    if(isListEmptyFilm(timeArray)){
+    if(isListEmptyFilm(*timeArray)){
         return false;
     }
     if(timeArray[duration] == NULL){
@@ -252,8 +253,10 @@ bool insertFilm(struct ListFilm** timeArray, char* title, int duration, char* ge
 }
 
 void freeTimeArray(struct ListFilm** timeArray){
+
     for(int i = 0; i < 500; i++){
         deleteListFilm(&timeArray[i]);
+        free(timeArray[i]);
     }
     free(timeArray);
     timeArray = NULL;

@@ -41,7 +41,7 @@ int hash_function(struct HashTable* ht, char* director){
     return hash%ht->buckets;
 }
 
-bool insert(struct HashTable* ht, char* director, char* title, int duration, char* genre){
+bool insert(struct HashTable* ht, char* director, char* title, int duration, char* genre, int* maxFilm){
     if(isHashTableEmpty(ht)){
         return false;
     }
@@ -49,23 +49,38 @@ bool insert(struct HashTable* ht, char* director, char* title, int duration, cha
     if(ht->table[hashedValue] == NULL){ //vide, créer la liste et insérer la valeur
 
         ht->table[hashedValue] = createEmptyListDirector();
-        addFirstDirector(ht->table[hashedValue], director);
-        addFirstFilm(ht->table[hashedValue]->head->films, title, duration, genre);
-        ht->table[hashedValue]->head->nmbFilm++;
+        addFirstDirector(ht->table[hashedValue], director); //j'ajoute le directeur en début de liste
+        addFirstFilm(ht->table[hashedValue]->head->films, title, duration, genre); //j'ajoute le film du directeur situé en début de list
+        ht->table[hashedValue]->head->nmbFilm++; //J'incrémente le nombre de film
+
+        if(ht->table[hashedValue]->head->nmbFilm > *maxFilm){ //Ce directeur à fait le plus de film, je stocke sa cellule comme topDirector
+            ht->topDirector = ht->table[hashedValue]->head;
+        }
         ht->items++;
         return true;
 
     }
     else{ //il y a collision, j'ajoute à la liste la valeur
-        if(directorBelongs(ht->table[hashedValue], director) != NULL){ //DirectorBelongs return the cell if founded or NULL if not
-            directorBelongs(ht->table[hashedValue], director)->nmbFilm++;
-            addFirstFilm(directorBelongs(ht->table[hashedValue], director)->films, title, duration, genre);
+        struct Director* temp = directorBelongs(ht->table[hashedValue],director); //DirectorBelongs return the cell if founded or NULL if not
+
+        if(temp != NULL){ //Le directeur existe déjà
+            temp->nmbFilm++;
+            addFirstFilm(temp->films, title, duration, genre);
+
+            if(temp->nmbFilm > *maxFilm){ //Ce directeur à fait le plus de film, je stocke sa cellule comme topDirector
+                ht->topDirector = temp;
+            }
             return true;
         }
         else { //Il y a collision mais le directeur n'appartient pas
+
             addFirstDirector(ht->table[hashedValue], director);
             addFirstFilm(ht->table[hashedValue]->head->films, title, duration, genre);
             ht->table[hashedValue]->head->nmbFilm++;
+
+            if(ht->table[hashedValue]->head->nmbFilm > *maxFilm){ //Ce directeur à fait le plus de film, je stocke sa cellule comme topDirector
+                ht->topDirector = ht->table[hashedValue]->head;
+            }
             return true;
         }
     }
