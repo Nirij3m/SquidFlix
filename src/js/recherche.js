@@ -201,7 +201,7 @@ function main(){
     find();
 
     //readFile();
-    let myResults = readFile();
-    console.log(myResults);
+    //let myResults = readFile();
+    //console.log(myResults);
 
 }
