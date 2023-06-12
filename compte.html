@@ -9,6 +9,7 @@
   <script src="src/js/read_write.js" defer></script>
   <script src="src/js/generalFunction.js" defer></script>
   <script src="src/js/index.js" defer></script>
+  <script src="src/js/compte.js" defer></script>
   <script src="https://kit.fontawesome.com/5b8b37978c.js" crossorigin="anonymous" defer></script>
   <link rel = "icon" href ="" type =""> <!-- logo de l'onglet de la page -->
   <title>Filmothèqu'ISEN</title>
@@ -27,15 +28,28 @@
   </header>
 
   <form action="" method="GET" id="container">
-    <div class="text"><p><u>Connectez-vous</u></p></div>
+    <div class="text">
+      <p><u>Connectez-vous</u></p>
+    </div>
 
-    <div class="box"> <i class="fa-solid fa-person"></i><input type="text" name="lname" class="input" placeholder="Nom d'utilisateur"> </div>
+    <div class="box">
+      <i class="fa-solid fa-person"></i><input type="text" name="lname" class="input" placeholder="Nom d'utilisateur"> 
+    </div>
+
     <p class="errorText" id="box1">Veuillez renseigner un nom et un prénom</p>
 
-    <div class="box"> <i class="fa-solid fa-lock"></i> <input type="text" name="email" class="input" placeholder="Mot de passe"> </div>
+    <div class="box"> 
+      <i class="fa-solid fa-lock" onclick="changer()"></i> 
+      <input type="password" name="pass" id="pw" class="input" placeholder="Mot de passe">
+    </div>
+
     <p class="errorText" id="box2">Email inccorect</p>
 
-    <div class="mess"><span class="subdiv"><p class="envoyer"><input type="submit" onclick="event.preventDefault()" value="Envoyer"></p></span></div>
+    <div class="mess">
+      <span class="subdiv">
+        <p class="envoyer"><input type="submit" onclick="event.preventDefault()" value="Envoyer"></p>
+      </span>
+    </div>
 
   </form>
 
