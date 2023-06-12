@@ -1,3 +1,32 @@
+//Modal liste Auteurs
+
+// Get the modal
+var modalQuestion = document.getElementById("Modal-question");
+
+// Get the button that opens the modal
+var btnQuestion = document.getElementById("fa-qst");
+
+// Get the <span> element that closes the modal
+var spanQuestion = document.getElementsByClassName("close-question")[0];
+
+// When the user clicks the button, open the modal 
+btnQuestion.onclick = function() {
+    modalQuestion.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+spanQuestion.onclick = function() {
+    modalQuestion.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modalQuestion) {
+    modalQuestion.style.display = "none";
+  }
+}
+
+
 //Ecriture dans un fichier
 
 function recup(){
