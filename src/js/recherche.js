@@ -81,7 +81,7 @@ function writeFile(counter, id_form,func) {
     //console.log("Poulpe");
 
     var element = document.createElement('a');
-    let save = counter + "\n";
+    let save = "";
     //console.log(save);
     //console.log("element : " + element);
 
@@ -192,6 +192,61 @@ function readFile(){
     readFileByName("/src/js/ready.txt");
     return readFileByName("/src/js/results.txt");
 }
+
+function Results(txt){
+
+    let n = txt.length ;
+    let count = 0 ;
+    let counter = 0;
+    let movies ;
+    let film ;
+
+    let exe = "";
+    let director = "";
+    let time = "";
+    let genre = "";
+
+    for ( let i = 0 ; i < n ; i ++ ){
+
+        if ( txt[i] == "\n" && counter == 0){
+            counter += 1 ;
+        }
+
+        if ( counter == 0 ){
+            exe += txt[i]
+        }
+
+        if ( txt[i] == ";"){
+            count += 1 ;
+            count = count%3 ;
+        }
+
+        if ( counter != 0 && count == 0 ){
+            director += txt[i] ;
+        }
+
+        if ( counter != 0 && count == 1 ){
+            time += txt[i] ;
+        }
+
+        if ( counter != 0 && count == 0 ){
+            genre += txt[i] ;
+        }
+
+        if ( txt[i] == "\n" && counter != 0){
+
+            film[0] = director;
+            film[1] = time ;
+            film[2] = genre ;
+
+            movies[counter - 1] = film ;
+
+            counter += 1 ;
+        }
+
+    }
+
+}
 // -------------------------
 
 // -------------------------
@@ -205,5 +260,7 @@ function main(){
     //readFile();
     let myResults = readFile();
     console.log(myResults);
+
+    Results(myResults);
 
 }
