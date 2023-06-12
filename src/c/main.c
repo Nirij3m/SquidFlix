@@ -37,38 +37,39 @@ int main() {
         request = fopen("request.txt", "r");
         char functionCalled[32];
         char parameter[32];
+        char* destination;
 
         while (request == NULL) { //Tant qu'un fichier request.txt n'est pas arrivée, je continue de le chercher
             request = fopen("request.txt", "r");
         }
         while (!feof(request)) { //Requête arrivée
             printf("Request found!\n");
-            fscanf(request, "%[^;];%[^\n]\n", functionCalled, parameter);
+            fscanf(request, "%[^;];%[^;];%[^\n]\n", destination, functionCalled, parameter);
             parameter[strcspn(parameter, "\r")] = '\0'; //retire l'éventuel "\n"
 
             //Je teste toutes les fonctions possibles à appeler
             if (strcmp(functionCalled, "findByDirector") == 0) {
-                findByDirector(parameter, lib);
+                findByDirector(parameter, lib, destination);
                 clearInput(); //removes the ready.txt and the results.txt
             }
             if (strcmp(functionCalled, "findByGenre") == 0) {
-                findByGenre(parameter, genres);
+                findByGenre(parameter, genres, destination);
                 clearInput();
             }
             if (strcmp(functionCalled, "findByDuration") == 0) {
-                findByDuration(atoi(parameter), timeArray);
+                findByDuration(atoi(parameter), timeArray, destination);
                 clearInput();
             }
             if (strcmp(functionCalled, "randomFilm") == 0) {
-                randomFilm(films);
+                randomFilm(films, destination);
                 clearInput();
             }
             if (strcmp(functionCalled, "allDirectors") == 0) {
-                allDirectors(lib);
+                allDirectors(lib, destination);
                 clearInput();
             }
             if (strcmp(functionCalled, "printTopDirector") == 0) {
-                printTopDirector(lib);
+                printTopDirector(lib, destination);
                 clearInput();
             }
             if (strcmp(functionCalled, "deleteDatabase") == 0){

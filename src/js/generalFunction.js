@@ -3,34 +3,20 @@ function animateCards(){
        card.addEventListener("mouseover", () => { //Je over la card
             card.children[0].classList.add("fade-in-bg");
             card.children[1].classList.add("fade-in-bg");
-            Array.from(document.getElementsByClassName("title")).forEach((title) => {
-               title.style.color = "#e5941f";
-            });
-            Array.from(document.getElementsByClassName("genre")).forEach((genre) => {
-                genre.style.color = "#797979";
-            });
-            Array.from(document.getElementsByClassName("duration")).forEach((duration) => {
-                duration.style.color = "#797979";
-            });
-            Array.from(document.getElementsByClassName("director")).forEach((director) => {
-                director.style.color = "#a9a9a9";
-            });
+            card.getElementsByClassName("title")[0].style.color = "#be743e";
+            card.getElementsByClassName("genre")[0].style.color = "#4c4c4c";
+           card.getElementsByClassName("duration")[0].style.color = "#4c4c4c";
+           card.getElementsByClassName("genre")[0].style.color = "#595959";
+           card.getElementsByClassName("director")[0].style.color = "#949494";
          });
        card.addEventListener("mouseout", () => { //Je quitte la card
             card.children[0].classList.remove("fade-in-bg");
             card.children[1].classList.remove("fade-in-bg");
-            Array.from(document.getElementsByClassName("title")).forEach((title) => {
-                title.style.color = "#F2EDEB";
-            });
-            Array.from(document.getElementsByClassName("genre")).forEach((genre) => {
-                genre.style.color = "#F2EDEB";
-            });
-            Array.from(document.getElementsByClassName("duration")).forEach((duration) => {
-                duration.style.color = "#F2EDEB";
-            });
-            Array.from(document.getElementsByClassName("director")).forEach((director) => {
-                director.style.color = "#F2EDEB";
-            });
+           card.getElementsByClassName("title")[0].style.color = "#f1f1f1";
+           card.getElementsByClassName("genre")[0].style.color = "#f1f1f1";
+           card.getElementsByClassName("duration")[0].style.color = "#f1f1f1";
+           card.getElementsByClassName("genre")[0].style.color = "#f1f1f1";
+           card.getElementsByClassName("director")[0].style.color = "#f1f1f1";
        });
     });
 }
