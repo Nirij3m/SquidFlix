@@ -1,0 +1,5 @@
+S
+0.456161
+Pokemon;151;Animation
+Pokemon;151;Animation
+Poulpe;8;Life
