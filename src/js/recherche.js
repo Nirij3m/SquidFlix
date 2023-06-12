@@ -290,7 +290,7 @@ function Results(txt){
 
                         newCard.children[0].children[2].setAttribute("src", randomImage);
 
-                        document.getElementsByClassName("container")[0].appendChild(newCard);
+                        document.getElementsByClassName("container1")[0].appendChild(newCard);
 
                         titre = "";
                         time = "";
@@ -337,7 +337,7 @@ function Results(txt){
     
                             newCard.children[0].children[2].setAttribute("src", randomImage);
     
-                            document.getElementsByClassName("container")[0].appendChild(newCard);
+                            document.getElementsByClassName("container2")[0].appendChild(newCard);
     
                             titre = "";
                             time = "";
