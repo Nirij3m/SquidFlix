@@ -203,7 +203,7 @@ function Results(txt){
 
     let n = txt.length ;
     let count = 0 ;
-    let counter = 0;
+    let counter = -1;
     let suggestion = 1 ;
 
     let exe = "";
@@ -221,54 +221,102 @@ function Results(txt){
     else {
         for ( let i = 0 ; i < n ; i ++ ){
 
-            if ( counter == 0 && txt[i] != "\n"){
-                exe += txt[i] ;
-            }
-            if ( counter == 0 && txt[i] == "\n"){
-                counter += 1 ;
-            }
-            else {
-                if ( count == 0 && txt[i] != "\n" && txt[i] != ";"){
-                    titre += txt[i] ;
+            if( txt[0] == "R" && i > 1 ){
+                if ( counter == 0 && txt[i] != "\n"){
+                    exe += txt[i] ;
                 }
-                if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){
-                    time += txt[i] ;
+                if ( counter == 0 && txt[i] == "\n"){
+                    counter += 1 ;
                 }
-                if ( count == 2 && txt[i] != "\n" && txt[i] != ";"){
-                    genre += txt[i] ;
-                }
-                if ( txt[i] == ";" ){
-                    count = ( count + 1 ) % 3 ;
-                }
-                if ( txt[i] == "\n" || i == ( n - 1 ) ){
+                else {
+                    if ( count == 0 && txt[i] != "\n" && txt[i] != ";"){
+                        titre += txt[i] ;
+                    }
+                    if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){
+                        time += txt[i] ;
+                    }
+                    if ( count == 2 && txt[i] != "\n" && txt[i] != ";"){
+                        genre += txt[i] ;
+                    }
+                    if ( txt[i] == ";" ){
+                        count = ( count + 1 ) % 3 ;
+                    }
+                    if ( txt[i] == "\n" || i == ( n - 1 ) ){
 
-                    count = 0 ;
+                        count = 0 ;
 
-                    if ( suggestion == 1 ){
-                        document.getElementById("searchGenre2").value = genre ;
-                        writeFile(1,['searchGenre'],["findByGenre"], "S");
-                        suggestion += 1 ;
+                        if ( suggestion == 1 ){
+                            document.getElementById("searchGenre2").value = genre ;
+                            writeFile(1,['searchGenre'],["findByGenre"], "S");
+                            suggestion += 1 ;
+                        }
+
+                        let newCard = document.getElementsByClassName("container1")[1].cloneNode(true);
+                        console.log(newCard);
+                        newCard.children[0].children[0].children[1].innerHTML = titre ;
+                        newCard.children[0].children[0].children[2].innerHTML = genre ;
+                        newCard.children[0].children[1].children[0].innerHTML = time ;
+
+                        let randomImage = 'https://source.unsplash.com/random/?Octopus/' + Math.random(); //Obtention d'une image aléatoire
+
+                        newCard.children[0].children[2].setAttribute("src", randomImage);
+
+                        document.getElementsByClassName("container")[0].appendChild(newCard);
+
+                        titre = "";
+                        time = "";
+                        genre = "";
                     }
 
-                    let newCard = document.getElementsByClassName("container")[1].cloneNode(true);
-                    console.log(newCard);
-                    newCard.children[0].children[0].children[1].innerHTML = titre ;
-                    newCard.children[0].children[0].children[2].innerHTML = genre ;
-                    newCard.children[0].children[1].children[0].innerHTML = time ;
+                }
+            }
+            else {
 
-                    let randomImage = 'https://source.unsplash.com/random/?Octopus/' + Math.random(); //Obtention d'une image aléatoire
+                if( txt[0] == "S" && i > 1 ){
+                    if ( counter == 0 && txt[i] != "\n"){
+                        exe += txt[i] ;
+                    }
+                    if ( counter == 0 && txt[i] == "\n"){
+                        counter += 1 ;
+                    }
+                    else {
+                        if ( count == 0 && txt[i] != "\n" && txt[i] != ";"){
+                            titre += txt[i] ;
+                        }
+                        if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){
+                            time += txt[i] ;
+                        }
+                        if ( count == 2 && txt[i] != "\n" && txt[i] != ";"){
+                            genre += txt[i] ;
+                        }
+                        if ( txt[i] == ";" ){
+                            count = ( count + 1 ) % 3 ;
+                        }
+                        if ( txt[i] == "\n" || i == ( n - 1 ) ){
+    
+                            count = 0 ;
+    
+                            let newCard = document.getElementsByClassName("container2")[1].cloneNode(true);
+                            console.log(newCard);
+                            newCard.children[0].children[0].children[1].innerHTML = titre ;
+                            newCard.children[0].children[0].children[2].innerHTML = genre ;
+                            newCard.children[0].children[1].children[0].innerHTML = time ;
+    
+                            let randomImage = 'https://source.unsplash.com/random/?Octopus/' + Math.random(); //Obtention d'une image aléatoire
+    
+                            newCard.children[0].children[2].setAttribute("src", randomImage);
+    
+                            document.getElementsByClassName("container")[0].appendChild(newCard);
+    
+                            titre = "";
+                            time = "";
+                            genre = "";
+                        }
+                    }
 
-                    newCard.children[0].children[2].setAttribute("src", randomImage);
-
-                    document.getElementsByClassName("container")[0].appendChild(newCard);
-
-                    titre = "";
-                    time = "";
-                    genre = "";
                 }
 
             }
-
         }
 
         //console.log(exe);
