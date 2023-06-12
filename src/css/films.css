@@ -1,4 +1,6 @@
-.items-top {
+/*Sans flex colonne*/
+
+/*.items-top {
     background: #684655;
     border-radius: 66px;
     position: absolute;
@@ -33,15 +35,69 @@ p {
     margin: 0;
     padding: 0;
     color: #F2EDEB;
+}*/
+
+
+/*Avec flex colonne*/
+
+#colonne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.items-top {
+    background: #684655;
+    border-radius: 66px;
+    align-items: center;
+    text-align: center;
+    margin-top: 5%;
+
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#trophy-item {
+    width: 10%;
+    height: 10%;
+}
+
+.items-top:hover {
+    background-color: #745361;
+    box-shadow: 0 0 9px #684665;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    color: #F2EDEB;
+}
+
+#top-director, #top-number {
+    color: #F2EDEB;
+}
+
+.btn-pagination {
+    margin-bottom: 30%;
+    cursor: pointer;
+
+    background: #3D2833;
+	border-color: #F2EDEB;
+	border-radius: 5px;
+	color: #F2EDEB;
+}
 
 /*  CSS des cartes*/
 
 #container {
 
     background: rgba(217, 217, 217, 0.03);
-    margin: 10% 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 1%;
     padding: 5%;
 
     display: flex;
@@ -133,6 +189,5 @@ p {
 }
 
 /*  Fin CSS des cartes*/
-
 
 

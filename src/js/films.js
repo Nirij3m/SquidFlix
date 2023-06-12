@@ -29,6 +29,7 @@ function Results(txt){
     let n = txt.length ;
     let count = 0 ;
     let counter = 0;
+    let nbr_element = 0;
 
     let exe = "";
     let titre = "";
@@ -68,6 +69,7 @@ function Results(txt){
 
                     count = 0 ;
 
+
                     let newCard = document.getElementsByClassName("container")[1].cloneNode(true);
                     console.log(newCard);
                     newCard.children[0].children[0].children[1].innerHTML = titre ;
@@ -83,6 +85,8 @@ function Results(txt){
                     titre = "";
                     time = "";
                     genre = "";
+
+                    nbr_element+=1;
                 }
             }
 
@@ -99,6 +103,8 @@ function Results(txt){
 
     }
 }
+
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////::
 
