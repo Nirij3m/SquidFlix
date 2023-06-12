@@ -232,7 +232,7 @@ function Results(txt){
 
     let n = txt.length ;
     let count = 0 ;
-    let counter = -1;
+    let counter = 0;
     let suggestion = 1 ;
 
     let exe = "";
