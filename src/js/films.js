@@ -45,51 +45,49 @@ function Results(txt){
     else {
         for ( let i = 0 ; i < n ; i ++ ){
 
-            if( txt[0] == "R" && i > 1 ){
-                if ( counter == 0 && txt[i] != "\n"){
-                    exe += txt[i] ;
-                }
-                if ( counter == 0 && txt[i] == "\n"){
-                    counter += 1 ;
-                }
-                else {
-                    if ( count == 0 && txt[i] != "\n" && txt[i] != ";"){
-                        titre += txt[i] ;
-                    }
-                    if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){
-                        time += txt[i] ;
-                    }
-                    if ( count == 2 && txt[i] != "\n" && txt[i] != ";"){
-                        genre += txt[i] ;
-                    }
-                    if ( txt[i] == ";" ){
-                        count = ( count + 1 ) % 3 ;
-                    }
-                    if ( txt[i] == "\n" || i == ( n - 1 ) ){
-
-                        count = 0 ;
-
-                        let newCard = document.getElementsByClassName("container")[1].cloneNode(true);
-                        console.log(newCard);
-                        newCard.children[0].children[0].children[1].innerHTML = titre ;
-                        newCard.children[0].children[0].children[2].innerHTML = genre ;
-                        newCard.children[0].children[1].children[0].innerHTML = time ;
-
-                        let randomImage = 'https://source.unsplash.com/random/?Octopus/' + Math.random(); //Obtention d'une image aléatoire
-
-                        newCard.children[0].children[2].setAttribute("src", randomImage);
-
-                        document.getElementsByClassName("container")[0].appendChild(newCard);
-
-                        titre = "";
-                        time = "";
-                        genre = "";
-                    }
-                }
-
-                document.getElementById("title").innerHTML = exe ;
-
+            if ( counter == 0 && txt[i] != "\n"){
+                exe += txt[i] ;
             }
+            if ( counter == 0 && txt[i] == "\n"){
+                counter += 1 ;
+            }
+            else {
+                if ( count == 0 && txt[i] != "\n" && txt[i] != ";"){
+                    titre += txt[i] ;
+                }
+                if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){
+                    time += txt[i] ;
+                }
+                if ( count == 2 && txt[i] != "\n" && txt[i] != ";"){
+                    genre += txt[i] ;
+                }
+                if ( txt[i] == ";" ){
+                    count = ( count + 1 ) % 3 ;
+                }
+                if ( txt[i] == "\n" || i == ( n - 1 ) ){
+
+                    count = 0 ;
+
+                    let newCard = document.getElementsByClassName("container")[1].cloneNode(true);
+                    console.log(newCard);
+                    newCard.children[0].children[0].children[1].innerHTML = titre ;
+                    newCard.children[0].children[0].children[2].innerHTML = genre ;
+                    newCard.children[0].children[1].children[0].innerHTML = time ;
+
+                    let randomImage = 'https://source.unsplash.com/random/?Octopus/' + Math.random(); //Obtention d'une image aléatoire
+
+                    newCard.children[0].children[2].setAttribute("src", randomImage);
+
+                    document.getElementsByClassName("container")[0].appendChild(newCard);
+
+                    titre = "";
+                    time = "";
+                    genre = "";
+                }
+            }
+
+            document.getElementById("title").innerHTML = exe ;
+
         }
 
         //console.log(exe);
