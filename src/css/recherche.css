@@ -86,7 +86,6 @@ input {
 	margin: 1% 5%;
 	padding: 5%;
 
-	width: 100%;
 	overflow-x: auto;
 }
 
@@ -181,6 +180,12 @@ input {
 	to {
 		background-color: rgba(37, 37, 37, 1);
 	}
+}
+
+#test {
+
+	display: none;
+
 }
 
 /*  Fin CSS des cartes*/

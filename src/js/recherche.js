@@ -29,6 +29,12 @@ function recup(){
     let time = document.getElementById("searchTime").value;
     //console.log(time);
 
+    if(time < 0){
+        let time2 = time * ( -1 ) ;
+        
+        document.getElementById("searchTime").value = time2 ;
+    }
+
     let genre = document.getElementById("searchGenre").value;
     //console.log(genre);
 
@@ -202,50 +208,67 @@ function Results(txt){
     let film ;
 
     let exe = "";
-    let director = "";
+    let titre = "";
     let time = "";
     let genre = "";
 
-    for ( let i = 0 ; i < n ; i ++ ){
+    if ( txt == "NULL"){
+        document.getElementsByClassName("container").innerHTML = "Film introuvable..." ;
+    }
+    else {
+        for ( let i = 0 ; i < n ; i ++ ){
 
-        if ( txt[i] == "\n" && counter == 0){
-            counter += 1 ;
+            if ( counter == 0 && txt[i] != "\n"){
+                exe += txt[i] ;
+            }
+            if ( counter == 0 && txt[i] == "\n"){
+                counter += 1 ;
+            }
+            else {
+                if ( count == 0 && txt[i] != "\n" && txt[i] != ";"){
+                    titre += txt[i] ;
+                }
+                if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){
+                    time += txt[i] ;
+                }
+                if ( count == 2 && txt[i] != "\n" && txt[i] != ";"){
+                    genre += txt[i] ;
+                }
+                if ( txt[i] == ";" ){
+                    count = ( count + 1 ) % 3 ;
+                }
+                if ( txt[i] == "\n" || i == ( n - 1 ) ){
+                    count = 0 ;
+
+                    let newCard = document.getElementsByClassName("container")[1].cloneNode(true);
+                    console.log(newCard);
+                    newCard.children[0].children[0].children[1].innerHTML = titre ;
+                    newCard.children[0].children[0].children[2].innerHTML = genre ;
+                    newCard.children[0].children[1].children[0].innerHTML = time ;
+
+                    let randomImage = 'https://source.unsplash.com/random/?Octopus/' + Math.random(); //Obtention d'une image aléatoire
+
+                    newCard.children[0].children[2].setAttribute("src", randomImage);
+
+                    document.getElementsByClassName("container")[0].appendChild(newCard);
+
+                    titre = "";
+                    time = "";
+                    genre = "";
+                }
+
+            }
+
         }
 
-        if ( counter == 0 ){
-            exe += txt[i]
-        }
-
-        if ( txt[i] == ";"){
-            count += 1 ;
-            count = count%3 ;
-        }
-
-        if ( counter != 0 && count == 0 ){
-            director += txt[i] ;
-        }
-
-        if ( counter != 0 && count == 1 ){
-            time += txt[i] ;
-        }
-
-        if ( counter != 0 && count == 0 ){
-            genre += txt[i] ;
-        }
-
-        if ( txt[i] == "\n" && counter != 0){
-
-            film[0] = director;
-            film[1] = time ;
-            film[2] = genre ;
-
-            movies[counter - 1] = film ;
-
-            counter += 1 ;
-        }
+        //console.log(exe);
+        //console.log(titre);
+        //console.log(time);
+        //console.log(genre);
+        //console.log(movies);
+        //console.log(film);
 
     }
-
 }
 // -------------------------
 
