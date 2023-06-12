@@ -28,7 +28,7 @@ struct HashTable* readDirectors(char* fileName, struct ListFilm** timeArray, str
     return ht;
 }
 
-void findByDirector(char* director, struct HashTable* ht){
+void findByDirector(char* director, struct HashTable* ht, char* destination){
     double time_spent = 0.0;
     clock_t begin = clock();
 
@@ -47,6 +47,7 @@ void findByDirector(char* director, struct HashTable* ht){
     FILE* ready;
     result = fopen("results.txt", "w");
     if(!exist){ //Directeur inexistant, je renvoie NULL
+        fprintf(result, "%s\n", destination);
         fprintf(result, "NULL");
         fclose(result);
         ready = fopen("ready.txt", "w");
@@ -59,8 +60,10 @@ void findByDirector(char* director, struct HashTable* ht){
 
         clock_t end = clock();
         time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
+        fprintf(result, "%s\n", destination);
         fprintf(result, "%f", time_spent); //j'insère le temps de la fonction //j'insère le temps de la fonction
         for(int i = 0; i < listSize; i++){
+            fprintf(result, "%s\n", destination);
             fprintf(result, "\n%s;%d;%s", iter->nomFilm, iter->duration, iter->genre); //je rajoute les champs séparés par des ";"
             iter = iter->next;
         }
@@ -72,7 +75,7 @@ void findByDirector(char* director, struct HashTable* ht){
 
 }
 
-void findByDuration(int duration, struct ListFilm** timeArray){
+void findByDuration(int duration, struct ListFilm** timeArray, char* destination){
     double time_spent = 0.0;
     clock_t begin = clock();
 
@@ -82,6 +85,7 @@ void findByDuration(int duration, struct ListFilm** timeArray){
 
 
     if(duration > 500 || duration < 0 || timeArray[duration]->head == NULL || isListEmptyFilm(*timeArray)){
+        fprintf(result, "%s\n", destination);
         fprintf(result, "NULL");
         fclose(result);
         ready = fopen("ready.txt", "w");
@@ -94,8 +98,10 @@ void findByDuration(int duration, struct ListFilm** timeArray){
 
         clock_t end = clock();
         time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
+        fprintf(result, "%s\n", destination);
         fprintf(result, "%f", time_spent); //j'insère le temps de la fonction //j'insère le temps de la fonction
         for(int i = 0; i < listSize; i++){
+            fprintf(result, "%s\n", destination);
             fprintf(result, "\n%s;%d;%s", iter->nomFilm, iter->duration, iter->genre); //je rajoute les champs séparés par des ";"
 
             iter = iter->next;
@@ -108,7 +114,7 @@ void findByDuration(int duration, struct ListFilm** timeArray){
 
 }
 
-void findByGenre(char* genre, struct HashTableFilm* genres){
+void findByGenre(char* genre, struct HashTableFilm* genres, char* destination){
     double time_spent = 0.0;
     clock_t begin = clock();
 
@@ -119,6 +125,7 @@ void findByGenre(char* genre, struct HashTableFilm* genres){
     result = fopen("results.txt", "w");
 
     if(hashedValue > 130 || hashedValue < 0 || isListEmptyFilm(genres->table[hashedValue])){ //Le genre rentrée n'est pas connu dans la base de donnée
+        fprintf(result, "%s\n", destination);
         fprintf(result, "NULL");
         fclose(result);
         ready = fopen("ready.txt", "w");
@@ -133,9 +140,11 @@ void findByGenre(char* genre, struct HashTableFilm* genres){
 
     clock_t end = clock();
     time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
+    fprintf(result, "%s\n", destination);
     fprintf(result, "%f", time_spent); //j'insère le temps de la fonction
 
     while(iter != NULL && strcmp(iter->genre, genre) == 0) { //Je parcours la différence restante de la liste
+        fprintf(result, "%s\n", destination);
         fprintf(result, "\n%s;%d;%s", iter->nomFilm, iter->duration, iter->genre);
         iter = iter->next;
     }
@@ -146,7 +155,7 @@ void findByGenre(char* genre, struct HashTableFilm* genres){
 
 }
 
-void randomFilm(struct HashTableFilm* films){
+void randomFilm(struct HashTableFilm* films, char* destination){
     double time_spent = 0.0;
     clock_t begin = clock();
     srand(time(NULL));
@@ -158,6 +167,7 @@ void randomFilm(struct HashTableFilm* films){
 
     clock_t end = clock();
     time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
+    fprintf(result, "%s\n", destination);
     fprintf(result, "%f", time_spent); //j'insère le temps de la fonction
 
     for(int i =0; i < 4; i++){ //Je génère 4 films aléatoire
@@ -171,7 +181,7 @@ void randomFilm(struct HashTableFilm* films){
 
 }
 
-void allDirectors(struct HashTable* dir){
+void allDirectors(struct HashTable* dir, char* destination){
     double time_spent = 0.0;
     clock_t begin = clock();
 
@@ -182,6 +192,7 @@ void allDirectors(struct HashTable* dir){
 
     clock_t end = clock();
     time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
+    fprintf(result, "%s\n", destination);
     fprintf(result, "%f", time_spent); //j'insère le temps de la fonction
 
     struct Director* iter;
@@ -193,7 +204,8 @@ void allDirectors(struct HashTable* dir){
 
             for (int j = 0;
                  j < listSize; j++); //A chaque bucket je parcours le list associée et je print le nom du directeur
-            fprintf(result, "\n%s", iter->name);
+
+                 fprintf(result, "\n%s", iter->name);
             iter = iter->next;
         }
     }
@@ -203,7 +215,7 @@ void allDirectors(struct HashTable* dir){
     fclose(ready);
 }
 
-void printTopDirector(struct HashTable* dir){
+void printTopDirector(struct HashTable* dir, char* destination){
     double time_spent = 0.0;
     clock_t begin = clock();
 
@@ -215,6 +227,7 @@ void printTopDirector(struct HashTable* dir){
 
     clock_t end = clock();
     time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
+    fprintf(result, "%s\n", destination);
     fprintf(result, "%f", time_spent); //j'insère le temps de la fonction
 
     fprintf(result, "\n%s;%d", topD->name, topD->nmbFilm);
