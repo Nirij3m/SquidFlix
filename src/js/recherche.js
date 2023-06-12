@@ -343,12 +343,12 @@ function main(){
     find();
 
     //readFile();
-    let myresults = readFile("/src/js/ready.txt", "/src/js/results.txt");
+    let myresults = readFile("/src/c/cmake-build-debug/ready.txt", "/src/c/cmake-build-debug/results.txt");
     console.log(myresults);
 
     results(myresults);
 
-    let Sug = readFile("/src/js/ready3.txt", "/src/js/results3.txt");
+    let Sug = readFile("/src/c/cmake-build-debug/ready3.txt", "/src/c/cmake-build-debug/ res_sug.txt");
     console.log(Sug);
 
     results(Sug);

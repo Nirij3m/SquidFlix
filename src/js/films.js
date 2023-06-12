@@ -29,85 +29,44 @@ var first = 0; //indice de départ
 var nbr_element = 0; //nombre d'élément chargé
 
 
-function Results(txt){
+function results(txt){
 
     let n = txt.length ;
     let count = 0 ;
     let counter = 0;
 
     let exe = "";
-    let titre = "";
-    let time = "";
-    let genre = "";
+    let director = "";
+    let film = "";
 
-    if ( txt == "NULL"){
+    for ( let i = 0 ; i < n ; i ++ ){
         
-        let p = document.createElement('p').innerHTML = "Film introuvable..." ;
-
-        document.getElementsByClassName("container")[0].appendChild(p);
-
-    }
-    else {
-        for ( let i = 0 ; i < n ; i ++ ){
-
-            if ( counter == 0 && txt[i] != "\n"){
+        if ( counter == 0 && i > 1 ){
+            if ( txt[i] != "\n"){
                 exe += txt[i] ;
+                console.log("exe : " + exe);
             }
-            if ( counter == 0 && txt[i] == "\n"){
+            if (  txt[i] == "\n"){
                 counter += 1 ;
             }
-            else {
-                if ( count == 0 && txt[i] != "\n" && txt[i] != ";"){
-                    titre += txt[i] ;
-                }
-                if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){
-                    time += txt[i] ;
-                }
-                if ( count == 2 && txt[i] != "\n" && txt[i] != ";"){
-                    genre += txt[i] ;
-                }
-                if ( txt[i] == ";" ){
-                    count = ( count + 1 ) % 3 ;
-                }
-                if ( txt[i] == "\n" || i == ( n - 1 ) ){
-
-                    count = 0 ;
-                    nbr_element+=1; // + une carte sur la page
-
-                    for(let j = first; j < first + nbr_max; j++){
-                        if(j < nbr_element){
-
-                            let newCard = document.getElementsByClassName("container")[1].cloneNode(true);
-                            console.log(newCard);
-                            newCard.children[0].children[0].children[1].innerHTML = titre ;
-                            newCard.children[0].children[0].children[2].innerHTML = genre ;
-                            newCard.children[0].children[1].children[0].innerHTML = time ;
-
-                            let randomImage = 'https://source.unsplash.com/random/?Octopus/' + Math.random(); //Obtention d'une image aléatoire
-
-                            newCard.children[0].children[2].setAttribute("src", randomImage);
-
-                            document.getElementsByClassName("container")[0].appendChild(newCard); //ajoute la carte sur la page
-
-                            titre = "";
-                            time = "";
-                            genre = "";
-                        }
-                    }
-                }
-            }
-
-            document.getElementById("title").innerHTML = exe ;
-
         }
-
-        //console.log(exe);
-        //console.log(titre);
-        //console.log(time);
-        //console.log(genre);
-        //console.log(movies);
-        //console.log(film);
-
+        else {
+            if ( count == 0 && txt[i] != "\n" && txt[i] != ";"){
+                director += txt[i] ;
+                console.log("director : " + director);
+            }
+            if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){
+                film += txt[i] ;
+                console.log("film : " + film);
+            }
+            if ( txt[i] == ";" ){
+                count = ( count + 1 ) % 2 ;
+            }
+            if ( txt[i] == "\n" || i == ( n - 1 ) ){
+                document.getElementById("top-director").innerHTML = director ;
+                document.getElementById("top-number").innerHTML = film ;
+            }
+        }
     }
 }
 

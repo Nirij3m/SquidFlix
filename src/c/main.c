@@ -19,7 +19,7 @@ int main() {
 
     //RENVOIE TOP DIRECTOR, RANDOM FILMS, ALLFILMS
     //printTopDirector(lib,"T");
-    printTimeArray(timeArray);
+    // printTimeArray(timeArray);
     //printHashTableFilm(films);
 
     //printHashTableFilm(genres);
