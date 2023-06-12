@@ -1,1 +1,1 @@
-deleteDatabase;
+T;findByDirector;Leandron

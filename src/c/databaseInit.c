@@ -22,7 +22,7 @@ struct HashTable* readDirectors(char* fileName, struct ListFilm** timeArray, str
         insert(ht, director, title, duration, genre, &maxFilm);
         insertFilm(timeArray, title, duration, genre);
         insertFilmGenre(genreTable, genre, duration, title); //Table de Hashage selon le genre
-        insertFilmRead(filmTable, genre, duration, title); //Table de Hachage selon le titre du film
+        insertFilmRead(filmTable, title, duration, genre); //Table de Hachage selon le titre du film
     }
     fclose(file);
     return ht;
@@ -63,7 +63,6 @@ void findByDirector(char* director, struct HashTable* ht, char* destination){
         fprintf(result, "%s\n", destination);
         fprintf(result, "%f", time_spent); //j'insère le temps de la fonction //j'insère le temps de la fonction
         for(int i = 0; i < listSize; i++){
-            fprintf(result, "%s\n", destination);
             fprintf(result, "\n%s;%d;%s", iter->nomFilm, iter->duration, iter->genre); //je rajoute les champs séparés par des ";"
             iter = iter->next;
         }
@@ -84,7 +83,7 @@ void findByDuration(int duration, struct ListFilm** timeArray, char* destination
     result = fopen("results.txt", "w");
 
 
-    if(duration > 500 || duration < 0 || timeArray[duration]->head == NULL || isListEmptyFilm(*timeArray)){
+    if(duration > 500 || duration < 0 || timeArray[duration] == NULL){
         fprintf(result, "%s\n", destination);
         fprintf(result, "NULL");
         fclose(result);
@@ -101,7 +100,6 @@ void findByDuration(int duration, struct ListFilm** timeArray, char* destination
         fprintf(result, "%s\n", destination);
         fprintf(result, "%f", time_spent); //j'insère le temps de la fonction //j'insère le temps de la fonction
         for(int i = 0; i < listSize; i++){
-            fprintf(result, "%s\n", destination);
             fprintf(result, "\n%s;%d;%s", iter->nomFilm, iter->duration, iter->genre); //je rajoute les champs séparés par des ";"
 
             iter = iter->next;
@@ -144,7 +142,6 @@ void findByGenre(char* genre, struct HashTableFilm* genres, char* destination){
     fprintf(result, "%f", time_spent); //j'insère le temps de la fonction
 
     while(iter != NULL && strcmp(iter->genre, genre) == 0) { //Je parcours la différence restante de la liste
-        fprintf(result, "%s\n", destination);
         fprintf(result, "\n%s;%d;%s", iter->nomFilm, iter->duration, iter->genre);
         iter = iter->next;
     }
@@ -163,7 +160,7 @@ void randomFilm(struct HashTableFilm* films, char* destination){
 
     FILE* result;
     FILE* ready;
-    result = fopen("results.txt", "w");
+    result = fopen("res_random.txt", "w");
 
     clock_t end = clock();
     time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
@@ -176,7 +173,7 @@ void randomFilm(struct HashTableFilm* films, char* destination){
         fprintf(result, "\n%s;%d;%s", films->table[r]->head->genre, films->table[r]->head->duration, films->table[r]->head->nomFilm); //J'ajoute depuis des positions 4 films;
     }
     fclose(result);
-    ready = fopen("ready.txt", "w"); //Création du fichier prêt pour lecture du côté front end;
+    ready = fopen("ready1.txt", "w"); //Création du fichier prêt pour lecture du côté front end;
     fclose(ready);
 
 }
@@ -188,7 +185,7 @@ void allDirectors(struct HashTable* dir, char* destination){
     int size = dir->buckets;
     FILE* result;
     FILE* ready;
-    result = fopen("results.txt", "w");
+    result = fopen("res_allDirector.txt", "w");
 
     clock_t end = clock();
     time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
@@ -211,7 +208,7 @@ void allDirectors(struct HashTable* dir, char* destination){
     }
 
     fclose(result);
-    ready = fopen("ready.txt", "w"); //Création du fichier prêt pour lecture du côté front end;
+    ready = fopen("ready2.txt", "w"); //Création du fichier prêt pour lecture du côté front end;
     fclose(ready);
 }
 
@@ -222,7 +219,7 @@ void printTopDirector(struct HashTable* dir, char* destination){
     FILE* result;
     FILE* ready;
 
-    result = fopen("results.txt", "w");
+    result = fopen("res_director.txt", "w");
     struct Director* topD = topDirector(dir);
 
     clock_t end = clock();
@@ -233,11 +230,12 @@ void printTopDirector(struct HashTable* dir, char* destination){
     fprintf(result, "\n%s;%d", topD->name, topD->nmbFilm);
 
     fclose(result);
-    ready = fopen("ready.txt", "w"); //Création du fichier prêt pour lecture du côté front end;
+    ready = fopen("ready0.txt", "w"); //Création du fichier prêt pour lecture du côté front end;
     fclose(ready);
 }
 
 void clearInput(){
+
     usleep(10000000);
     remove("results.txt");
     remove("ready.txt");
