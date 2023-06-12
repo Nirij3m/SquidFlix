@@ -110,6 +110,14 @@ function recup(){
     return counter ;
 }
 
+function clear(){
+
+    card = document.getElementById("test1");
+    document.getElementsByClassName("container1") = "";
+    document.getElementsByClassName("container1") = card;
+
+}
+
 // ------- WRITE FILE -------
 function writeFile(counter, id_form,func, destionnation) {
 
@@ -233,6 +241,7 @@ function results(txt){
     let n = txt.length ;
     let count = 0 ;
     let counter = 0;
+    let suggestion = 1 ;
 
     let exe = "";
     let titre = "";
@@ -241,7 +250,7 @@ function results(txt){
 
     for ( let i = 0 ; i < n ; i ++ ){
         
-        if ( counter == 0){
+        if ( counter == 0 && i > 1 ){
             if ( txt[i] != "\n"){
                 exe += txt[i] ;
                 console.log("exe : " + exe);
@@ -270,20 +279,48 @@ function results(txt){
 
                 count = 0 ;
 
-                let newCard = document.getElementsByClassName("card-box")[0].cloneNode(true);
-                newCard.id ="";
-                console.log(newCard);
+                if ( txt[0] == "R"){
 
-                newCard.children[0].children[1].innerHTML = titre ;
-                newCard.children[0].children[2].innerHTML = genre ;
-                newCard.children[1].children[0].innerHTML = time ;
+                    if ( suggestion == 1 ){
+                        document.getElementById("searchGenre2").value = genre ;
+                        writeFile(1,['searchGenre2'],["findByGenre"], "S");
+                        suggestion += 1 ;
+                    }
 
-                let randomImage = 'https://source.unsplash.com/random/?Octopus/' + Math.random(); //Obtention d'une image aléatoire
+                    let newCard = document.getElementsByClassName("card-box1")[0].cloneNode(true);
+                    newCard.id ="";
+                    console.log(newCard);
 
-                newCard.children[2].setAttribute("src", randomImage);
+                    newCard.children[0].children[1].innerHTML = titre ;
+                    newCard.children[0].children[2].innerHTML = genre ;
+                    newCard.children[1].children[0].innerHTML = time ;
 
-                document.getElementsByClassName("container1")[0].appendChild(newCard);
-                console.log("bloup");
+                    let randomImage = 'https://source.unsplash.com/random/?Octopus/' + Math.random(); //Obtention d'une image aléatoire
+
+                    newCard.children[2].setAttribute("src", randomImage);
+
+                    document.getElementsByClassName("container1")[0].appendChild(newCard);
+                    console.log("bloup");
+                }
+
+                if ( txt[0] == "S"){
+
+                    let newCard = document.getElementsByClassName("card-box2")[0].cloneNode(true);
+                    newCard.id ="";
+                    console.log(newCard);
+
+                    newCard.children[0].children[1].innerHTML = titre ;
+                    newCard.children[0].children[2].innerHTML = genre ;
+                    newCard.children[1].children[0].innerHTML = time ;
+
+                    let randomImage = 'https://source.unsplash.com/random/?Octopus/' + Math.random(); //Obtention d'une image aléatoire
+
+                    newCard.children[2].setAttribute("src", randomImage);
+
+                    document.getElementsByClassName("container2")[0].appendChild(newCard);
+                    console.log("bloup");
+
+                }
 
                 titre = "" ;
                 time = "" ;
@@ -311,9 +348,9 @@ function main(){
 
     results(myresults);
 
-    //let Sug = readFile("/src/js/ready3.txt", "/src/js/results3.txt");
-    //console.log(Sug);
+    let Sug = readFile("/src/js/ready3.txt", "/src/js/results3.txt");
+    console.log(Sug);
 
-    //Results(Sug);
+    results(Sug);
 
 }
