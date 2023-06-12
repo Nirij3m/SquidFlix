@@ -195,7 +195,7 @@ function readFileByName(fileName){
 }
 
 function readFile(){
-    readFileByName("/src/c/ready.txt");
+    readFileByName("/src/c/cmake-build-debug/ready.txt");
     return readFileByName("/src/c/cmake-build-debug/results.txt");
 }
 
@@ -267,8 +267,10 @@ function Results(txt){
                         time = "";
                         genre = "";
                     }
-
                 }
+
+                document.getElementById("title").innerHTML = exe ;
+
             }
             else {
 
