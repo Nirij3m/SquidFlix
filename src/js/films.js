@@ -24,12 +24,16 @@ function readFile(){
     return readFileByName("/src/c/cmake-build-debug/results.txt");
 }
 
+var nbr_max = 24; //nombre max d'élément par page
+var first = 0; //indice de départ
+var nbr_element = 0; //nombre d'élément chargé
+
+
 function Results(txt){
 
     let n = txt.length ;
     let count = 0 ;
     let counter = 0;
-    let nbr_element = 0;
 
     let exe = "";
     let titre = "";
@@ -68,25 +72,28 @@ function Results(txt){
                 if ( txt[i] == "\n" || i == ( n - 1 ) ){
 
                     count = 0 ;
+                    nbr_element+=1; // + une carte sur la page
 
+                    for(let j = first; j < first + nbr_max; j++){
+                        if(j < nbr_element){
 
-                    let newCard = document.getElementsByClassName("container")[1].cloneNode(true);
-                    console.log(newCard);
-                    newCard.children[0].children[0].children[1].innerHTML = titre ;
-                    newCard.children[0].children[0].children[2].innerHTML = genre ;
-                    newCard.children[0].children[1].children[0].innerHTML = time ;
+                            let newCard = document.getElementsByClassName("container")[1].cloneNode(true);
+                            console.log(newCard);
+                            newCard.children[0].children[0].children[1].innerHTML = titre ;
+                            newCard.children[0].children[0].children[2].innerHTML = genre ;
+                            newCard.children[0].children[1].children[0].innerHTML = time ;
 
-                    let randomImage = 'https://source.unsplash.com/random/?Octopus/' + Math.random(); //Obtention d'une image aléatoire
+                            let randomImage = 'https://source.unsplash.com/random/?Octopus/' + Math.random(); //Obtention d'une image aléatoire
 
-                    newCard.children[0].children[2].setAttribute("src", randomImage);
+                            newCard.children[0].children[2].setAttribute("src", randomImage);
 
-                    document.getElementsByClassName("container")[0].appendChild(newCard);
+                            document.getElementsByClassName("container")[0].appendChild(newCard); //ajoute la carte sur la page
 
-                    titre = "";
-                    time = "";
-                    genre = "";
-
-                    nbr_element+=1;
+                            titre = "";
+                            time = "";
+                            genre = "";
+                        }
+                    }
                 }
             }
 
@@ -104,6 +111,24 @@ function Results(txt){
     }
 }
 
+
+// Se déplacer dans la pagination
+function firstPage(){
+
+}
+
+function previous(){
+    //first+=nbr_max; //décale de 24 la position initiale
+    //Results(readFile());
+}
+
+function nextPage(){
+    
+}
+
+function lastPage(){
+    
+}
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////::

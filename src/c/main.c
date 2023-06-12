@@ -8,13 +8,24 @@ int main() {
     //INITI DATABASE
     double time_spent = 0.0;
     clock_t begin = clock();
-    struct ListFilm** timeArray = createTimeArray();
-    struct HashTableFilm* films = createEmptyHashTableFilm(1000);
-    struct HashTableFilm* genres = createEmptyHashTableFilm(130);
-    struct HashTable* lib = readDirectors("BD_medium.txt", timeArray, genres, films);
+    struct ListFilm **timeArray = createTimeArray();
+    struct HashTableFilm *films = createEmptyHashTableFilm(2500);
+    struct HashTableFilm *genres = createEmptyHashTableFilm(130);
+    struct HashTable *lib = readDirectors("BD_medium.txt", timeArray, genres, films);
     clock_t end = clock();
-    time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
+    time_spent += (double) (end - begin) / CLOCKS_PER_SEC;
     printf("Database initialized in: %fs\n", time_spent);
+    //END
+
+    //RENVOIE TOP DIRECTOR, RANDOM FILMS, ALLFILMS
+    //printTopDirector(lib,"T");
+    printTimeArray(timeArray);
+    //printHashTableFilm(films);
+
+    //printHashTableFilm(genres);
+    //randomFilm(films, "A");
+    //allDirectors(lib, "D");
+
     //END
 
     //printHashTableFilm(genres);
@@ -37,7 +48,7 @@ int main() {
         request = fopen("request.txt", "r");
         char functionCalled[32];
         char parameter[32];
-        char* destination;
+        char destination[2];
 
         while (request == NULL) { //Tant qu'un fichier request.txt n'est pas arrivée, je continue de le chercher
             request = fopen("request.txt", "r");
@@ -56,8 +67,10 @@ int main() {
                 findByGenre(parameter, genres, destination);
                 clearInput();
             }
+            int newDuration = atoi(parameter);
+
             if (strcmp(functionCalled, "findByDuration") == 0) {
-                findByDuration(atoi(parameter), timeArray, destination);
+                findByDuration(newDuration, timeArray, destination);
                 clearInput();
             }
             if (strcmp(functionCalled, "randomFilm") == 0) {
@@ -83,6 +96,7 @@ int main() {
             //Clear the input to avoid artefacts
             memset(functionCalled, '\0', sizeof(char) * 32);
             memset(parameter, '\0', sizeof(char) * 32);
+
         }
         //J'ai lu toute la requête, je peux la supprimer
         remove("request.txt");
