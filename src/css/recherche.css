@@ -81,6 +81,12 @@ input {
 	padding: 1%;
 }
 
+#searchGenre2 {
+
+	display: none;
+
+}
+
 .scroll {
 	background: rgba(217, 217, 217, 0.03);
 	margin: 1% 5%;

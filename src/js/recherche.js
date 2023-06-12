@@ -82,7 +82,7 @@ function recup(){
 }
 
 // ------- WRITE FILE -------
-function writeFile(counter, id_form,func) {
+function writeFile(counter, id_form,func, destionnation) {
 
     //console.log("Poulpe");
 
@@ -102,7 +102,7 @@ function writeFile(counter, id_form,func) {
         //console.log("count : " + count);
 
         //console.log(func[j]);
-        let textToSave = func[j] + ";";
+        let textToSave = destionnation + ";" + func[j] + ";";
         //console.log(textToSave);
 
         for(let i = 0;i<=count-1;i++){
@@ -137,31 +137,31 @@ function find(){
     }
     else{
         if ( counter == "100" ){
-            writeFile(1,['searchDirector'],["findByDirector"]);
+            writeFile(1,['searchDirector'],["findByDirector"], "R");
         }
         else {
             if ( counter == "010" ){
-                writeFile(1,['searchTime'],["findByTime"]);
+                writeFile(1,['searchTime'],["findByTime"], "R");
             }
             else{
                 if ( counter == "001" ){
-                    writeFile(1,['searchGenre'],["findByGenre"]);
+                    writeFile(1,['searchGenre'],["findByGenre"], "R");
                 }
                 else{
                     if ( counter == "110" ){
-                        writeFile(2,['searchDirector','searchTime'],["findByDirector","findByTime"]);
+                        writeFile(2,['searchDirector','searchTime'],["findByDirector","findByTime"], "R");
                     }
                     else{
                         if ( counter == "101" ){
-                            writeFile(2,['searchDirector','searchGenre'],["findByDirector","findByGenre"]);
+                            writeFile(2,['searchDirector','searchGenre'],["findByDirector","findByGenre"], "R");
                         }
                         else{
                             if ( counter == "011" ){
-                                writeFile(2,['searchTime','searchGenre'],["findByTime","findByGenre"]);
+                                writeFile(2,['searchTime','searchGenre'],["findByTime","findByGenre"], "R");
                             }
                             else{
                                 if ( counter == "111" ){
-                                    writeFile(3,['searchDirector','searchTime','searchGenre'],["findByDirector","findByTime","findByGenre"]);
+                                    writeFile(3,['searchDirector','searchTime','searchGenre'],["findByDirector","findByTime","findByGenre"], "R");
                                 }
                             }
                         }
@@ -195,7 +195,7 @@ function readFileByName(fileName){
 }
 
 function readFile(){
-    readFileByName("/src/c/request.txt");
+    readFileByName("/src/c/ready.txt");
     return readFileByName("/src/c/cmake-build-debug/results.txt");
 }
 
@@ -204,6 +204,7 @@ function Results(txt){
     let n = txt.length ;
     let count = 0 ;
     let counter = 0;
+    let suggestion = 1 ;
 
     let exe = "";
     let titre = "";
@@ -240,7 +241,14 @@ function Results(txt){
                     count = ( count + 1 ) % 3 ;
                 }
                 if ( txt[i] == "\n" || i == ( n - 1 ) ){
+
                     count = 0 ;
+
+                    if ( suggestion == 1 ){
+                        document.getElementById("searchGenre2").value = genre ;
+                        writeFile(1,['searchGenre'],["findByGenre"], "S");
+                        suggestion += 1 ;
+                    }
 
                     let newCard = document.getElementsByClassName("container")[1].cloneNode(true);
                     console.log(newCard);
