@@ -113,6 +113,8 @@ function main() {
         });
     });
 
+    Results(readFile());
+
 }
 
 main();
