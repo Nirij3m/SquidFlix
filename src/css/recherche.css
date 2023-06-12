@@ -82,12 +82,11 @@ input {
 	padding: 1%;
 }
 
-<<<<<<< Updated upstream
 #searchGenre2 {
 
 	display: none;
+}
 
-=======
 /* The Modal (background) */
 .modal-question {
 	display: none; /* Hidden by default */
@@ -134,7 +133,6 @@ input {
 
 #fa-qst {
 	cursor: pointer;
->>>>>>> Stashed changes
 }
 
 .scroll {
