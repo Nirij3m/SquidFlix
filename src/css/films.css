@@ -86,6 +86,7 @@ p {
     background: #3D2833;
 	border-color: #F2EDEB;
 	border-radius: 5px;
+    border-width: thin;
 	color: #F2EDEB;
 }
 
