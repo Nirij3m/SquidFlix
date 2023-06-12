@@ -1,12 +1,14 @@
 //
 // Created by nirin on 5/12/2023.
 //
-#include "listDirector.h"
-#include "listFilm.h"
-#include "hashTableDirectorList.h"
-#include <time.h>
+
+
 #ifndef Film
 #define Film
+#include "listDirector.h"
+#include "listFilm.h"
+#include "nodeTrie.h"
+#include <time.h>
 
 struct HashTableFilm {
     unsigned int items;

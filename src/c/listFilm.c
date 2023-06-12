@@ -42,6 +42,7 @@ struct ListFilm* createEmptyListFilm(){
         return l1;
     }
     l1->size = 0;
+    l1->director = NULL;
     l1->head = NULL;
 
     return l1;
@@ -196,6 +197,7 @@ void deleteItemPosFilm(struct ListFilm* l, unsigned int position, bool* valid){
 void deleteListFilm(struct ListFilm** l){
 
         if(isListEmptyFilm(*l)){
+            free((*l)->director);
             free(*l);
             *l = NULL;
             return;
@@ -204,6 +206,7 @@ void deleteListFilm(struct ListFilm** l){
         for(int i = 0; i < size; i++){
             deleteFirstFilm(*l);
         }
+        free((*l)->director);
 
         free(*l);
         *l = NULL;

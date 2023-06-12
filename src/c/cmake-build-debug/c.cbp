@@ -8,116 +8,114 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="c">
-				<Option output="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/c" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug"/>
+				<Option output="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/c" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 c"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 c"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="c/fast">
-				<Option output="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/c" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug"/>
+				<Option output="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/c" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 c/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet\ C\ Web\ -\ Groupe\ 7/Github/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 c/fast"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/accountManagement.c">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/accountManagement.c">
 			<Option target="c"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/accountManagement.h">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/accountManagement.h">
 			<Option target="c"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/databaseInit.c">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/databaseInit.c">
 			<Option target="c"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/databaseInit.h">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/databaseInit.h">
 			<Option target="c"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/hashTableDirectorList.c">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableFilmList.c">
 			<Option target="c"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/hashTableDirectorList.h">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableFilmList.h">
 			<Option target="c"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/hashTableFilmList.c">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listDirector.c">
 			<Option target="c"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/hashTableFilmList.h">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listDirector.h">
 			<Option target="c"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/listDirector.c">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.c">
 			<Option target="c"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/listDirector.h">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.h">
 			<Option target="c"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/listFilm.c">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/main.c">
 			<Option target="c"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/listFilm.h">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/nodeTrie.c">
 			<Option target="c"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/main.c">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/nodeTrie.h">
 			<Option target="c"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/CMakeLists.txt">
+		<Unit filename="/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

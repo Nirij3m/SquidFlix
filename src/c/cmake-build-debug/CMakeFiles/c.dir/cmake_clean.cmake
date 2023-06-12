@@ -1,13 +1,13 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/c.dir/listFilm.c.o"
-  "CMakeFiles/c.dir/databaseInit.c.o"
-  "CMakeFiles/c.dir/listDirector.c.o"
-  "CMakeFiles/c.dir/hashTableDirectorList.c.o"
-  "CMakeFiles/c.dir/main.c.o"
-  "CMakeFiles/c.dir/hashTableFilmList.c.o"
   "CMakeFiles/c.dir/accountManagement.c.o"
-  "c.pdb"
+  "CMakeFiles/c.dir/databaseInit.c.o"
+  "CMakeFiles/c.dir/hashTableFilmList.c.o"
+  "CMakeFiles/c.dir/listDirector.c.o"
+  "CMakeFiles/c.dir/listFilm.c.o"
+  "CMakeFiles/c.dir/main.c.o"
+  "CMakeFiles/c.dir/nodeTrie.c.o"
   "c"
+  "c.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

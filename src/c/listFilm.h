@@ -15,6 +15,7 @@ struct CellFilm{
 };
 
 struct ListFilm{
+    char* director;
     unsigned int size;
     struct CellFilm* head;
 };

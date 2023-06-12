@@ -216,11 +216,6 @@ struct Director* directorBelongs(struct ListDirector* l, char* name){
     return NULL;
 }
 
-struct Director* topDirector(struct HashTable* ht){
-    return ht->topDirector;
-}
-
-
 
 int getPosItemDirector(struct ListDirector* l, char* name){
     if(isListEmptyDirector(l)){

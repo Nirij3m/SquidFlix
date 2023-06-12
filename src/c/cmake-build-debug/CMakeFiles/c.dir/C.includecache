@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,27 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/accountManagement.c
-accountManagement.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/accountManagement.h
-
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/accountManagement.h
-
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/databaseInit.c
-databaseInit.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/databaseInit.h
-unistd.h
--
-
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/databaseInit.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/databaseInit.h
 listDirector.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/listDirector.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listDirector.h
 listFilm.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/listFilm.h
-hashTableDirectorList.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/hashTableDirectorList.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.h
+nodeTrie.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/nodeTrie.h
 hashTableFilmList.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/hashTableFilmList.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableFilmList.h
 string.h
 -
 time.h
@@ -34,37 +22,17 @@ time.h
 stdlib.h
 -
 
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/hashTableDirectorList.c
-hashTableDirectorList.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/hashTableDirectorList.h
-
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/hashTableDirectorList.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableFilmList.h
 listDirector.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/listDirector.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listDirector.h
 listFilm.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/listFilm.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.h
+nodeTrie.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/nodeTrie.h
 time.h
 -
 
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/hashTableFilmList.c
-hashTableFilmList.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/hashTableFilmList.h
-
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/hashTableFilmList.h
-listDirector.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/listDirector.h
-listFilm.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/listFilm.h
-hashTableDirectorList.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/hashTableDirectorList.h
-time.h
--
-
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/listDirector.c
-listDirector.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/listDirector.h
-
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/listDirector.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listDirector.h
 stdio.h
 -
 stdbool.h
@@ -74,15 +42,11 @@ stdlib.h
 string.h
 -
 listFilm.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/listFilm.h
-hashTableDirectorList.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/hashTableDirectorList.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.h
+nodeTrie.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/nodeTrie.h
 
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/listFilm.c
-listFilm.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/listFilm.h
-
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/listFilm.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.h
 stdio.h
 -
 stdbool.h
@@ -92,11 +56,31 @@ stdlib.h
 string.h
 -
 
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/main.c
-hashTableDirectorList.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/hashTableDirectorList.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/main.c
+nodeTrie.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/nodeTrie.h
 hashTableFilmList.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/hashTableFilmList.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableFilmList.h
 databaseInit.h
-/mnt/c/Users/lisac/OneDrive/Documents/ISEN/Annee_1/Projet C Web - Groupe 7/Github/projetCIR1_groupe_7/src/c/databaseInit.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/databaseInit.h
+ctype.h
+-
+
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/nodeTrie.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+stdbool.h
+-
+ctype.h
+-
+listFilm.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.h
+listDirector.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listDirector.h
+hashTableFilmList.h
+/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/hashTableFilmList.h
 

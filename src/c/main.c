@@ -1,6 +1,7 @@
-#include "hashTableDirectorList.h"
+#include "nodeTrie.h"
 #include "hashTableFilmList.h"
 #include "databaseInit.h"
+#include <ctype.h>
 
 
 int main() {
@@ -9,9 +10,9 @@ int main() {
     double time_spent = 0.0;
     clock_t begin = clock();
     struct ListFilm **timeArray = createTimeArray();
-    struct HashTableFilm *films = createEmptyHashTableFilm(2500);
-    struct HashTableFilm *genres = createEmptyHashTableFilm(130);
-    struct HashTable *lib = readDirectors("BD_medium.txt", timeArray, genres, films);
+    struct NodeTrie* genres = createEmptyNodeTrie();
+    struct NodeTrie* root = readDict("BD_big.txt", timeArray, genres);
+
     clock_t end = clock();
     time_spent += (double) (end - begin) / CLOCKS_PER_SEC;
     printf("Database initialized in: %fs\n", time_spent);
@@ -19,22 +20,12 @@ int main() {
 
     //RENVOIE TOP DIRECTOR, RANDOM FILMS, ALLFILMS
     //printTopDirector(lib,"T");
-    // printTimeArray(timeArray);
-    //printHashTableFilm(films);
-
-    //printHashTableFilm(genres);
-    //randomFilm(films, "A");
-    //allDirectors(lib, "D");
-
+    randomFilm(timeArray, "T");
+    printTopDirector(root, "T");
+    allDirectors(root, "T");
+    allFilms(root, "T");
     //END
 
-    //printHashTableFilm(genres);
-
-    //findByDuration(499, timeArray);
-    //findByDirector("Haam", lib);
-    //randomFilm(films);
-    //allDirectors(lib);
-    //findByGenre("Western", genres);
 
     //LISTNER INCOMMING REQUESTS
     bool stopInit = false;
@@ -49,6 +40,7 @@ int main() {
         char functionCalled[32];
         char parameter[32];
         char destination[2];
+        char preword[32];
 
         while (request == NULL) { //Tant qu'un fichier request.txt n'est pas arrivée, je continue de le chercher
             request = fopen("request.txt", "r");
@@ -57,10 +49,16 @@ int main() {
             printf("Request found!\n");
             fscanf(request, "%[^;];%[^;];%[^\n]\n", destination, functionCalled, parameter);
             parameter[strcspn(parameter, "\r")] = '\0'; //retire l'éventuel "\n"
+            memset(preword, '\0', 32);
 
             //Je teste toutes les fonctions possibles à appeler
             if (strcmp(functionCalled, "findByDirector") == 0) {
-                findByDirector(parameter, lib, destination);
+                for(int i = 0; parameter[i]; i++){
+                    parameter[i] = tolower(parameter[i]);
+                }
+                remove_spaces(parameter);
+                remove_schar(parameter);
+                findByDirector(parameter, root, destination);
                 clearInput(); //removes the ready.txt and the results.txt
             }
             if (strcmp(functionCalled, "findByGenre") == 0) {
@@ -74,24 +72,27 @@ int main() {
                 clearInput();
             }
             if (strcmp(functionCalled, "randomFilm") == 0) {
-                randomFilm(films, destination);
+                randomFilm(timeArray, destination);
                 clearInput();
             }
             if (strcmp(functionCalled, "allDirectors") == 0) {
-                allDirectors(lib, destination);
+                allDirectors(root, destination);
+                clearInput();
+            }
+            if (strcmp(functionCalled, "allFilms") == 0) {
+                allFilms(root, destination);
                 clearInput();
             }
             if (strcmp(functionCalled, "printTopDirector") == 0) {
-                printTopDirector(lib, destination);
+                printTopDirector(root, destination);
                 clearInput();
             }
             if (strcmp(functionCalled, "deleteDatabase") == 0){
                 printf("Databsase clear procedure intialized");
                 stopInit = true; //will stop the infinite loop after the database have been cleared
                 freeTimeArray(timeArray);
-                deleteHashTableFilm(&films);
-                deleteHashTableFilm(&genres);
-                deleteHashTable(&lib);
+                deleteNodeTrie(&genres);
+                deleteNodeTrie(&root);
             }
             //Clear the input to avoid artefacts
             memset(functionCalled, '\0', sizeof(char) * 32);

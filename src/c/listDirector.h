@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "listFilm.h"
-#include "hashTableDirectorList.h"
+#include "nodeTrie.h"
 
 
 struct Director {
@@ -34,7 +34,7 @@ void addItemPosDirector(struct ListDirector* l, char* name, unsigned int positio
 void deleteItemPosDirector(struct ListDirector* l, unsigned int position, bool* valid);
 void deleteListDirector(struct ListDirector** l);
 struct Director* directorBelongs(struct ListDirector* l, char* name);
-struct Director* topDirector(struct HashTable* ht);
+
 int getPosItemDirector(struct ListDirector*l, char* name);
 
 
