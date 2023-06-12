@@ -211,7 +211,11 @@ function Results(txt){
     let genre = "";
 
     if ( txt == "NULL"){
-        document.getElementsByClassName("container").innerHTML = "Film introuvable..." ;
+        
+        let p = document.createElement('p').innerHTML = "Film introuvable..." ;
+
+        document.getElementsByClassName("container")[0].appendChild(p);
+
     }
     else {
         for ( let i = 0 ; i < n ; i ++ ){
