@@ -1,5 +1,7 @@
 
 function changer() {
+    let bool = true;
+
     if (bool) {
         document.getElementById("pw").setAttribute("type", "text") //rend visible le mot de passe
         bool = false;
@@ -15,8 +17,9 @@ function hash(str){
 }
 
 function subscribe() {
-    let connexionPanel = document.getElementById("container").cloneNode(true);
-    connexionPanel.children[0].children[1].innerHTML = "Inscrivez-vous";
+    let connexionPanel = document.getElementsByClassName("container")[0].cloneNode(true);
+    connexionPanel.children[0].children[0].innerHTML = "Inscrivez-vous";
+    connexionPanel.children[6].remove();
 
     document.getElementById("subscribe").addEventListener("click", function(){
         console.log("click");
@@ -26,3 +29,4 @@ function subscribe() {
 function main(){
     subscribe();
 }
+main()

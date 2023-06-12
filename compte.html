@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
 <head>
   <link href="src/css/navbar_footer.css" rel="stylesheet">
   <link href="src/css/compte.css" rel="stylesheet">
@@ -30,18 +30,14 @@
   </header>
 
 
-  <form action="" method="GET" id="container">
+  <form action="" method="GET" class="container">
     <div class="text">
       <p><u>Connectez-vous</u></p>
     </div>
 
     <div class="box">
-      <i class="fa-solid fa-person"></i><input type="text" name="lname" class="input" placeholder="Nom d'utilisateur"> 
+      <i class="fa-solid fa-person"></i><input type="text" name="lname" class="input" placeholder="Nom d'utilisateur">
     </div>
-
-  <form action="" method="GET" class="container">
-    <div class="text"><p><u>Connectez-vous</u></p></div>
-
 
     <p class="errorText" id="box1">Veuillez renseigner un nom et un prénom</p>
 
@@ -53,19 +49,10 @@
     <p class="errorText" id="box2">Email inccorect</p>
 
 
-    <div class="mess">
-      <span class="subdiv">
-        <p class="envoyer"><input type="submit" onclick="event.preventDefault()" value="Envoyer"></p>
-      </span>
-    </div>
-
     <div class="mess"><span class="subdiv"><p class="envoyer"><input type="submit" onclick="event.preventDefault()" value="Envoyer"></p></span></div>
     <span id="textSub"><p>Pas encore de compte?</p><p id="subscribe"><u>Inscrivez-vous</u></p></span>
 
-
   </form>
-
-
 
   </body>
 <footer>
