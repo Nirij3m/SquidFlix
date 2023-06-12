@@ -31,7 +31,7 @@
 	border: 1px solid #FFFB0A;
 }
 
-#container {
+#placeholder {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -50,7 +50,7 @@
 #title {
 	color: #F2EDEB;
 	margin-top : 5%;
-	margin-left: 2%;
+	margin-left: 5%;
 }
 
 #search {
@@ -80,3 +80,107 @@ input {
 	border: none;
 	padding: 1%;
 }
+
+.scroll {
+	background: rgba(217, 217, 217, 0.03);
+	margin: 1% 5%;
+	padding: 5%;
+
+	width: 100%;
+	overflow-x: auto;
+}
+
+/*  CSS des cartes*/
+
+.container {
+
+	display: flex;
+	flex-direction: row;
+	gap: 5%;
+}
+
+.card-box {
+	box-sizing: border-box;
+	position: relative;
+	width: 150px;
+	height: 200px;
+	margin-bottom: 1%;
+	border-radius: 5px;
+	border: none;
+	display: flex;
+	flex-direction: column;
+	word-wrap: break-word;
+
+}
+
+.cardHeader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	word-wrap: break-word;
+	width: 100%;
+	padding: 3%;
+	box-sizing: border-box;
+	z-index: 1;
+}
+.cardHeader p {
+	margin: 0;
+	padding: 0;
+	color: #F2EDEB;
+	text-align: left;
+
+}
+
+.cardFooter {
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 3%;
+	z-index: 1;
+}
+
+.cardFooter p {
+	margin: 0;
+	padding: 0;
+	color: #F2EDEB;
+	text-align: left;
+}
+
+.title {
+	font-weight: 1000;
+	font-size: larger;
+}
+.genre {
+	font-size: x-small
+}
+.duration {
+	font-size: x-small;
+}
+.director {
+	font-size: small;
+}
+
+.backgroundImage{
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	border: none;
+	border-radius: 5px;
+}
+
+.fade-in-bg{
+	background-color: rgba(37, 37, 37, 0);
+	animation: fadeIn 0.2s ease forwards;
+}
+
+@keyframes fadeIn {
+	from {
+		background-color: rgba(37, 37, 37, 0);
+	}
+	to {
+		background-color: rgba(37, 37, 37, 1);
+	}
+}
+
+/*  Fin CSS des cartes*/

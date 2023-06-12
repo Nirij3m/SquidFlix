@@ -1,1 +1,1 @@
-findByDirector;Hannam
+deleteDatabase;
