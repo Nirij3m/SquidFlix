@@ -195,8 +195,8 @@ function readFileByName(fileName){
 }
 
 function readFile(){
-    readFileByName("/src/js/ready.txt");
-    return readFileByName("/src/js/results.txt");
+    readFileByName("/src/c/request.txt");
+    return readFileByName("/src/c/cmake-build-debug/results.txt");
 }
 
 function Results(txt){
@@ -204,8 +204,6 @@ function Results(txt){
     let n = txt.length ;
     let count = 0 ;
     let counter = 0;
-    let movies ;
-    let film ;
 
     let exe = "";
     let titre = "";
