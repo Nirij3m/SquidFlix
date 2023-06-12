@@ -233,7 +233,6 @@ function results(txt){
     let n = txt.length ;
     let count = 0 ;
     let counter = 0;
-    let suggestion = 1 ;
 
     let exe = "";
     let titre = "";
@@ -242,21 +241,27 @@ function results(txt){
 
     for ( let i = 0 ; i < n ; i ++ ){
         
-        if ( counter == 0 && txt[i] != "\n"){
-            exe += txt[i] ;
-        }
-        if ( counter == 0 && txt[i] == "\n"){
-            counter += 1 ;
+        if ( counter == 0){
+            if ( txt[i] != "\n"){
+                exe += txt[i] ;
+                console.log("exe : " + exe);
+            }
+            if (  txt[i] == "\n"){
+                counter += 1 ;
+            }
         }
         else {
             if ( count == 0 && txt[i] != "\n" && txt[i] != ";"){
                 titre += txt[i] ;
+                console.log("titre : " + titre);
             }
             if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){
                 time += txt[i] ;
+                console.log("time : " + time);
             }
             if ( count == 2 && txt[i] != "\n" && txt[i] != ";"){
                 genre += txt[i] ;
+                console.log("genre : " + genre);
             }
             if ( txt[i] == ";" ){
                 count = ( count + 1 ) % 3 ;
@@ -265,26 +270,30 @@ function results(txt){
 
                 count = 0 ;
 
-                let newCard = document.getElementsByClassName("container1")[0].cloneNode(true);
+                let newCard = document.getElementsByClassName("card-box")[0].cloneNode(true);
+                newCard.id ="";
                 console.log(newCard);
 
-                newCard.children[0].children[0].children[1].innerHTML = titre ;
-                newCard.children[0].children[0].children[2].innerHTML = genre ;
-                newCard.children[0].children[1].children[0].innerHTML = time ;
+                newCard.children[0].children[1].innerHTML = titre ;
+                newCard.children[0].children[2].innerHTML = genre ;
+                newCard.children[1].children[0].innerHTML = time ;
 
                 let randomImage = 'https://source.unsplash.com/random/?Octopus/' + Math.random(); //Obtention d'une image aléatoire
 
-                newCard.children[0].children[2].setAttribute("src", randomImage);
+                newCard.children[2].setAttribute("src", randomImage);
 
                 document.getElementsByClassName("container1")[0].appendChild(newCard);
                 console.log("bloup");
 
-                titre = "";
-                time = "";
-                genre = "";
+                titre = "" ;
+                time = "" ;
+                genre = "" ;
             }
         }
     }
+
+
+
 }
 // -------------------------
 
