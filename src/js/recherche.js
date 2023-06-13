@@ -349,8 +349,9 @@ function main(){
     console.log(myresults);
 
     results(myresults);
+    setTimeout(() =>{}, "1000");
 
-    let Sug = readFile("/src/c/cmake-build-debug/ready3.txt", "/src/c/cmake-build-debug/ res_sug.txt");
+    let Sug = readFile("/src/c/cmake-build-debug/ready.txt", "/src/c/cmake-build-debug/results.txt");
     console.log(Sug);
 
     results(Sug);
