@@ -1,6 +1,6 @@
 A
-0.000422
-Toad of Name;71;fantasy
-Forty Chicago;77;sports
-Legionnaire of Strange Opportunity;302;disaster
-The Tragic Compendium Leviathan;212;comedy
+0.000349
+The Gothic Coast;175;suspense
+The Letters Across;319;animation
+Tragic Hands;186;parody
+The Prague Into;361;thriller
