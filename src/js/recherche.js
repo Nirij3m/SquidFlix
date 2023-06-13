@@ -178,7 +178,7 @@ function find(){
         }
         else {
             if ( counter == "010" ){
-                writeFile(1,['searchTime'],["findByTime"], "R"); //Le champ Durée est rempli
+                writeFile(1,['searchTime'],["findByDuration"], "R"); //Le champ Durée est rempli
             }
             else{
                 if ( counter == "001" ){
@@ -186,7 +186,7 @@ function find(){
                 }
                 else{
                     if ( counter == "110" ){
-                        writeFile(2,['searchDirector','searchTime'],["findByDirector","findByTime"], "R"); //Les champs Directeur et Durée sont remplis
+                        writeFile(2,['searchDirector','searchTime'],["findByDirector","findByDuration"], "R"); //Les champs Directeur et Durée sont remplis
                     }
                     else{
                         if ( counter == "101" ){
@@ -194,11 +194,11 @@ function find(){
                         }
                         else{
                             if ( counter == "011" ){
-                                writeFile(2,['searchTime','searchGenre'],["findByTime","findByGenre"], "R"); //Les champs Durée et Genre sont remplis
+                                writeFile(2,['searchTime','searchGenre'],["findByDuration","findByGenre"], "R"); //Les champs Durée et Genre sont remplis
                             }
                             else{
                                 if ( counter == "111" ){
-                                    writeFile(3,['searchDirector','searchTime','searchGenre'],["findByDirector","findByTime","findByGenre"], "R"); //Tous les champs sont remplis
+                                    writeFile(3,['searchDirector','searchTime','searchGenre'],["findByDirector","findByDuration","findByGenre"], "R"); //Tous les champs sont remplis
                                 }
                             }
                         }
