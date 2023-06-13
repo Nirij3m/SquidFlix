@@ -388,7 +388,7 @@ function main(){
     find();
     let counter = recup();
 
-    if ( counter == "000"){
+    if ( counter != "000"){
         //readFile();
         let myresults = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt");
         console.log(myresults);
