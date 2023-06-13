@@ -87,11 +87,6 @@ input {
 	display: none;
 }
 
-#noResult {
-	color: #fffb0a;
-	display: none;
-}
-
 /* The Modal (background) */
 .modal-question {
 	display: none; /* Hidden by default */
