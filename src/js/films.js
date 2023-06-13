@@ -1,7 +1,7 @@
 // ------- READ FILE -------
 function readFileByName(fileName){
 
-    console.log(window.location.pathname);
+    //console.log(window.location.pathname);
 
     //console.log("poulpe");
 
@@ -19,7 +19,7 @@ function readFileByName(fileName){
     return xhr.responseText;
 }
 
-function readFile(src1, src2){
+function readFile(src1, src2){ //src1 et src2 pour pouvoir utiliser la fonction plusieurs fois
     readFileByName(src1);
     return readFileByName(src2);
 }
@@ -145,8 +145,8 @@ function topDirector(txt){
                 //console.log(director2);
                 // Mise en page
 
-                document.getElementById("top-director").innerHTML = director2 ;
-                document.getElementById("top-number").innerHTML = film ;
+                document.getElementById("top-director").innerHTML = director2 ; //Ajoute le nom du real dans la balise top director
+                document.getElementById("top-number").innerHTML = film ; //Ajoute le nombre de film du real dans la balise top number
             }
         }
     }
