@@ -62,20 +62,53 @@ function writeFile(counter, id_form,func, destionnation) {
     // text1.submit();
 }
 
+function propo_movie(){
+    console.log("Bob");
+    document.getElementsByClassName("container")[0].innerHTML = "";
+}
+
 function connect(){
+
+    let bd = [['user','pass'],['poulpe', 'octopus']]
+
     document.getElementsByTagName("input")[2].addEventListener("click", function(){
         let user = document.getElementsByClassName("input")[0].value;
         let pass = document.getElementsByClassName("input")[1].value;
         if(user === "" || pass === ""){
             alert("Veuillez remplir tous les champs");
-        }else{
-            if(user === "user" && pass === "pass"){
+        }
+        else{
+            let here = 0 ;
+            let size = bd.length ;
+            for ( let i = 0 ; i < size ; i ++ ){
+                //console.log(bd[i][0]);
+                //console.log(bd[i][1]);
+                if ( user === bd[i][0] && pass === bd[i][1]){
+                    alert("Vous êtes connecté");
+                    propo_movie();
+                    here = 1 ;
+                }
+            }
+            if ( here == 0 ){
+                alert("Utilisateur ou Mot de Passe incorrect");
+            }
+
+            /*if(user === "user" && pass === "pass"){
                 alert("Vous êtes connecté");
-                document.location.href="index.html";
-        }}});
-
+                propo_movie();
+                //document.location.href="index.html";
+            }
+            if(user === "poulpe" && pass === "octopus"){
+                alert("Vous êtes connecté en mode admin");
+                propo_movie();
+                //document.location.href="index.html";
+            }
+            else{
+                alert("Utilisateur ou Mot de Passe incorrect");
+            }*/
+        }
+    });
 }
-
 
 function subscribe() {
     let connexionPanel = document.getElementsByClassName("container")[0].cloneNode(true);
