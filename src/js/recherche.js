@@ -34,6 +34,9 @@ function recup(){
     //console.log("octopus");
 
     let counter = "000" ; //si 000 alors rien d'entrée nul part
+    // 0 si vide
+    // 1 si remplis
+
     //console.log(counter);
 
     let director = document.getElementById("searchDirector").value; //On réccupère ce qui est dans director
@@ -46,10 +49,10 @@ function recup(){
         let director2 = "";
         for( let i = 0 ; i < size ; i ++ ){
             if ( i == 0 ){
-                director2 += director[i].toUpperCase();
+                director2 += director[i].toUpperCase(); //Mettre en Majuscule
             }
             else{
-                director2 += director[i].toLowerCase();
+                director2 += director[i].toLowerCase(); //Mettre en minuscule
             }
         }
         //console.log(director2);
@@ -71,35 +74,35 @@ function recup(){
     let genre = document.getElementById("searchGenre").value;
     //console.log(genre);
 
-    if(director == '' && time == "" && genre == "None"){
+    if(director == '' && time == "" && genre == "None"){ //Si rien de remplis
         counter = "000";
     }
     else {
-        if(director != '' && time != "" && genre != "None"){
+        if(director != '' && time != "" && genre != "None"){ // si tout remplis
             counter = "111";
         }
         else {
-            if(director != '' && time == "" && genre == "None"){
+            if(director != '' && time == "" && genre == "None"){ // si director seulement remplis
                 counter = "100";
             }
             else {
-                if(director == '' && time != "" && genre == "None"){
+                if(director == '' && time != "" && genre == "None"){ // si time seulement remplis
                     counter = "010";
                 }
                 else {
-                    if(director == '' && time == "" && genre != "None"){
+                    if(director == '' && time == "" && genre != "None"){ // si genre seulement remplis
                         counter = "001";
                     }
                     else {
-                        if(director != '' && time != "" && genre == "None"){
+                        if(director != '' && time != "" && genre == "None"){ //si director et time remplis
                             counter = "110";
                         }
                         else {
-                            if(director != '' && time == "" && genre != "None"){
+                            if(director != '' && time == "" && genre != "None"){ //si director et genre remplis
                                 counter = "101";
                             }
                             else {
-                                if(director == '' && time != "" && genre != "None"){
+                                if(director == '' && time != "" && genre != "None"){ //si durer et genre remplis
                                     counter = "011";
                                 }
                             }
@@ -111,14 +114,17 @@ function recup(){
     }
 
     //console.log(counter);
-    return counter ;
+    return counter ; // renvoie quelle champ est remplis par l'utilisateur
 }
 
+//Pour supprimer les cartes d'une ancienne demande par exemple
 function clear(){
 
-    card = document.getElementById("test1");
-    document.getElementsByClassName("container1")[0].innerHTML = "";
-    document.getElementsByClassName("container1")[0].appendChild(card);
+    card = document.getElementById("test1"); // On réccupère le code d'une carte par défaut
+    document.getElementsByClassName("container1")[0].innerHTML = ""; // On supprime tout ce qu'il y a dans le container
+    document.getElementsByClassName("container2")[0].innerHTML = ""; // On supprime tout ce qu'il y a dans le container
+    document.getElementsByClassName("container1")[0].appendChild(card); //On re-ajoute la carte ( pour recommencer )
+    document.getElementsByClassName("container2")[0].appendChild(card); //On re-ajoute la carte ( qui est invisible car display : none )
 
 }
 
@@ -127,32 +133,32 @@ function writeFile(counter, id_form,func, destionnation) {
 
     //console.log("Poulpe");
 
-    var element = document.createElement('a');
-    let save = "";
+    var element = document.createElement('a'); //creation d'une balise <a>
+    let save = ""; //Texte à mettre dans le fichier
     //console.log(save);
     //console.log("element : " + element);
 
-    for(let j = 0; j < counter ; j ++){
+    for(let j = 0; j < counter ; j ++){ //Boucle si multifiltre pour faire toutes les demande
 
         //console.log("id_form : " + id_form[j]);
 
-        let text1 = document.getElementById(id_form[j]).value;
+        let text1 = document.getElementById(id_form[j]).value; //octenir les valeurs dans le form
         //console.log("text : " + text1);
 
-        let count = text1.length;
+        let count = text1.length; //taille
         //console.log("count : " + count);
 
         //console.log(func[j]);
         let textToSave = destionnation + ";" + func[j] + ";";
         //console.log(textToSave);
 
-        for(let i = 0;i<=count-1;i++){
+        for(let i = 0;i<=count-1;i++){ //ecriture
             textToSave += text1[i];
             //console.log("TextToSave_1 : " + textToSave);
             //console.log("text1[i] : " + text1[i]);
         }
 
-        save += textToSave + "\n"
+        save += textToSave + "\n" //retour à la ligne
         //console.log(save);
     }
 
@@ -170,13 +176,13 @@ function writeFile(counter, id_form,func, destionnation) {
 }
 // ------- WRITE FILE -------
 
-function find(){
+function find(){ //Pour lancer la fonction écriture
 
-    let counter = recup();
+    let counter = recup(); // pour savoir qu'elle champ est remplis
 
-    clear();
+    clear(); // pour supprimer si il y avait une recheche avant
 
-    if ( counter == "000" ){
+    if ( counter == "000" ){ //vide
         console.log("Veuillez entrez quelque chose avant de rechercher\nPour voir l'intégralité de notre catalogue vous pouvez aller dans la catégorie Films.")
         return;
     }
@@ -221,7 +227,7 @@ function find(){
 // ------- READ FILE -------
 function readFileByName(fileName){
 
-    console.log(window.location.pathname);
+    //console.log(window.location.pathname); // pour savoir où on se trouve
 
     //console.log("poulpe");
 
@@ -239,74 +245,108 @@ function readFileByName(fileName){
     return xhr.responseText;
 }
 
-function readFile(src1, src2){
+function readFile(src1, src2){ // src1 et src2 pour choisir ce qu'on va chercher et pas avoir une fonction à usage unique
     readFileByName(src1);
     return readFileByName(src2);
 }
+// ------- READ FILE -------
 
 function results(txt){
 
-    let n = txt.length ;
-    let count = 0 ;
-    let counter = 0;
-    let suggestion = 1 ;
+    let n = txt.length ; // taille
+    let count = 0 ; //compteur pour savoir ce que nous écrivons ( lettre, exe, director...)
+    let counter = 0; //compteur pour le nombre de ligne
+    let suggestion = 1 ; //Pour lancer la suggestion
 
-    let lettre = "";
-    let exe = "";
-    let director = "";
-    let titre = "";
-    let time = "";
-    let genre = "";
+    let lettre = ""; //Pour savoir où écrire
+    let exe = ""; //Temps d'exécution
+    let director = ""; //Nom du directeur
+    let titre = ""; //Titre du film
+    let time = ""; //Durer du film
+    let genre = ""; //Genre du film
 
-    for ( let i = 0 ; i < n ; i ++ ){
+    for ( let i = 0 ; i < n ; i ++ ){ //Boucle pour avoir lettre par lettre
         
-        if ( counter === 1 || counter === 0 ){
-            if ( counter === 1 && txt[i] != "\n"){
+        if ( counter === 1 || counter === 0 ){ //Une des 2 premières ligne
+            if ( counter === 0 && txt[i] != "\n"){ //lettre pour savoir où écrire c'est txt[i=0]
+                lettre += txt[i];
+            }
+            if ( counter === 1 && txt[i] != "\n"){ //Temps d'exe
                 exe += txt[i] ;
                 //console.log("exe : " + exe);
             }
-            if ( txt[i] == "\n"){
+            if ( txt[i] == "\n"){//On change de ligne
                 counter += 1 ;
             }
-            if ( counter === 0 && txt[i] != "\n"){
-                lettre += txt[i];
-            }
         }
-        else {            
-            if ( count == 0 && txt[i] != "\n" && txt[i] != ";"){
+        else {            //On commence à lire des lignes avec les films
+            if ( count == 0 && txt[i] != "\n" && txt[i] != ";"){ //Nom du directeur
                 director += txt[i] ;
-                console.log("director : " + director);
+                //console.log("director : " + director);
             }
-            if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){
+            if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){ //Titre du film
                 titre += txt[i] ;
                 console.log("titre : " + titre);
             }
-            if ( count == 2 && txt[i] != "\n" && txt[i] != ";"){
+            if ( count == 2 && txt[i] != "\n" && txt[i] != ";"){ //durer du film
                 time += txt[i] ;
                 console.log("time : " + time);
             }
-            if ( count == 3 && txt[i] != "\n" && txt[i] != ";"){
+            if ( count == 3 && txt[i] != "\n" && txt[i] != ";"){ //genre du film
                 genre += txt[i] ;
                 console.log("genre : " + genre);
             }
-            if ( txt[i] == ";" ){
+            if ( txt[i] == ";" ){ //on change de champ
                 count = ( count + 1 ) % 4 ;
             }
-            if ( txt[i] == "\n" || i == ( n - 1 ) ){
+            if ( txt[i] == "\n" || i == ( n - 1 ) ){//Retour à la ligne ou fin du texte, on imprime car fin du film 
 
-                count = 0 ;
+                count = 0 ; //On remet le count à 0 pour être sur
 
-                if ( txt[0] === "R"){
+                if ( txt[0] === "R"){ //Si c'est pour réponse
 
-                    if ( suggestion === 1 ){
-                        document.getElementById("searchGenre2").value = genre ;
-                        //writeFile(1,['searchGenre2'],["findByGenre"], "S");
-                        suggestion += 1 ;
+                    if ( suggestion === 1 ){ //Première carte de film
+                        document.getElementById("searchGenre2").value = genre ; //On choisis le genre du premier film
+                        //writeFile(1,['searchGenre2'],["findByGenre"], "S"); //On renvoie une seconde requetes
+                        suggestion += 1 ; //On met suggestion à 2 pour être sur de le faire qu'une fois
                     }
 
-                    let newCard = document.getElementsByClassName("card-box1")[0].cloneNode(true);
-                    newCard.id ="";
-                    console.log(newCard);
+                    let newCard = document.getElementsByClassName("card-box1")[0].cloneNode(true); //On clone une nouvelle carte pour faire pareil
+                    newCard.id =""; //Id à rien, car sinon display none
+                    //console.log(newCard);
+
+                    // Pour avoir une majuscule ( mise en page )
+                    let size = director.length ; //taille
+                    let director2 = ""; //vide
+                    for( let i = 0 ; i < size ; i ++ ){
+                        if ( i == 0 ){
+                            director2 += director[i].toUpperCase(); //Majuscule
+                        }
+                        else{
+                            director2 += director[i].toLowerCase(); //minuscule
+                        }
+                    }
+                    //console.log(director2);
+                    // Mise en page
+
+                    newCard.children[0].children[1].innerHTML = titre ; //On insert les informations du film
+                    newCard.children[0].children[2].innerHTML = genre ; //On insert les informations du film
+                    newCard.children[1].children[0].innerHTML = time ; //On insert les informations du film
+                    newCard.children[1].children[1].innerHTML = director ; //On insert les informations du film
+
+                    let randomImage = 'https://source.unsplash.com/random/?Squid/' + Math.random(); //Obtention d'une image aléatoire
+
+                    newCard.children[2].setAttribute("src", randomImage); //On change le src pour avoir une image random 
+
+                    document.getElementsByClassName("container1")[0].appendChild(newCard); //On ajoute la nouvelle card
+                    //console.log("bloup");
+                }
+
+                if ( txt[0] === "S"){ //Si c'est pour une suggestion
+
+                    let newCard = document.getElementsByClassName("card-box2")[0].cloneNode(true); //On créer un clone pour ajouter des cartes de films
+                    newCard.id =""; //Id à vide pour pas avoir de display none
+                    //console.log(newCard);
 
                     // Pour avoir une majuscule ( mise en page )
                     let size = director.length ;
@@ -322,63 +362,27 @@ function results(txt){
                     //console.log(director2);
                     // Mise en page
 
-                    newCard.children[0].children[1].innerHTML = titre ;
-                    newCard.children[0].children[2].innerHTML = genre ;
-                    newCard.children[1].children[0].innerHTML = time ;
-                    newCard.children[1].children[1].innerHTML = director ;
+                    newCard.children[0].children[1].innerHTML = titre ; //On insert les informations du film
+                    newCard.children[0].children[2].innerHTML = genre ; //On insert les informations du film
+                    newCard.children[1].children[0].innerHTML = time ; //On insert les informations du film
+                    newCard.children[1].children[1].innerHTML = director ; //On insert les informations du film
 
                     let randomImage = 'https://source.unsplash.com/random/?Octopus/' + Math.random(); //Obtention d'une image aléatoire
 
-                    newCard.children[2].setAttribute("src", randomImage);
+                    newCard.children[2].setAttribute("src", randomImage); //On change le src afin d'avoir une image aléatoire pour chaque film
 
-                    document.getElementsByClassName("container1")[0].appendChild(newCard);
-                    console.log("bloup");
-                }
-
-                if ( txt[0] === "S"){
-
-                    let newCard = document.getElementsByClassName("card-box2")[0].cloneNode(true);
-                    newCard.id ="";
-                    console.log(newCard);
-
-                    // Pour avoir une majuscule ( mise en page )
-                    let size = director.length ;
-                    let director2 = "";
-                    for( let i = 0 ; i < size ; i ++ ){
-                        if ( i == 0 ){
-                            director2 += director[i].toUpperCase();
-                        }
-                        else{
-                            director2 += director[i].toLowerCase();
-                        }
-                    }
-                    //console.log(director2);
-                    // Mise en page
-
-                    newCard.children[0].children[1].innerHTML = titre ;
-                    newCard.children[0].children[2].innerHTML = genre ;
-                    newCard.children[1].children[0].innerHTML = time ;
-                    newCard.children[1].children[1].innerHTML = director ;
-
-                    let randomImage = 'https://source.unsplash.com/random/?Octopus/' + Math.random(); //Obtention d'une image aléatoire
-
-                    newCard.children[2].setAttribute("src", randomImage);
-
-                    document.getElementsByClassName("container2")[0].appendChild(newCard);
-                    console.log("bloup");
+                    document.getElementsByClassName("container2")[0].appendChild(newCard); //On ajoute la carte au container pour l'affihcer
+                    //console.log("bloup");
 
                 }
 
-                titre = "" ;
-                time = "" ;
-                genre = "" ;
-                director = "";
+                titre = "" ; //Réinitalisation des champs
+                time = "" ; //Réinitalisation des champs
+                genre = "" ; //Réinitalisation des champs
+                director = ""; //Réinitalisation des champs
             }
         }
     }
-
-
-
 }
 // -------------------------
 
@@ -388,26 +392,25 @@ function main(){
 
     //console.log("poulpe");
 
-    find();
+    find();//lance la fonction pour voir si on peut lancer l'écriture
+
     let counter = recup();
-
-
-    if ( counter !== "000"){
+    if ( counter !== "000"){ // si au moins un champ est remplis
 
         //readFile();
-        let myresults = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt");
-        console.log(myresults);
+        let myresults = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt"); //on réccupère les résultats de la fonction readFile
+        //console.log(myresults);
 
-        results(myresults);
-        setTimeout(() =>{}, "1000");
+        results(myresults); // Fonction pour l'affichage des résultats
+        setTimeout(() =>{}, "1000"); //pause
 
-        let Sug = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt");
-        console.log(Sug);
+        let Sug = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt"); //On réccupère les résultats pour faire une suggestion à partir du genre du premier film resortie
+        //console.log(Sug);
 
-        results(Sug);
+        results(Sug); //On affiche
     }
     else{
-        alert("Champ(s) vide(s)!")
+        alert("Champ(s) vide(s)!") //Si champ vide une alert car on peut pas chercher
     }
 
 }
