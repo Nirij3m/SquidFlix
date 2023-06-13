@@ -10,7 +10,12 @@
 struct Director {
     char* name;
     int nmbFilm;
-    struct ListFilm* films;
+};
+
+struct ListFilm{
+    char* director;
+    unsigned int size;
+    struct CellFilm* head;
 };
 
 struct CellFilm{
@@ -18,12 +23,6 @@ struct CellFilm{
     int duration;
     char* genre;
     struct CellFilm* next;
-};
-
-struct ListFilm{
-    char* director;
-    unsigned int size;
-    struct CellFilm* head;
 };
 
 struct Director* createDirector(char* name);
@@ -38,14 +37,11 @@ unsigned int listSizeFilm(struct ListFilm* l);
 
 
 void deleteListFilm(struct ListFilm** l);
-struct CellFilm* filmBelongs(struct ListFilm* l, char* nomFilm, int duration, char* genre);
+void deleteDirector(struct Director* d);
 
 struct ListFilm** createTimeArray();
 bool insertFilm(struct ListFilm** timeArray, char* title, int duration, char* genre);
 void freeTimeArray(struct ListFilm** timeArray);
-void printTimeArray(struct ListFilm** timeArray);
 
-
-//int getPosItem(struct ListFilm*l, char* name, int nmbFilm);
 
 #endif //TP9EX2_LIST_H

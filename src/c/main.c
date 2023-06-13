@@ -11,8 +11,7 @@ int main() {
     clock_t begin = clock();
     struct ListFilm **timeArray = createTimeArray();
     struct NodeTrie* genres = createEmptyNodeTrie();
-    struct NodeTrie *root = readDict("BD_small.txt", timeArray, genres);
-
+    struct NodeTrie *root = readDict("BD_medium.txt", timeArray, genres);
 
     clock_t end = clock();
     time_spent += (double) (end - begin) / CLOCKS_PER_SEC;
@@ -63,6 +62,11 @@ int main() {
                 clearInput(); //removes the ready.txt and the results.txt
             }
             if (strcmp(functionCalled, "findByGenre") == 0) {
+                remove_spaces(parameter);
+                remove_schar(parameter);
+                for(int i = 0; parameter[i]; i++){
+                    parameter[i] = tolower(parameter[i]);
+                }
                 findByGenre(parameter, genres, destination);
                 clearInput();
             }

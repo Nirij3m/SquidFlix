@@ -1,1 +1,1 @@
-T;deleteDatabase;
+T;findByGenre;r'('("é"5

@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/databaseInit.c
-databaseInit.h
-/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/databaseInit.h
-unistd.h
--
-
 /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/databaseInit.h
 listFilm.h
 /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.h
@@ -23,10 +17,6 @@ time.h
 -
 stdlib.h
 -
-
-/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.c
-listFilm.h
-/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.h
 
 /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.h
 stdio.h
@@ -45,12 +35,6 @@ databaseInit.h
 /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/databaseInit.h
 ctype.h
 -
-
-/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/nodeTrie.c
-nodeTrie.h
-/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/nodeTrie.h
-listFilm.h
-/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/listFilm.h
 
 /mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/nodeTrie.h
 stdio.h

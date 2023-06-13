@@ -1,2 +1,1 @@
-Aa;Annie Hall;93;Romance
-Ab;Midnight in Paris;94;Comedy
+A;Annie Hall;93;b
