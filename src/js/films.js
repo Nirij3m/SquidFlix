@@ -24,28 +24,32 @@ function readFile(src1, src2){ //src1 et src2 pour pouvoir utiliser la fonction 
     return readFileByName(src2);
 }
 
+
+
+// ------- ALL FILMS -------
+
 ///////////////////////////////////////////////////////////////////////:
 // Variable globale (obligatoire car elles sont utilisées dans plusieurs fonctions)
 
 var nbr_max = 24; //nombre max d'élément par page
 var first = 0; //indice de départ
 var nbr_element = ""; //nombre d'élément chargé
-var tabInformationEachCard = [];
+var tabInformationEachCard = []; //Tableau qui contriendra des tableaux donnant les informations de chaque carte
 
 ///////////////////////////////////////////////////////////////////////:
 
 function results(txt){
 
-    let n = txt.length ;
-    let count = 0 ;
-    let counter = 0;
-    let tabInformationCard = [];
+    let n = txt.length ; //Taille
+    let count = 0 ; //compteur pour savoir ce que nous écrivons (titre, time, genre)
+    let counter = 0; //compteur pour la ligne
+    let tabInformationCard = []; //Tableau qui contient les informations sur une carte
 
-    let lettre = "";
-    let exe = "";
-    let titre = "";
-    let time = "";
-    let genre = "";
+    let lettre = ""; //Pour savoir où écrire
+    let exe = ""; //Temps d'exécution
+    let titre = ""; //Le titre du film
+    let time = ""; //La durée du film
+    let genre = ""; //Le genre du film
 
     if ( txt == "NULL"){
 
@@ -75,33 +79,33 @@ function results(txt){
                 }
             }
             else {
-                if ( count == 0 && txt[i] != "\n" && txt[i] != ";"){
+                if ( count == 0 && txt[i] != "\n" && txt[i] != ";"){ //Titre du film
                     titre += txt[i] ;
                     //console.log("titre :" + titre)
                 }
-                if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){
+                if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){ //Durée du film
                     time += txt[i] ;
                     //console.log("durée :" + time)
                 }
-                if ( count == 2 && txt[i] != "\n" && txt[i] != ";"){
+                if ( count == 2 && txt[i] != "\n" && txt[i] != ";"){ //Genre du film
                     genre += txt[i] ;
                     //console.log("genre :" + genre)
                 }
-                if ( txt[i] == ";" ){
+                if ( txt[i] == ";" ){ //On change de champ
                     count = ( count + 1 ) % 3 ;
                 }
                 if ( txt[i] == "\n" || i == ( n - 1 ) ){
 
-                    count = 0 ;
+                    count = 0 ; //On retourne au premier champ
 
-                    tabInformationCard.push(titre, genre, time);
+                    tabInformationCard.push(titre, genre, time); //On ajoute les informations de la carte dans un tableau
 
-                    tabInformationEachCard.push(tabInformationCard);
-                    tabInformationCard = [];
+                    tabInformationEachCard.push(tabInformationCard); //On ajoute le tableau de la carte dans un tableau
+                    tabInformationCard = []; //On vide notre tableau d'information sur la carte pour boucler
 
-                    titre = "";
-                    time = "";
-                    genre = "";
+                    titre = ""; //On vide l'information du titre pour boucler
+                    time = ""; //On vide l'information de la durée pour boucler
+                    genre = ""; //On vide l'information du genre pour boucler
                 }
             }
         }
@@ -112,6 +116,8 @@ function results(txt){
 }
 
 function showCard(){
+    //-------------------------------------------------------------------------------------------
+    // On remet notre carte comme model
     document.getElementsByClassName("container")[0].innerHTML = `<div class="card-box">
         <header class="cardHeader">
             <p></p>
@@ -124,14 +130,15 @@ function showCard(){
             <p class="director">DIRECTOR</p>
         </footer>
         <img class="backgroundImage" src=""></div>`;
+    //-------------------------------------------------------------------------------------------
 
-    for(let j = first; j < first + nbr_max; j++){
+    for(let j = first; j < first + nbr_max; j++){ //Parcourt les cartes par indice en fonction de la valeur de first
         if(j < nbr_element){
-            let newCard = document.getElementsByClassName("card-box")[0].cloneNode(true);
+            let newCard = document.getElementsByClassName("card-box")[0].cloneNode(true); //Clone la carte modèle
 
-            newCard.children[0].children[1].innerHTML = tabInformationEachCard[j][0] ;
-            newCard.children[0].children[2].innerHTML = tabInformationEachCard[j][1] ;
-            newCard.children[1].children[0].innerHTML = tabInformationEachCard[j][2] ;
+            newCard.children[0].children[1].innerHTML = tabInformationEachCard[j][0] ; //Renseigne le titre dans la carte
+            newCard.children[0].children[2].innerHTML = tabInformationEachCard[j][1] ; //Renseigne le genre dans la carte
+            newCard.children[1].children[0].innerHTML = tabInformationEachCard[j][2] ; //Renseigne la durée dans la carte
 
             let randomImage = 'https://source.unsplash.com/random/?Films/' + Math.random(); //Obtention d'une image aléatoire
 
@@ -148,11 +155,11 @@ function showCard(){
 function firstPage(){
     first = 0; //On retourne à la première page
     //console.log(first);
-    showCard();
+    showCard(); 
 }
 
 function nextPage(){
-    if(first + nbr_max <= nbr_element){
+    if(first + nbr_max <= nbr_element){ // Condition pour éviter un dépassement
         first += nbr_max; //décale de -24 la position initiale
         //console.log(first);
         showCard();
@@ -160,7 +167,7 @@ function nextPage(){
 }
 
 function previous(){
-    if(first - nbr_max >= 0){            // Condition pour éviter de dépasser
+    if(first - nbr_max >= 0){ // Condition pour éviter un dépassement
         first -= nbr_max; //décale de +24 la position initiale
         //console.log(first);
         showCard();
@@ -173,6 +180,10 @@ function lastPage(){
     //console.log(first);
     showCard();
 }
+
+
+
+// ------- TOP DIRECTOR -------
 
 function topDirector(txt){
 
@@ -230,7 +241,7 @@ function topDirector(txt){
 }
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////::
+/////////////////////////////////////////////////////////////////////////////////////////////:
 
 function main() {
 
