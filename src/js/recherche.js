@@ -402,10 +402,12 @@ function directorName(txt){
         }
 
         if(txt[0] === "D" && txt[i] == "\n" && i>1){//Vérifie si c'est un retour à la ligne => fin du nom du directeur
+            directors = directors.charAt(0).toUpperCase();
             newItem.innerHTML = directors; //Valeur dans la balise dans le HTML
+            //console.log(newItem);
             document.getElementsByClassName("listAuthor")[0].parentNode.appendChild(newItem); //ajoute le newItem
+            //console.log(document.getElementsByClassName("listAuthor")[0].parentNode);
         }
-        directors = "";
     }
 }
 
@@ -424,8 +426,10 @@ function search(){
     if ( counter !== "000"){ // si au moins un champ est remplis
 
         //readFile();
-        let myresults = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt"); //on réccupère les résultats de la fonction readFile
+        //let myresults = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt"); //on réccupère les résultats de la fonction readFile
         //console.log(myresults);
+
+        let myresults = readFile("src/js/ready3.txt","src/js/BD_small.txt");
 
         results(myresults); // Fonction pour l'affichage des résultats
         setTimeout(() =>{}, "1000"); //pause
@@ -441,6 +445,7 @@ function search(){
 }
 
 function main(){
-    directorName(readFile("src/c/cmake-build-debug/ready4.txt", "src/c/cmake-build-debug/res_allDirector.txt")); //On récupère directement le fichier contenant tous les Directeurs
+    //directorName(readFile("src/c/cmake-build-debug/ready4.txt", "src/c/cmake-build-debug/res_allDirector.txt")); //On récupère directement le fichier contenant tous les Directeurs
+    directorName(readFile("src/js/ready3.txt","src/js/res_allDirector.txt"));
 }
 main();
