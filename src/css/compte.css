@@ -100,3 +100,6 @@ textarea{
     font-size: 100%;
 }
 
+#subscribe {
+    cursor: pointer;
+}

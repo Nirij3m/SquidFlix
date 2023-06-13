@@ -1,6 +1,5 @@
-
+let bool = true;
 function changer() {
-    let bool = true;
 
     if (bool) {
         document.getElementById("pw").setAttribute("type", "text") //rend visible le mot de passe
