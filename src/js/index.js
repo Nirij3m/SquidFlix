@@ -103,7 +103,7 @@ function sugg(txt){
 
 function main(){
 
-    let random = readFile("/src/c/cmake-build-debug/ready1.txt", "/src/c/cmake-build-debug/res_random.txt"); //pour lire et lancer le fichier sugg
+    let random = readFile("src/c/cmake-build-debug/ready1.txt", "src/c/cmake-build-debug/res_random.txt"); //pour lire et lancer le fichier sugg
     //console.log(random);
 
     sugg(random); //affichage des suggestion pour les films
