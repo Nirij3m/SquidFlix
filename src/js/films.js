@@ -28,7 +28,7 @@ var nbr_max = 24; //nombre max d'élément par page
 var first = 0; //indice de départ
 var nbr_element = 0; //nombre d'élément chargé
 
-function results(){
+function results(txt){
 
     let n = txt.length ;
     let count = 0 ;
