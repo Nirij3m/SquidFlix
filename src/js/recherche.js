@@ -28,19 +28,20 @@ window.onclick = function(event) {
 
 
 //Ecriture dans un fichier
-
+//Fonction pour réccupérer les valeurs entrer dans le form
 function recup(){
 
     //console.log("octopus");
 
-    let counter = "000" ;
+    let counter = "000" ; //si 000 alors rien d'entrée nul part
     //console.log(counter);
 
-    let director = document.getElementById("searchDirector").value;
+    let director = document.getElementById("searchDirector").value; //On réccupère ce qui est dans director
     let size = director.length ;
     //console.log("length : " + size);
     //console.log(director);
 
+    // Ajouter une majuscule au début - Mise en Page
     if(director != ''){
         let director2 = "";
         for( let i = 0 ; i < size ; i ++ ){
@@ -54,6 +55,7 @@ function recup(){
         //console.log(director2);
         document.getElementById("searchDirector").value = director2 ;
     }
+    //Mise en page
 
     let time = document.getElementById("searchTime").value;
     //console.log(time);
@@ -290,7 +292,7 @@ function results(txt){
 
                 count = 0 ;
 
-                if ( txt[0] == "R"){
+                if ( txt[0] === "R"){
 
                     if ( suggestion == 1 ){
                         document.getElementById("searchGenre2").value = genre ;
@@ -301,6 +303,20 @@ function results(txt){
                     let newCard = document.getElementsByClassName("card-box1")[0].cloneNode(true);
                     newCard.id ="";
                     console.log(newCard);
+
+                    // Pour avoir une majuscule ( mise en page )
+                    let size = director.length ;
+                    let director2 = "";
+                    for( let i = 0 ; i < size ; i ++ ){
+                        if ( i == 0 ){
+                            director2 += director[i].toUpperCase();
+                        }
+                        else{
+                            director2 += director[i].toLowerCase();
+                        }
+                    }
+                    //console.log(director2);
+                    // Mise en page
 
                     newCard.children[0].children[1].innerHTML = titre ;
                     newCard.children[0].children[2].innerHTML = genre ;
@@ -320,6 +336,20 @@ function results(txt){
                     let newCard = document.getElementsByClassName("card-box2")[0].cloneNode(true);
                     newCard.id ="";
                     console.log(newCard);
+
+                    // Pour avoir une majuscule ( mise en page )
+                    let size = director.length ;
+                    let director2 = "";
+                    for( let i = 0 ; i < size ; i ++ ){
+                        if ( i == 0 ){
+                            director2 += director[i].toUpperCase();
+                        }
+                        else{
+                            director2 += director[i].toLowerCase();
+                        }
+                    }
+                    //console.log(director2);
+                    // Mise en page
 
                     newCard.children[0].children[1].innerHTML = titre ;
                     newCard.children[0].children[2].innerHTML = genre ;
