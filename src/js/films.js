@@ -156,19 +156,19 @@ function topDirector(txt){
 // Se déplacer dans la pagination
 function firstPage(){
     first = 0; //On retourne à la première page
-    results(readFile("/src/c/cmake-build/debug/ready4.txt","/src/c/cmake-build-debug/res_allFilms.txt"));
+    results(readFile("src/c/cmake-build/debug/ready4.txt","src/c/cmake-build-debug/res_allFilms.txt"));
 }
 
 function previous(){
     //if(first + nbr_max <= nbr_element)             // Condition pour éviter de dépasser
     first+=nbr_max; //décale de +24 la position initiale
-    results(readFile("/src/c/cmake-build/debug/ready4.txt","/src/c/cmake-build-debug/res_allFilms.txt"));
+    results(readFile("src/c/cmake-build/debug/ready4.txt","src/c/cmake-build-debug/res_allFilms.txt"));
 }
 
 function nextPage(){
     if(first - nbr_max >= 0){
         first+=nbr_max; //décale de -24 la position initiale
-        results(readFile("/src/c/cmake-build/debug/ready4.txt","/src/c/cmake-build-debug/res_allFilms.txt"));
+        results(readFile("src/c/cmake-build/debug/ready4.txt","src/c/cmake-build-debug/res_allFilms.txt"));
     }
 }
 
@@ -176,7 +176,7 @@ function nextPage(){
 //let maxPages = Math.ceil(nbr_element / nbr_max);   // Nombre maximum du page générable
 function lastPage(){
     //first = (maxPages * nbr_max) - nbr_max;        // Indice de la dernière position
-    //Results(readFile("/src/c/cmake-build/debug/ready4.txt","/src/c/cmake-build-debug/res_allFilms.txt"));
+    //Results(readFile("src/c/cmake-build/debug/ready4.txt","src/c/cmake-build-debug/res_allFilms.txt"));
 }
 
 
@@ -184,7 +184,7 @@ function lastPage(){
 
 function main() {
 
-    topDirector(readFile("/src/c/cmake-build-debug/ready0.txt","/src/c/cmake-build-debug/res_director.txt")); //Lancement au démarage
+    topDirector(readFile("src/c/cmake-build-debug/ready0.txt","src/c/cmake-build-debug/res_director.txt")); //Lancement au démarage
 
 }
 
