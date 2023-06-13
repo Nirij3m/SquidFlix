@@ -24,10 +24,15 @@ function readFile(src1, src2){ //src1 et src2 pour pouvoir utiliser la fonction 
     return readFileByName(src2);
 }
 
+///////////////////////////////////////////////////////////////////////:
+// Variable globale (obligatoire car elles sont utilisées dans plusieurs fonctions)
+
 var nbr_max = 24; //nombre max d'élément par page
 var first = 0; //indice de départ
 var nbr_element = ""; //nombre d'élément chargé
 var tabInformationEachCard = [];
+
+///////////////////////////////////////////////////////////////////////:
 
 function results(txt){
 
