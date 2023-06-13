@@ -41,7 +41,7 @@ function results(txt){
     let counter = 0;
     let tabInformationCard = [];
 
-    let lettre = ";"
+    let lettre = "";
     let exe = "";
     let titre = "";
     let time = "";
