@@ -340,6 +340,8 @@ function results(txt){
 
                     document.getElementsByClassName("container1")[0].appendChild(newCard); //On ajoute la nouvelle card
                     //console.log("bloup");
+
+                    document.getElementsByClassName("exe").innerHTML = exe ;
                 }
 
                 if ( txt[0] === "S"){ //Si c'est pour une suggestion
@@ -411,7 +413,7 @@ function directorName(txt){
 
 // -------------------------
 
-function main(){
+function search(){
 
     //console.log("poulpe");
 
@@ -437,7 +439,7 @@ function main(){
     }
 }
 
-function otherMain(){
+function main(){
     directorName(readFile("src/c/cmake-build-debug/ready4.txt", "src/c/cmake-build-debug/res_allDirector.txt"));
 }
-otherMain();
+main();
