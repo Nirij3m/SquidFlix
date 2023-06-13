@@ -175,6 +175,7 @@ function find(){
 
     if ( counter == "000" ){
         console.log("Veuillez entrez quelque chose avant de rechercher\nPour voir l'intégralité de notre catalogue vous pouvez aller dans la catégorie Films.")
+        return;
     }
     else{
         if ( counter == "100" ){
@@ -368,7 +369,7 @@ function results(txt){
                 titre = "" ;
                 time = "" ;
                 genre = "" ;
-                director ="";
+                director = "";
             }
         }
     }
