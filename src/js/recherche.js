@@ -113,8 +113,8 @@ function recup(){
 function clear(){
 
     card = document.getElementById("test1");
-    document.getElementsByClassName("container1") = "";
-    document.getElementsByClassName("container1") = card;
+    document.getElementsByClassName("container1")[0] = "";
+    document.getElementsByClassName("container1")[0] = card;
 
 }
 
@@ -290,11 +290,11 @@ function results(txt){
 
                 count = 0 ;
 
-                if ( txt[0] == "R"){
+                if ( txt[0] === "R"){
 
-                    if ( suggestion == 1 ){
+                    if ( suggestion === 1 ){
                         document.getElementById("searchGenre2").value = genre ;
-                        writeFile(1,['searchGenre2'],["findByGenre"], "S");
+                        //writeFile(1,['searchGenre2'],["findByGenre"], "S");
                         suggestion += 1 ;
                     }
 
@@ -315,7 +315,7 @@ function results(txt){
                     console.log("bloup");
                 }
 
-                if ( txt[0] == "S"){
+                if ( txt[0] === "S"){
 
                     let newCard = document.getElementsByClassName("card-box2")[0].cloneNode(true);
                     newCard.id ="";
@@ -356,13 +356,13 @@ function main(){
     find();
 
     //readFile();
-    let myresults = readFile("/src/c/cmake-build-debug/ready.txt", "/src/c/cmake-build-debug/results.txt");
+    let myresults = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt");
     console.log(myresults);
 
     results(myresults);
     setTimeout(() =>{}, "1000");
 
-    let Sug = readFile("/src/c/cmake-build-debug/ready.txt", "/src/c/cmake-build-debug/results.txt");
+    let Sug = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt");
     console.log(Sug);
 
     results(Sug);

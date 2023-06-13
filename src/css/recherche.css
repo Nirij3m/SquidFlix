@@ -139,8 +139,9 @@ input {
 	background: rgba(217, 217, 217, 0.03);
 	margin: 1% 5%;
 	padding: 5%;
+	display: flex;
 
-	overflow-x: auto;
+	overflow-y: scroll;
 }
 
 /*  CSS des cartes*/
@@ -148,15 +149,16 @@ input {
 .container1 {
 
 	display: flex;
+	flex-shrink: 1;
 	flex-direction: row;
-	gap: 5%;
+	gap: 20px;
 }
 
 .container2 {
 
 	display: flex;
 	flex-direction: row;
-	gap: 5%;
+	gap: 20px;
 }
 
 .card-box1 {

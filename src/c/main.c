@@ -11,7 +11,7 @@ int main() {
     clock_t begin = clock();
     struct ListFilm **timeArray = createTimeArray();
     struct NodeTrie* genres = createEmptyNodeTrie();
-    struct NodeTrie* root = readDict("BD_big.txt", timeArray, genres);
+    struct NodeTrie* root = readDict("BD_medium.txt", timeArray, genres);
 
     clock_t end = clock();
     time_spent += (double) (end - begin) / CLOCKS_PER_SEC;
@@ -20,10 +20,10 @@ int main() {
 
     //RENVOIE TOP DIRECTOR, RANDOM FILMS, ALLFILMS
     //printTopDirector(lib,"T");
-    randomFilm(timeArray, "T");
+    randomFilm(timeArray, "A");
     printTopDirector(root, "T");
-    allDirectors(root, "T");
-    allFilms(root, "T");
+    allDirectors(root, "D");
+    allFilms(root, "F");
     //END
 
 
@@ -37,10 +37,10 @@ int main() {
         printf("Listenning for incomming request...\n");
         FILE *request;
         request = fopen("request.txt", "r");
-        char functionCalled[32];
-        char parameter[32];
+        char functionCalled[232];
+        char parameter[232];
         char destination[2];
-        char preword[32];
+        char preword[232];
 
         while (request == NULL) { //Tant qu'un fichier request.txt n'est pas arrivée, je continue de le chercher
             request = fopen("request.txt", "r");

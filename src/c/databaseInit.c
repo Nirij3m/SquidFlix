@@ -77,7 +77,7 @@ void findByDuration(int duration, struct ListFilm** timeArray, char* destination
         fprintf(result, "%s\n", destination);
         fprintf(result, "%f", time_spent); //j'insère le temps de la fonction //j'insère le temps de la fonction
         for(int i = 0; i < listSize; i++){
-            fprintf(result, "\n%s;%d;%s", iter->nomFilm, iter->duration, iter->genre); //je rajoute les champs séparés par des ";"
+            fprintf(result, "\n;%s;%d;%s", iter->nomFilm, iter->duration, iter->genre); //je rajoute les champs séparés par des ";"
 
             iter = iter->next;
         }
@@ -124,7 +124,7 @@ void findByGenre(char* genre, struct NodeTrie* genres, char* destination){
         fprintf(result, "%s\n", destination);
         fprintf(result, "%f", time_spent); //j'insère le temps de la fonction //j'insère le temps de la fonction
         for(int i = 0; i < listSize; i++){
-            fprintf(result, "\n%s;%d;%s", iter->nomFilm, iter->duration, iter->genre); //je rajoute les champs séparés par des ";"
+            fprintf(result, "\n;%s;%d;%s", iter->nomFilm, iter->duration, iter->genre); //je rajoute les champs séparés par des ";"
             iter = iter->next;
         }
     }
@@ -208,7 +208,7 @@ void allFilms(struct NodeTrie* trie, char* destination){
 
 
     fclose(result);
-    ready = fopen("ready3.txt", "w"); //Création du fichier prêt pour lecture du côté front end;
+    ready = fopen("ready4.txt", "w"); //Création du fichier prêt pour lecture du côté front end;
     fclose(ready);
 }
 
@@ -236,7 +236,7 @@ void printTopDirector(struct NodeTrie* trie, char* destination){
 
 void clearInput(){
 
-    usleep(10000000);
+    usleep(1000000000);
     remove("results.txt");
     remove("ready.txt");
 }
