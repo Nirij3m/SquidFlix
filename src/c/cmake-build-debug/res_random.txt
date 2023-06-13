@@ -1,6 +1,6 @@
 A
-0.000207
-From the Steampunk Toad;318;suspense
-The Closed Rings;83;animation
-The Tsar of Children;351;animation
-The Dead Spawn For the South;224;mystery
+0.000532
+Legacy Beast;84;drama
+Kingless;152;action
+The Army of Leandron;173;action
+The Eight Childhoods;103;animation
