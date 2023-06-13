@@ -73,20 +73,28 @@ function results(txt){
 
 // Se déplacer dans la pagination
 function firstPage(){
-
+    first = 0; //On retourne à la première page
+    Results(readFile());
 }
 
 function previous(){
-    //first+=nbr_max; //décale de 24 la position initiale
-    //Results(readFile());
+    //if(first + nbr_max <= nbr_element)             // Condition pour éviter de dépasser
+    first+=nbr_max; //décale de +24 la position initiale
+    Results(readFile());
 }
 
 function nextPage(){
-    
+    if(first - nbr_max >= 0){
+        first+=nbr_max; //décale de -24 la position initiale
+        Results(readFile());
+    }
 }
 
+
+//let maxPages = Math.ceil(nbr_element / nbr_max);   // Nombre maximum du page générable
 function lastPage(){
-    
+    //first = (maxPages * nbr_max) - nbr_max;        // Indice de la dernière position
+    //Results(readFile());
 }
 
 
