@@ -7,6 +7,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+struct Director {
+    char* name;
+    int nmbFilm;
+    struct ListFilm* films;
+};
+
 struct CellFilm{
     char* nomFilm;
     int duration;
@@ -20,17 +26,17 @@ struct ListFilm{
     struct CellFilm* head;
 };
 
-
+struct Director* createDirector(char* name);
 struct CellFilm* createCellFilm(char* nomFilm, int duration, char* genre);
 struct ListFilm* createEmptyListFilm();
 void addFirstFilm(struct ListFilm* l, char* nomFilm, int duration, char* genre);
 bool isListEmptyFilm(struct ListFilm* l);
-struct CellFilm* getItemPosFilm(struct ListFilm* l, unsigned int position, bool* valid);
+
 void deleteFirstFilm(struct ListFilm* l);
 void printListFilm(struct ListFilm* l);
 unsigned int listSizeFilm(struct ListFilm* l);
-void addItemPosFilm(struct ListFilm* l, char* nomFilm, int duration, char* genre, unsigned int position, bool* valid);
-void deleteItemPosFilm(struct ListFilm* l, unsigned int position, bool* valid);
+
+
 void deleteListFilm(struct ListFilm** l);
 struct CellFilm* filmBelongs(struct ListFilm* l, char* nomFilm, int duration, char* genre);
 

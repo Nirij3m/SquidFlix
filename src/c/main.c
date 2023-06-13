@@ -1,5 +1,5 @@
 #include "nodeTrie.h"
-#include "hashTableFilmList.h"
+
 #include "databaseInit.h"
 #include <ctype.h>
 
@@ -11,7 +11,8 @@ int main() {
     clock_t begin = clock();
     struct ListFilm **timeArray = createTimeArray();
     struct NodeTrie* genres = createEmptyNodeTrie();
-    struct NodeTrie* root = readDict("BD_medium.txt", timeArray, genres);
+    struct NodeTrie *root = readDict("BD_small.txt", timeArray, genres);
+
 
     clock_t end = clock();
     time_spent += (double) (end - begin) / CLOCKS_PER_SEC;
@@ -107,4 +108,3 @@ int main() {
 
 return 0;
 }
-

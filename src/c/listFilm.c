@@ -21,6 +21,13 @@ struct CellFilm* createCellFilm(char* nomFilm, int duration, char* genre){
 
 }
 
+struct Director* createDirector(char* name){
+    struct Director* d = malloc(sizeof(struct Director));
+    d->name = malloc((strlen(name)+1)*sizeof(char));
+    d->nmbFilm = 0;
+    d->films = createEmptyListFilm();
+}
+
 bool isListEmptyFilm(struct ListFilm* l){
     if(l == NULL){
         return true;

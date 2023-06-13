@@ -6,8 +6,8 @@
 #include <stdbool.h>
 #include <ctype.h>
 #include "listFilm.h"
-#include "listDirector.h"
-#include "hashTableFilmList.h"
+
+
 
 #define MAX_SIZE 26 // 26 alphabets
 

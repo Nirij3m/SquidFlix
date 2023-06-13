@@ -1,1 +1,1 @@
-T;allFilms;
+T;deleteDatabase;
