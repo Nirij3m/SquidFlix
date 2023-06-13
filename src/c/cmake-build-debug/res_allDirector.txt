@@ -1,5 +1,5 @@
-T
-0.000063
+D
+0.000211
 abashidze
 abbott
 abraham
@@ -655,7 +655,6 @@ dominik
 donaldson
 donen
 donghyuk
-donnelly
 donner
 donnersmarck
 donskoi
@@ -770,7 +769,6 @@ feuillade
 feyder
 fiala
 field
-fields
 fiennes
 figgis
 filoni
@@ -980,6 +978,7 @@ gurewitz
 gutierrez
 guzman
 haas
+haasan
 hackford
 hadel
 hadid
@@ -1036,6 +1035,7 @@ heckerling
 heder
 heerden
 heerman
+heinzerling
 heisler
 helgeland
 heller
@@ -1262,6 +1262,7 @@ kershner
 kerwin
 kiarostami
 kiduk
+kieslowski
 kiley
 killy
 kimmich
@@ -1962,7 +1963,6 @@ ripley
 ripstein
 ritchie
 ritt
-ritter
 rivers
 rivette
 rix
@@ -2354,6 +2354,7 @@ tomlin
 tommy
 tonderai
 toor
+toriumi
 tornatore
 torres
 tors

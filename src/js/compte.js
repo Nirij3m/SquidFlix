@@ -1,3 +1,4 @@
+
 let bool = true;
 function changer() {
 
@@ -15,17 +16,93 @@ function hash(str){
     return encodedMessage;
 }
 
+function writeFile(counter, id_form,func, destionnation) {
+
+    //console.log("Poulpe");
+
+    var element = document.createElement('a');
+    let save = "";
+    //console.log(save);
+    //console.log("element : " + element);
+
+    for(let j = 0; j < counter ; j ++){
+
+        //console.log("id_form : " + id_form[j]);
+
+        let text1 = document.getElementById(id_form[j]).value;
+        //console.log("text : " + text1);
+
+        let count = text1.length;
+        //console.log("count : " + count);
+
+        //console.log(func[j]);
+        let textToSave = destionnation + ";" + func[j] + ";";
+        //console.log(textToSave);
+
+        for(let i = 0;i<=count-1;i++){
+            textToSave += text1[i];
+            //console.log("TextToSave_1 : " + textToSave);
+            //console.log("text1[i] : " + text1[i]);
+        }
+
+        save += textToSave + "\n"
+        //console.log(save);
+    }
+
+    //console.log(save);
+
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(save));
+    element.setAttribute('download', 'request.txt');
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+
+    // text1.submit();
+}
+
+function connect(){
+    document.getElementsByTagName("input")[2].addEventListener("click", function(){
+        let user = document.getElementsByClassName("input")[0].value;
+        let pass = document.getElementsByClassName("input")[1].value;
+        if(user === "" || pass === ""){
+            alert("Veuillez remplir tous les champs");
+        }else{
+            if(user === "user" && pass === "pass"){
+                alert("Vous êtes connecté");
+                document.location.href="index.html";
+        }}});
+
+}
+
+
 function subscribe() {
     let connexionPanel = document.getElementsByClassName("container")[0].cloneNode(true);
     connexionPanel.children[0].children[0].innerHTML = "Inscrivez-vous";
     connexionPanel.children[6].remove();
+    connexionPanel.id = "subPanel";
+    connexionPanel.children[3].children[1].id = "subPass";
+    console.log(connexionPanel.children[3].children[1]);
+    console.log(connexionPanel.children[1].children[1]);
+    connexionPanel.children[1].children[1].id = "subUser";
+
+    connexionPanel.getElementsByClassName("envoyer")[0].addEventListener("click", function(){
+        let username = connexionPanel.getElementsByTagName("input")[0].value;
+        let password = connexionPanel.getElementsByTagName("input")[1].value;
+
+        let finalPass = username + " " + password;
+        console.log(finalPass);
+        document.getElementById("finalPass").value = finalPass;
+        writeFile(1, ['finalPass'], ["createUser"], "Z");
+    });
 
     document.getElementById("subscribe").addEventListener("click", function(){
-        console.log("click");
         document.body.appendChild(connexionPanel);
     });
 }
 function main(){
     subscribe();
+    connect();
 }
 main()

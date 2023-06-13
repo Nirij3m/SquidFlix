@@ -21,31 +21,80 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d184d65e-da4e-4206-8a11-0ad225943aa9" name="Changes" comment="Serveur backend terminé et opérationnel">
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/ready4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/projetCIR1_groupe_7.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/projetCIR1_groupe_7.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../compte.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../compte.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../films.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../films.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../recherche.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../recherche.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/c.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/c.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2023_16_45_[Changes]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2023_16_45_[Changes]/shelved.patch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2023_16_45__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2023_16_45__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountManagement.c" beforeDir="false" afterPath="$PROJECT_DIR$/accountManagement.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountManagement.h" beforeDir="false" afterPath="$PROJECT_DIR$/accountManagement.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/BD_big.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/BD_big.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.18.4/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.18.4/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/databaseInit.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/databaseInit.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/c" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/c.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/c.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dictAnglais.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dictAnglais.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/res_allDirector.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/res_allDirector.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/res_allFilms.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/res_allFilms.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/res_director.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/res_director.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/res_random.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/res_random.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databaseInit.c" beforeDir="false" afterPath="$PROJECT_DIR$/databaseInit.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databaseInit.h" beforeDir="false" afterPath="$PROJECT_DIR$/databaseInit.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hashTableFilmList.c" beforeDir="false" afterPath="$PROJECT_DIR$/hashTableFilmList.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hashTableFilmList.h" beforeDir="false" afterPath="$PROJECT_DIR$/hashTableFilmList.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listDirector.c" beforeDir="false" afterPath="$PROJECT_DIR$/listDirector.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listDirector.h" beforeDir="false" afterPath="$PROJECT_DIR$/listDirector.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listFilm.c" beforeDir="false" afterPath="$PROJECT_DIR$/listFilm.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listFilm.h" beforeDir="false" afterPath="$PROJECT_DIR$/listFilm.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodeTrie.c" beforeDir="false" afterPath="$PROJECT_DIR$/nodeTrie.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodeTrie.h" beforeDir="false" afterPath="$PROJECT_DIR$/nodeTrie.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../card_test/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/../card_test/card.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../card_test/card.html" beforeDir="false" afterPath="$PROJECT_DIR$/../card_test/card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../css/compte.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/compte.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../css/films.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/films.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../css/navbar_footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/navbar_footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../css/recherche.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/recherche.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/compte.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/compte.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/films.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/films.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/generalFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/generalFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/read_write.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/read_write.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/recherche.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/recherche.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/res_allDirector.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../js/res_allDirector.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/res_director.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../js/res_director.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/res_random.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../js/res_random.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/results.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../js/results.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/results3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../js/results3.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +133,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -119,11 +169,20 @@
       <workItem from="1686591760580" duration="481000" />
       <workItem from="1686592481053" duration="5558000" />
       <workItem from="1686598089209" duration="9050000" />
+      <workItem from="1686640047374" duration="2521000" />
+      <workItem from="1686644568194" duration="84000" />
+      <workItem from="1686644791399" duration="3627000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticEditVcpkgJson value="false" />
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticFoundErrors value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -133,7 +192,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.c</url>
-          <line>81</line>
+          <line>82</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
