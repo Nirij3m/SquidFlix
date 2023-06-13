@@ -170,35 +170,35 @@ function find(){
     let counter = recup();
 
     if ( counter == "000" ){
-        console.log("Veuillez entrez quelque chose avant de rechercher\nPour voir l'intégralité de notre tacalogue vous pouvez aller dans la catégorie Films.")
+        console.log("Veuillez entrez quelque chose avant de rechercher\nPour voir l'intégralité de notre catalogue vous pouvez aller dans la catégorie Films.")
     }
     else{
         if ( counter == "100" ){
-            writeFile(1,['searchDirector'],["findByDirector"], "R");
+            writeFile(1,['searchDirector'],["findByDirector"], "R"); //Le champ Directeur est rempli
         }
         else {
             if ( counter == "010" ){
-                writeFile(1,['searchTime'],["findByTime"], "R");
+                writeFile(1,['searchTime'],["findByTime"], "R"); //Le champ Durée est rempli
             }
             else{
                 if ( counter == "001" ){
-                    writeFile(1,['searchGenre'],["findByGenre"], "R");
+                    writeFile(1,['searchGenre'],["findByGenre"], "R"); //Le champ Genre est rempli
                 }
                 else{
                     if ( counter == "110" ){
-                        writeFile(2,['searchDirector','searchTime'],["findByDirector","findByTime"], "R");
+                        writeFile(2,['searchDirector','searchTime'],["findByDirector","findByTime"], "R"); //Les champs Directeur et Durée sont remplis
                     }
                     else{
                         if ( counter == "101" ){
-                            writeFile(2,['searchDirector','searchGenre'],["findByDirector","findByGenre"], "R");
+                            writeFile(2,['searchDirector','searchGenre'],["findByDirector","findByGenre"], "R"); //Les champs Directeur et Genre sont remplis
                         }
                         else{
                             if ( counter == "011" ){
-                                writeFile(2,['searchTime','searchGenre'],["findByTime","findByGenre"], "R");
+                                writeFile(2,['searchTime','searchGenre'],["findByTime","findByGenre"], "R"); //Les champs Durée et Genre sont remplis
                             }
                             else{
                                 if ( counter == "111" ){
-                                    writeFile(3,['searchDirector','searchTime','searchGenre'],["findByDirector","findByTime","findByGenre"], "R");
+                                    writeFile(3,['searchDirector','searchTime','searchGenre'],["findByDirector","findByTime","findByGenre"], "R"); //Tous les champs sont remplis
                                 }
                             }
                         }
