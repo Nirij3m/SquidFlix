@@ -389,22 +389,23 @@ function results(txt){
 
 
 function directorName(txt){
-    let n = txt.length;
-    let directors = "";
+    let n = txt.length; //taille du texte
+    let directors = ""; //contient chaque directeur
     console.log("accesesed");
-    let newItem = document.getElementsByClassName("listAuthor")[0].cloneNode(true);
+    let newItem = document.getElementsByClassName("listAuthor")[0].cloneNode(true); //Clone la balise <p> qui contient chaque directeur et la stocke dans newItem
 
-    for(let i = 0; i < n; i++){
+    for(let i = 0; i < n; i++){ //parcourt chaque lettre du fichier
 
-        if(txt[0] === "D" && txt[i] != "\n" && i>1){
+        if(txt[0] === "D" && txt[i] != "\n" && i>1){ //Vérifie si c'est un caractère
             directors += txt[i];
             //console.log("réalisateur : " + directors);
         }
 
-        if(txt[0] === "D" && txt[i] == "\n" && i>1){
-            newItem.innerHTML = directors;
-            document.getElementsByClassName("listAuthor")[0].parentNode.appendChild(newItem);
+        if(txt[0] === "D" && txt[i] == "\n" && i>1){//Vérifie si c'est un retour à la ligne => fin du nom du directeur
+            newItem.innerHTML = directors; //Valeur dans la balise dans le HTML
+            document.getElementsByClassName("listAuthor")[0].parentNode.appendChild(newItem); //ajoute le newItem
         }
+        directors = "";
     }
 }
 
