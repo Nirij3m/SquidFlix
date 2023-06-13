@@ -385,17 +385,19 @@ function results(txt){
 function directorName(txt){
     let n = txt.length;
     let directors = "";
+    console.log("accesesed");
+    let newItem = document.getElementsByClassName("listAuthor")[0].cloneNode(true);
 
     for(let i = 0; i < n; i++){
 
         if(txt[0] === "D" && txt[i] != "\n" && i>1){
             directors += txt[i];
-            console.log("réalisateur : " + directors);
+            //console.log("réalisateur : " + directors);
         }
 
         if(txt[0] === "D" && txt[i] == "\n" && i>1){
-            var newDirectorItem = document.getElementsByClassName("listAuthor");
-            newDirectorItem.innerHTML = `<p class="listAuthor">${directors}</p>`
+            newItem.innerHTML = directors;
+            document.getElementsByClassName("listAuthor")[0].parentNode.appendChild(newItem);
         }
     }
 }
@@ -430,6 +432,9 @@ function main(){
     else{
         alert("Champ(s) vide(s)!")
     }
-    directorName(readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/res_allDirector.txt"));
-
 }
+
+function otherMain(){
+    directorName(readFile("src/c/cmake-build-debug/ready4.txt", "src/c/cmake-build-debug/res_allDirector.txt"));
+}
+otherMain();

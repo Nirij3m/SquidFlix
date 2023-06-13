@@ -1,6 +1,6 @@
 A
-0.000532
-Legacy Beast;84;drama
-Kingless;152;action
-The Army of Leandron;173;action
-The Eight Childhoods;103;animation
+0.000281
+Bookkeeper and a March;289;action
+Blade and a Earth;249;disaster
+Bishop Feet;159;sports
+The Black Amulet's Tower;187;comedy
