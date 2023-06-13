@@ -386,17 +386,20 @@ function main(){
     //console.log("poulpe");
 
     find();
+    let counter = recup();
 
-    //readFile();
-    let myresults = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt");
-    console.log(myresults);
+    if ( counter == "000"){
+        //readFile();
+        let myresults = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt");
+        console.log(myresults);
 
-    results(myresults);
-    setTimeout(() =>{}, "1000");
+        results(myresults);
+        setTimeout(() =>{}, "1000");
 
-    let Sug = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt");
-    console.log(Sug);
+        let Sug = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt");
+        console.log(Sug);
 
-    results(Sug);
+        results(Sug);
+    }
 
 }
