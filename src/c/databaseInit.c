@@ -179,7 +179,7 @@ void allDirectors(struct NodeTrie* trie, char* destination){
     clock_t end = clock();
     time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
     fprintf(result, "%s\n", destination);
-    fprintf(result, "%f", time_spent); //j'insère le temps de la fonction
+    //fprintf(result, "%f", time_spent); //j'insère le temps de la fonction
 
     preorderDirector(trie, result);
 

@@ -109,7 +109,12 @@ input {
 	padding: 20px;
 	border: 1px solid #888;
 	width: 80%;
-	
+	margin-bottom: 10%;
+
+	display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
   
 /* The Close Button */
@@ -127,7 +132,7 @@ input {
 	cursor: pointer;
 }
   
-#listAuthor {
+.listAuthor {
 	  color: #F2EDEB;
 }
 
@@ -257,7 +262,7 @@ input {
 	}
 }
 
-#test {
+#test1 {
 
 	display: none;
 
