@@ -109,10 +109,9 @@ function topDirector(txt){
 
     for ( let i = 0 ; i < n ; i ++ ){
         
-        if ( counter == 0 && i > 1 ){
+        if ( counter == 1 || counter == 0){
             if ( txt[i] != "\n"){
                 exe += txt[i] ;
-                console.log("exe : " + exe);
             }
             if (  txt[i] == "\n"){
                 counter += 1 ;
@@ -121,17 +120,29 @@ function topDirector(txt){
         else {
             if ( count == 0 && txt[i] != "\n" && txt[i] != ";"){
                 director += txt[i] ;
-                console.log("director : " + director);
             }
             if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){
                 film += txt[i] ;
-                console.log("film : " + film);
             }
             if ( txt[i] == ";" ){
                 count = ( count + 1 ) % 2 ;
             }
             if ( txt[i] == "\n" || i == ( n - 1 ) ){
-                document.getElementById("top-director").innerHTML = director ;
+
+                let size = director.length ;
+
+                let director2 = "";
+                for( let i = 0 ; i < size ; i ++ ){
+                    if ( i == 0 ){
+                        director2 += director[i].toUpperCase();
+                    }
+                    else{
+                        director2 += director[i].toLowerCase();
+                    }
+                }
+                console.log(director2);
+
+                document.getElementById("top-director").innerHTML = director2 ;
                 document.getElementById("top-number").innerHTML = film ;
             }
         }
@@ -169,15 +180,6 @@ function lastPage(){
 /////////////////////////////////////////////////////////////////////////////////////////////::
 
 function main() {
-    
-    var monterHaut = document.getElementById('fleche');
-
-    monterHaut.addEventListener("click", function() {
-        window.scrollTo({
-            top: 0, //remonte en haut
-            behavior: 'smooth' //de manière douce
-        });
-    });
 
     topDirector(readFile("/src/js/ready0.txt","/src/js/res_director.txt"));
 
