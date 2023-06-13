@@ -168,6 +168,7 @@ function writeFile(counter, id_form,func, destionnation) {
 
    // text1.submit();
 }
+// ------- WRITE FILE -------
 
 function find(){
 
