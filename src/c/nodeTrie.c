@@ -42,7 +42,7 @@ void insertWord(struct NodeTrie* trie, char* word, struct CellFilm* film, struct
         strcpy(currentNode->films->director, word);
     }
     //Comparaison pour le topDirector
-    if(currentNode->films->size > d->nmbFilm){
+    if( d != NULL && currentNode->films->size > d->nmbFilm){
         d->nmbFilm = currentNode->films->size;
         if(d->name != NULL){ // le nom existe déjà je le libère
             free(d->name);
@@ -269,6 +269,22 @@ void preorderNmbFilms(struct NodeTrie* node, int* count) {
     }
     for (int i = 0; i < MAX_SIZE; i++) {
         preorderNmbFilms(node->alphabets[i], count);
+    }
+}
+
+void separateString(char* input, char** output) {
+    char* token = strtok(input, " ");
+    int i = 0;
+
+    while (token != NULL && i < 4) {
+        output[i] = token;
+        token = strtok(NULL, " ");
+        i++;
+    }
+
+    // Si la chaîne d'entrée ne contient pas assez d'espaces, les éléments manquants dans le tableau de sortie seront définis sur NULL
+    for (; i < 4; i++) {
+        output[i] = NULL;
     }
 }
 

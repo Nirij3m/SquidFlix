@@ -49998,3 +49998,5 @@ Gould;The Equation of Affair;178;Mystery
 Arcand;The Gothic Wretched's Idol;177;Thriller
 Leandron;The Army of Leandron;173;Action
 Bartkowiak;Without the Land;148;Suspense
+
+kamoto;hello;5;picsou

@@ -1,6 +1,6 @@
 A
-0.001617
-Thief and a Cold;300;Animation
-On the Dweller and the Rider;191;Animation
-Moonlight of Wish;315;Parody
-The CasketWhat Waits;79;Superhero
+0.000132
+Stranger of Blood;256;Thriller
+Return of Radiant Bite;205;Action
+The Power-Cry;366;Educational
+The Abbey From the Airship;340;Romance

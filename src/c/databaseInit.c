@@ -178,7 +178,7 @@ void allDirectors(struct NodeTrie* trie, char* destination){
 
     clock_t end = clock();
     time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
-    fprintf(result, "%s\n", destination);
+    fprintf(result, "%s", destination);
     //fprintf(result, "%f", time_spent); //j'insère le temps de la fonction
 
     preorderDirector(trie, result);
@@ -239,4 +239,34 @@ void clearInput(){
     usleep(1000000);
     remove("results.txt");
     remove("ready.txt");
+}
+
+void addFilm(char* parameter, struct NodeTrie* director, struct NodeTrie* genres, struct ListFilm** timeArray){
+    //0 Director
+    //1 Titre
+    //2 Genre
+    //3 Durée
+    char* output[4];
+    separateString(parameter, output); //sépare les strings
+
+
+    for(int j = 0; j < 3; j++){
+        remove_schar(output[j]);
+        remove_spaces(output[j]);
+    }
+
+    int newDuration = atoi(output[3]);
+    struct CellFilm* f1 = createCellFilm(output[1], newDuration, output[2]);
+    struct CellFilm* f2 = createCellFilm(output[1], newDuration, output[2]);
+    struct CellFilm* f3 = createCellFilm(output[1], newDuration, output[2]);
+
+    insertWord(director, output[0], f1, NULL);
+    insertWordGenre(genres, output[2], f2);
+    insertFilm(timeArray, f3);
+
+    FILE* db;
+    db = fopen(DB, "a");
+    fprintf(db, "%s;%s;%d;%s\n", output[0], output[1], newDuration, output[2]);
+    fclose(db);
+
 }

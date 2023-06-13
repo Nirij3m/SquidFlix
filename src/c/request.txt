@@ -1,1 +1,1 @@
-T;deleteDatabase;
+R;findByDirector;Pa

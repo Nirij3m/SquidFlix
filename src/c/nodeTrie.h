@@ -39,4 +39,5 @@ void preorderFilms(struct NodeTrie* node, FILE* result);
 void preorderDirector(struct NodeTrie* node, FILE* result);
 void preorderNmbFilms(struct NodeTrie* node, int* count);
 void preorderTopDirector(struct NodeTrie* node, int* count, char* director);
+void separateString(char* input, char** output);
 #endif

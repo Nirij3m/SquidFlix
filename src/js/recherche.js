@@ -1,3 +1,27 @@
+function animateCards(){
+    console.log("updated");
+    Array.from(document.getElementsByClassName("card-box")).forEach((card) => {
+        card.addEventListener("mouseover", () => { //Je over la card
+            card.children[0].classList.add("fade-in-bg");
+            card.children[1].classList.add("fade-in-bg");
+            card.getElementsByClassName("title")[0].style.color = "#be743e";
+            card.getElementsByClassName("genre")[0].style.color = "#4c4c4c";
+            card.getElementsByClassName("duration")[0].style.color = "#4c4c4c";
+            card.getElementsByClassName("genre")[0].style.color = "#595959";
+            card.getElementsByClassName("director")[0].style.color = "#949494";
+        });
+        card.addEventListener("mouseout", () => { //Je quitte la card
+            card.children[0].classList.remove("fade-in-bg");
+            card.children[1].classList.remove("fade-in-bg");
+            card.getElementsByClassName("title")[0].style.color = "#f1f1f1";
+            card.getElementsByClassName("genre")[0].style.color = "#f1f1f1";
+            card.getElementsByClassName("duration")[0].style.color = "#f1f1f1";
+            card.getElementsByClassName("genre")[0].style.color = "#f1f1f1";
+            card.getElementsByClassName("director")[0].style.color = "#f1f1f1";
+        });
+    });
+}
+
 //Modal liste Auteurs
 
 // Get the modal
@@ -286,18 +310,18 @@ function results(txt){
             }
             if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){ //Titre du film
                 titre += txt[i] ;
-                console.log("titre : " + titre);
+                //console.log("titre : " + titre);
             }
             if ( count == 2 && txt[i] != "\n" && txt[i] != ";"){ //durer du film
                 time += txt[i] ;
-                console.log("time : " + time);
+                //console.log("time : " + time);
             }
             if ( count == 3 && txt[i] != "\n" && txt[i] != ";"){ //genre du film
                 genre += txt[i] ;
-                console.log("genre : " + genre);
+                //console.log("genre : " + genre);
             }
             if ( txt[i] == ";" ){ //on change de champ
-                count = ( count + 1 ) % 4 ;
+                //count = ( count + 1 ) % 4 ;
             }
             if ( txt[i] == "\n" || i == ( n - 1 ) ){//Retour à la ligne ou fin du texte, on imprime car fin du film 
 
@@ -307,12 +331,13 @@ function results(txt){
 
                     if ( suggestion === 1 ){ //Première carte de film
                         document.getElementById("searchGenre2").value = genre ; //On choisis le genre du premier film
+                        //setTimeout(() => {  console.log("World!"); }, 10000); //On attend 1 seconde pour être sur que la requete soit fini
                         //writeFile(1,['searchGenre2'],["findByGenre"], "S"); //On renvoie une seconde requetes
                         suggestion += 1 ; //On met suggestion à 2 pour être sur de le faire qu'une fois
                     }
 
                     let newCard = document.getElementsByClassName("card-box1")[0].cloneNode(true); //On clone une nouvelle carte pour faire pareil
-                    newCard.id =""; //Id à rien, car sinon display none
+                    newCard.id = ""; //Id à rien, car sinon display none
                     //console.log(newCard);
 
                     // Pour avoir une majuscule ( mise en page )
@@ -347,7 +372,7 @@ function results(txt){
                 if ( txt[0] === "S"){ //Si c'est pour une suggestion
 
                     let newCard = document.getElementsByClassName("card-box2")[0].cloneNode(true); //On créer un clone pour ajouter des cartes de films
-                    newCard.id =""; //Id à vide pour pas avoir de display none
+                    newCard.id = ""; //Id à vide pour pas avoir de display none
                     //console.log(newCard);
 
                     // Pour avoir une majuscule ( mise en page )
@@ -398,7 +423,7 @@ function directorName(txt){
 
         if(txt[0] === "D" && txt[i] != "\n" && i>1){ //Vérifie si c'est un caractère
             directors += txt[i];
-            //console.log("réalisateur : " + directors);
+            console.log("réalisateur : " + directors);
         }
 
         if(txt[0] === "D" && txt[i] == "\n" && i>1){//Vérifie si c'est un retour à la ligne => fin du nom du directeur
@@ -441,6 +466,7 @@ function search(){
     else{
         alert("Champ(s) vide(s)!") //Si champ vide une alert car on peut pas chercher
     }
+    animateCards();
 }
 
 function main(){
@@ -448,3 +474,4 @@ function main(){
     //directorName(readFile("src/js/ready3.txt","src/js/res_allDirector.txt"));
 }
 main();
+animateCards(); //On lance l'animation des cartes

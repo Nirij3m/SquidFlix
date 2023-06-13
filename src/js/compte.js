@@ -85,7 +85,28 @@ function connect(){
                 //console.log(bd[i][1]);
                 if ( user === bd[i][0] && pass === bd[i][1]){
                     alert("Vous êtes connecté");
-                    propo_movie();
+                    document.location.href = "userPanel.html";
+                    here = 1 ;
+                }
+
+                if( user === "admin" && pass === "admin_pwd"){
+                    let promp = prompt("Voulez-vous vraiment initialiser la fermeture de la base de données ? (Oui/Non)");
+                    if ( promp === "Oui" || promp === "oui" || promp === "OUI" || promp === "OUI"){
+                        //création du form d'envoi
+                        let form = document.createElement("form");
+                        form.id = "deleteForm";
+                        form.appendChild(document.createElement("input"));
+                        form.children[0].type = "hidden";
+                        form.children[0].id = "sendDeletion";
+                        document.body.appendChild(form);
+                        writeFile(1, ['sendDeletion'], ["deleteDatabase"], "X");
+                        document.body.removeChild(form);
+                        form.remove();
+                    }
+                    if( promp === "Non" || promp === "non" || promp === "NON" || promp === "NON"){
+                        alert("Base de données non supprimée");
+                    }
+
                     here = 1 ;
                 }
             }
@@ -93,19 +114,6 @@ function connect(){
                 alert("Utilisateur ou Mot de Passe incorrect");
             }
 
-            /*if(user === "user" && pass === "pass"){
-                alert("Vous êtes connecté");
-                propo_movie();
-                //document.location.href="index.html";
-            }
-            if(user === "poulpe" && pass === "octopus"){
-                alert("Vous êtes connecté en mode admin");
-                propo_movie();
-                //document.location.href="index.html";
-            }
-            else{
-                alert("Utilisateur ou Mot de Passe incorrect");
-            }*/
         }
     });
 }
@@ -134,9 +142,8 @@ function subscribe() {
         document.body.appendChild(connexionPanel);
     });
 
-
-
 }
+
 function main(){
     subscribe();
     connect();

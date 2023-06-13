@@ -11,7 +11,7 @@ int main() {
     clock_t begin = clock();
     struct ListFilm **timeArray = createTimeArray();
     struct NodeTrie *genres = createEmptyNodeTrie();
-    struct NodeTrie *root = readDict("BD_medium.txt", timeArray, genres);
+    struct NodeTrie *root = readDict(DB, timeArray, genres);
 
 
     clock_t end = clock();
@@ -39,7 +39,7 @@ int main() {
         FILE *request;
         request = fopen("request.txt", "r");
         char functionCalled[232];
-        char parameter[232];
+        char parameter[400];
         char destination[2];
         char preword[232];
 
@@ -94,11 +94,18 @@ int main() {
                 clearInput();
             }
             if (strcmp(functionCalled, "deleteDatabase") == 0) {
-                printf("Databsase clear procedure intialized");
+                printf("Databsase clear procedure intialized\n");
                 stopInit = true; //will stop the infinite loop after the database have been cleared
                 freeTimeArray(timeArray);
                 deleteNodeTrie(&genres);
                 deleteNodeTrie(&root);
+            }
+            if(strcmp(functionCalled, "addFilm") == 0){
+                for (int i = 0; parameter[i]; i++) {
+                    parameter[i] = tolower(parameter[i]);
+                }
+                addFilm(parameter, root, genres, timeArray);
+                clearInput();
             }
             //Clear the input to avoid artefacts
             memset(functionCalled, '\0', sizeof(char) * 32);

@@ -1,6 +1,7 @@
 
 #ifndef C_FILM_H
 #define C_FILM_H
+#define DB "BD_medium.txt"
 
 #include "listFilm.h"
 #include "nodeTrie.h"
@@ -22,5 +23,6 @@ void allFilms(struct NodeTrie* trie, char* destination);
 void printTopDirector(struct NodeTrie* trie, char* destination);
 void clearInput();
 void createAccount(char* hashUser, char* hashPass);
+void addFilm(char* parameter, struct NodeTrie* director, struct NodeTrie* genres, struct ListFilm** timeArray);
 
 #endif //C_FILM_H

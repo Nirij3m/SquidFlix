@@ -1,3 +1,29 @@
+function animateCards(){
+    console.log("updated");
+    Array.from(document.getElementsByClassName("card-box")).forEach((card) => {
+        console.log(card);
+        card.addEventListener("mouseover", () => { //Je over la card
+            console.log("over");
+            card.children[0].classList.add("fade-in-bg");
+            card.children[1].classList.add("fade-in-bg");
+            card.getElementsByClassName("title")[0].style.color = "#c99e29";
+            card.getElementsByClassName("genre")[0].style.color = "#ffffff";
+            card.getElementsByClassName("duration")[0].style.color = "#4c4c4c";
+            card.getElementsByClassName("genre")[0].style.color = "#595959";
+
+        });
+        card.addEventListener("mouseout", () => { //Je quitte la card
+            card.children[0].classList.remove("fade-in-bg");
+            card.children[1].classList.remove("fade-in-bg");
+            card.getElementsByClassName("title")[0].style.color = "#f1f1f1";
+            card.getElementsByClassName("genre")[0].style.color = "#f1f1f1";
+            card.getElementsByClassName("duration")[0].style.color = "#f1f1f1";
+            card.getElementsByClassName("genre")[0].style.color = "#f1f1f1";
+        });
+    });
+}
+
+
 // ------- READ FILE -------
 function readFileByName(fileName){
 
@@ -127,7 +153,6 @@ function showCard(){
 
         <footer class="cardFooter">
             <p class="duration">160min</p>
-            <p class="director">DIRECTOR</p>
         </footer>
         <img class="backgroundImage" src=""></div>`;
     //-------------------------------------------------------------------------------------------
@@ -148,6 +173,7 @@ function showCard(){
             //tabInformationEachCard.forEach((elt) => console.log(elt[0] + " : " + elt[1] + " (" + elt[2] + ")"));
         }
     }
+    animateCards();
 }
 
 
@@ -251,5 +277,5 @@ function main() {
     showCard();
 
 }
-
+animateCards()
 main();
