@@ -99,17 +99,17 @@ function results(txt){
 
 function topDirector(txt){
 
-    let n = txt.length ;
-    let count = 0 ;
-    let counter = 0;
+    let n = txt.length ; //taille du texte
+    let count = 0 ; //pour savoir si on est en train d'écrire le nom ou le nombre de film
+    let counter = 0; //pour le nombre de ligne
 
-    let exe = "";
-    let director = "";
-    let film = "";
+    let exe = ""; //temps d'execition + lettre
+    let director = ""; //nom du director
+    let film = ""; //nombre de film du director
 
     for ( let i = 0 ; i < n ; i ++ ){
         
-        if ( counter == 1 || counter == 0){
+        if ( counter == 1 || counter == 0){ //si ligne 1 ou 2 ( lettre + temps d'execution)
             if ( txt[i] != "\n"){
                 exe += txt[i] ;
             }
@@ -117,20 +117,22 @@ function topDirector(txt){
                 counter += 1 ;
             }
         }
-        else {
+        else { // signe 3 avec le nom du director et son nombre de film
+            // count = 0 -> nom du directeur
+            // count = 1 -> nombre de film
             if ( count == 0 && txt[i] != "\n" && txt[i] != ";"){
-                director += txt[i] ;
+                director += txt[i] ; //Concaténation pour réccupérer le nom du director
             }
             if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){
-                film += txt[i] ;
+                film += txt[i] ;//Concaténation pour réccupérer le nombre de film du director
             }
-            if ( txt[i] == ";" ){
+            if ( txt[i] == ";" ){ // ; alors changement de champ
                 count = ( count + 1 ) % 2 ;
             }
-            if ( txt[i] == "\n" || i == ( n - 1 ) ){
+            if ( txt[i] == "\n" || i == ( n - 1 ) ){ //si retour ou fin du fichier
 
+                // Pour avoir une majuscule ( mise en page )
                 let size = director.length ;
-
                 let director2 = "";
                 for( let i = 0 ; i < size ; i ++ ){
                     if ( i == 0 ){
@@ -140,7 +142,8 @@ function topDirector(txt){
                         director2 += director[i].toLowerCase();
                     }
                 }
-                console.log(director2);
+                //console.log(director2);
+                // Mise en page
 
                 document.getElementById("top-director").innerHTML = director2 ;
                 document.getElementById("top-number").innerHTML = film ;
@@ -181,7 +184,7 @@ function lastPage(){
 
 function main() {
 
-    topDirector(readFile("/src/c/cmake-build-debug/ready0.txt","/src/c/cmake-build-debug/res_director.txt"));
+    topDirector(readFile("/src/c/cmake-build-debug/ready0.txt","/src/c/cmake-build-debug/res_director.txt")); //Lancement au démarage
 
 }
 

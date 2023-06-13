@@ -245,6 +245,7 @@ function results(txt){
     let counter = 0;
     let suggestion = 1 ;
 
+    let lettre = "";
     let exe = "";
     let titre = "";
     let time = "";
@@ -252,13 +253,16 @@ function results(txt){
 
     for ( let i = 0 ; i < n ; i ++ ){
         
-        if ( counter == 0 && i > 1 ){
-            if ( txt[i] != "\n"){
+        if ( counter === 1 || counter === 0 ){
+            if ( counter === 1 && txt[i] != "\n"){
                 exe += txt[i] ;
-                console.log("exe : " + exe);
+                //console.log("exe : " + exe);
             }
-            if (  txt[i] == "\n"){
+            if ( txt[i] == "\n"){
                 counter += 1 ;
+            }
+            if ( counter === 0 && txt[i] != "\n"){
+                lettre += txt[i];
             }
         }
         else {
@@ -340,7 +344,7 @@ function results(txt){
 
 function main(){
 
-    console.log("poulpe");
+    //console.log("poulpe");
 
     find();
 
