@@ -430,5 +430,6 @@ function main(){
     else{
         alert("Champ(s) vide(s)!")
     }
+    directorName(readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/res_allDirector.txt"));
 
 }
