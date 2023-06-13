@@ -247,6 +247,7 @@ function results(txt){
 
     let lettre = "";
     let exe = "";
+    let director = "";
     let titre = "";
     let time = "";
     let genre = "";
@@ -265,21 +266,25 @@ function results(txt){
                 lettre += txt[i];
             }
         }
-        else {
+        else {            
             if ( count == 0 && txt[i] != "\n" && txt[i] != ";"){
+                director += txt[i] ;
+                console.log("director : " + director);
+            }
+            if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){
                 titre += txt[i] ;
                 console.log("titre : " + titre);
             }
-            if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){
+            if ( count == 2 && txt[i] != "\n" && txt[i] != ";"){
                 time += txt[i] ;
                 console.log("time : " + time);
             }
-            if ( count == 2 && txt[i] != "\n" && txt[i] != ";"){
+            if ( count == 3 && txt[i] != "\n" && txt[i] != ";"){
                 genre += txt[i] ;
                 console.log("genre : " + genre);
             }
             if ( txt[i] == ";" ){
-                count = ( count + 1 ) % 3 ;
+                count = ( count + 1 ) % 4 ;
             }
             if ( txt[i] == "\n" || i == ( n - 1 ) ){
 
@@ -300,6 +305,7 @@ function results(txt){
                     newCard.children[0].children[1].innerHTML = titre ;
                     newCard.children[0].children[2].innerHTML = genre ;
                     newCard.children[1].children[0].innerHTML = time ;
+                    newCard.children[1].children[1].innerHTML = director ;
 
                     let randomImage = 'https://source.unsplash.com/random/?Octopus/' + Math.random(); //Obtention d'une image aléatoire
 
@@ -318,6 +324,7 @@ function results(txt){
                     newCard.children[0].children[1].innerHTML = titre ;
                     newCard.children[0].children[2].innerHTML = genre ;
                     newCard.children[1].children[0].innerHTML = time ;
+                    newCard.children[1].children[1].innerHTML = director ;
 
                     let randomImage = 'https://source.unsplash.com/random/?Octopus/' + Math.random(); //Obtention d'une image aléatoire
 
