@@ -26,14 +26,17 @@ function readFile(src1, src2){ //src1 et src2 pour pouvoir utiliser la fonction 
 
 var nbr_max = 24; //nombre max d'élément par page
 var first = 0; //indice de départ
-var nbr_element = 0; //nombre d'élément chargé
+var nbr_element = ""; //nombre d'élément chargé
+var tabInformationEachCard = [];
 
 function results(txt){
 
     let n = txt.length ;
     let count = 0 ;
     let counter = 0;
+    let tabInformationCard = [];
 
+    let lettre = ";"
     let exe = "";
     let titre = "";
     let time = "";
@@ -47,21 +50,37 @@ function results(txt){
     }
     else {
         for ( let i = 0 ; i < n ; i ++ ){
-            if ( counter == 0 && txt[i] != "\n"){
-                exe += txt[i] ;
-            }
-            if ( counter == 0 && txt[i] == "\n"){
-                counter += 1 ;
+            if (counter === 0 || counter === 1 || counter === 2){ //Une des 3 premières lignes
+                if ( counter === 0 && txt[i] != "\n"){ //lettre pour savoir où écrire le txt[i=0]
+                    lettre += txt[i];
+                }
+
+                if ( counter === 1 && txt[i] != "\n"){ //temps d'éxécution
+                    exe += txt[i] ;
+                    //console.log("exe : " + exe);
+                }
+
+                if ( counter === 2 && txt[i] != "\n"){ //nombre de films
+                    nbr_element+= txt[i] ;
+                    //console.log("exe : " + exe);
+                }
+
+                if ( txt[i] == "\n"){//On change de ligne
+                    counter += 1 ;
+                }
             }
             else {
                 if ( count == 0 && txt[i] != "\n" && txt[i] != ";"){
                     titre += txt[i] ;
+                    //console.log("titre :" + titre)
                 }
                 if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){
                     time += txt[i] ;
+                    //console.log("durée :" + time)
                 }
                 if ( count == 2 && txt[i] != "\n" && txt[i] != ";"){
                     genre += txt[i] ;
+                    //console.log("genre :" + genre)
                 }
                 if ( txt[i] == ";" ){
                     count = ( count + 1 ) % 3 ;
@@ -69,32 +88,103 @@ function results(txt){
                 if ( txt[i] == "\n" || i == ( n - 1 ) ){
 
                     count = 0 ;
-                    nbr_element+=1; // + une carte sur la page
 
-                    for(let j = first; j < first + nbr_max; j++){
-                        if(j < nbr_element){
+                    tabInformationCard.push(titre, genre, time);
 
-                            let newCard = document.getElementsByClassName("container")[1].cloneNode(true);
-                            console.log(newCard);
-                            newCard.children[0].children[0].children[1].innerHTML = titre ;
-                            newCard.children[0].children[0].children[2].innerHTML = genre ;
-                            newCard.children[0].children[1].children[0].innerHTML = time ;
+                    tabInformationEachCard.push(tabInformationCard);
+                    tabInformationCard = [];
 
-                            let randomImage = 'https://source.unsplash.com/random/?Films/' + Math.random(); //Obtention d'une image aléatoire
-
-                            newCard.children[0].children[2].setAttribute("src", randomImage);
-
-                            document.getElementsByClassName("container")[0].appendChild(newCard); //ajoute la carte sur la page
-
-                            titre = "";
-                            time = "";
-                            genre = "";
-                        }
-                    }
+                    titre = "";
+                    time = "";
+                    genre = "";
                 }
             }
         }
+        
     }
+
+                      
+}
+
+function showCard(){
+    //if(document.getElementsByClassName("container")[0].children.length > 0){
+        //for(let k = 0; k < document.getElementsByClassName("container")[0].children.length; k++){
+            //document.getElementsByClassName("container")[0].removeChild(k);
+        //}
+
+        //Array.from(document.getElementsByClassName("container")[0].children).forEach(function (element) {
+            //document.getElementsByClassName("container")[0].removeChild(element);
+        //});
+    //}
+
+    document.getElementsByClassName("container")[0].innerHTML = `<div class="card-box">
+        <header class="cardHeader">
+            <p></p>
+            <p class="title">TITRE</p>
+            <p class="genre">GENRE</p>
+        </header>
+
+        <footer class="cardFooter">
+            <p class="duration">160min</p>
+            <p class="director">DIRECTOR</p>
+        </footer>
+        <img class="backgroundImage" src=""></div>`;
+
+    for(let j = first; j < first + nbr_max; j++){
+        if(j < nbr_element){
+            let newCard = document.getElementsByClassName("card-box")[0].cloneNode(true);
+
+            newCard.children[0].children[1].innerHTML = tabInformationEachCard[j][0] ;
+            newCard.children[0].children[2].innerHTML = tabInformationEachCard[j][1] ;
+            newCard.children[1].children[0].innerHTML = tabInformationEachCard[j][2] ;
+
+            let randomImage = 'https://source.unsplash.com/random/?Films/' + Math.random(); //Obtention d'une image aléatoire
+
+            newCard.children[2].setAttribute("src", randomImage);
+
+            document.getElementsByClassName("container")[0].appendChild(newCard); //ajoute la carte sur la page
+            //tabInformationEachCard.forEach((elt) => console.log(elt[0] + " : " + elt[1] + " (" + elt[2] + ")"));
+        }
+    }
+}
+
+
+// Se déplacer dans la pagination
+function firstPage(){
+    first = 0; //On retourne à la première page
+    //console.log(first);
+    //results(readFile("src/c/cmake-build/debug/ready4.txt","src/c/cmake-build-debug/res_allFilms.txt"));
+    //results(readFile("src/js/ready3.txt","src/js/BD_small.txt"));
+    showCard();
+}
+
+function nextPage(){
+    if(first + nbr_max <= nbr_element){
+        first += nbr_max; //décale de -24 la position initiale
+        //console.log(first);
+        //results(readFile("src/c/cmake-build/debug/ready4.txt","src/c/cmake-build-debug/res_allFilms.txt"));
+        //results(readFile("src/js/ready3.txt","src/js/BD_small.txt"));
+        showCard();
+    }
+}
+
+function previous(){
+    if(first - nbr_max >= 0){            // Condition pour éviter de dépasser
+        first -= nbr_max; //décale de +24 la position initiale
+        //console.log(first);
+        //results(readFile("src/c/cmake-build/debug/ready4.txt","src/c/cmake-build-debug/res_allFilms.txt"));
+        //results(readFile("src/js/ready3.txt","src/js/BD_small.txt"));
+        showCard();
+    }
+}
+
+function lastPage(){
+    let maxPages = Math.ceil(nbr_element / nbr_max);   // Nombre maximum du page générable
+    first = (maxPages * nbr_max) - nbr_max;        // Indice de la dernière position
+    //console.log(first);
+    //Results(readFile("src/c/cmake-build/debug/ready4.txt","src/c/cmake-build-debug/res_allFilms.txt"));
+    //results(readFile("src/js/ready3.txt","src/js/BD_small.txt"));
+    showCard();
 }
 
 function topDirector(txt){
@@ -153,38 +243,14 @@ function topDirector(txt){
 }
 
 
-// Se déplacer dans la pagination
-function firstPage(){
-    first = 0; //On retourne à la première page
-    results(readFile("src/c/cmake-build/debug/ready4.txt","src/c/cmake-build-debug/res_allFilms.txt"));
-}
-
-function previous(){
-    //if(first + nbr_max <= nbr_element)             // Condition pour éviter de dépasser
-    first+=nbr_max; //décale de +24 la position initiale
-    results(readFile("src/c/cmake-build/debug/ready4.txt","src/c/cmake-build-debug/res_allFilms.txt"));
-}
-
-function nextPage(){
-    if(first - nbr_max >= 0){
-        first+=nbr_max; //décale de -24 la position initiale
-        results(readFile("src/c/cmake-build/debug/ready4.txt","src/c/cmake-build-debug/res_allFilms.txt"));
-    }
-}
-
-
-//let maxPages = Math.ceil(nbr_element / nbr_max);   // Nombre maximum du page générable
-function lastPage(){
-    //first = (maxPages * nbr_max) - nbr_max;        // Indice de la dernière position
-    //Results(readFile("src/c/cmake-build/debug/ready4.txt","src/c/cmake-build-debug/res_allFilms.txt"));
-}
-
-
 /////////////////////////////////////////////////////////////////////////////////////////////::
 
 function main() {
 
     topDirector(readFile("src/c/cmake-build-debug/ready0.txt","src/c/cmake-build-debug/res_director.txt")); //Lancement au démarage
+    //results(readFile("src/c/cmake-build/debug/ready4.txt","src/c/cmake-build-debug/res_allFilms.txt"));
+    results(readFile("src/js/ready3.txt","src/js/BD_small.txt"));
+    showCard();
 
 }
 
