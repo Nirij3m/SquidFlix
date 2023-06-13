@@ -53,18 +53,20 @@ function recup(){
             }
         }
         //console.log(director2);
-        document.getElementById("searchDirector").value = director2 ;
+        document.getElementById("searchDirector").value = director2 ; //échange pour une meilleure lisibilité
     }
     //Mise en page
 
-    let time = document.getElementById("searchTime").value;
+    let time = document.getElementById("searchTime").value; //Réccupérer les données dans seahTime
     //console.log(time);
 
+    //Si valeur négative alors valeur absolu
     if(time < 0){
         let time2 = time * ( -1 ) ;
         
         document.getElementById("searchTime").value = time2 ;
     }
+    //Si valeur négative
 
     let genre = document.getElementById("searchGenre").value;
     //console.log(genre);
@@ -115,8 +117,8 @@ function recup(){
 function clear(){
 
     card = document.getElementById("test1");
-    document.getElementsByClassName("container1")[0] = "";
-    document.getElementsByClassName("container1")[0] = card;
+    document.getElementsByClassName("container1")[0].innerHTML = "";
+    document.getElementsByClassName("container1")[0].appendChild(card);
 
 }
 
