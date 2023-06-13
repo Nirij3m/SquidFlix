@@ -120,7 +120,7 @@ function subscribe() {
     console.log(connexionPanel.children[1].children[1]);
     connexionPanel.children[1].children[1].id = "subUser";
 
-    connexionPanel.getElementsByClassName("envoyer")[0].addEventListener("click", function(){
+    connexionPanel.getElementsByClassName("envoyer")[0].addEventListener("click", function () {
         let username = connexionPanel.getElementsByTagName("input")[0].value;
         let password = connexionPanel.getElementsByTagName("input")[1].value;
 
@@ -130,9 +130,12 @@ function subscribe() {
         writeFile(1, ['finalPass'], ["createUser"], "Z");
     });
 
-    document.getElementById("subscribe").addEventListener("click", function(){
+    document.getElementById("subscribe").addEventListener("click", function () {
         document.body.appendChild(connexionPanel);
     });
+
+
+
 }
 function main(){
     subscribe();

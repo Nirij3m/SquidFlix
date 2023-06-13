@@ -10,8 +10,6 @@ struct NodeTrie* createEmptyNodeTrie(){
         }
         trie->isWord = false;
         trie->films = createEmptyListFilm();
-        trie->topDirector = malloc(sizeof(struct Director));
-        trie->topDirector = NULL;
         return trie;
     }
     else{
@@ -27,7 +25,7 @@ bool isNodeTrieEmpty(struct NodeTrie* trie) {
     return false;
 }
 
-void insertWord(struct NodeTrie* trie, char* word, struct CellFilm* film, struct Director* topDirector, int* maxSize){
+void insertWord(struct NodeTrie* trie, char* word, struct CellFilm* film, struct Director* d){
     unsigned int len = strlen(word);
     struct NodeTrie *currentNode = trie;
     for (int i = 0; i < len; i++) {
@@ -38,39 +36,52 @@ void insertWord(struct NodeTrie* trie, char* word, struct CellFilm* film, struct
         currentNode = currentNode->alphabets[index];
     }
     currentNode->isWord = true;
-    //Check the best director
-    int listSize = listSizeFilm(currentNode->films);
-    if(maxSize != NULL && listSize > *maxSize){
-
-       *maxSize = listSize; //Nouvelle taille à comparer
-       topDirector->nmbFilm = listSize; //Change la taille du directeur
-       free(topDirector->name);
-       topDirector->name = malloc((strlen(word)+1)*sizeof(char));
-       strcpy(topDirector->name, word);
-    }
-    if(topDirector != NULL) {
-        currentNode->films->director = malloc((strlen(word) + 1) * sizeof(char));//Je copie le nom du directeur en rappel
-        memset(currentNode->films->director, '\0', strlen(word)+1 );
+    //je copie le directeur dans la liste de film
+    if(currentNode->films->director == NULL){ //Créer et copie le directeur ssi il n'existe pas
+        currentNode->films->director = malloc((strlen(word)+1)*sizeof(char));
         strcpy(currentNode->films->director, word);
     }
-    addFirstFilm(currentNode->films, film->nomFilm, film->duration, film->genre);
-    free(film->genre);
-    free(film->nomFilm);
-
-
-}
-
-void deleteWord(struct NodeTrie* trie, char* word){
-    unsigned int n = strlen(word);
-    for (int i = 0; i < n; i++){
-        int index = word[i] - 'a';
-        if (trie->alphabets[index] == NULL){
-            return;
+    //Comparaison pour le topDirector
+    if(currentNode->films->size > d->nmbFilm){
+        d->nmbFilm = currentNode->films->size;
+        if(d->name != NULL){ // le nom existe déjà je le libère
+            free(d->name);
+            d->name = NULL;
+            d->name = malloc((strlen(word)+1)*sizeof(char));
+            strcpy(d->name, word);
         }
-        trie = trie->alphabets[index];
+        else{ //le nom n'existe pas
+            d->name = malloc((strlen(word)+1)*sizeof(char));
+            strcpy(d->name, word);
+        }
+
     }
-    trie->isWord = false;
+    addFirstFilm(currentNode->films, film);
+
 }
+
+void insertWordGenre(struct NodeTrie* trie, char* word, struct CellFilm* film){
+    unsigned int len = strlen(word);
+    struct NodeTrie *currentNode = trie;
+    for (int i = 0; i < len; i++) {
+        int index = word[i] - 'a';
+        if (currentNode->alphabets[index] == NULL) {
+            currentNode->alphabets[index] = createEmptyNodeTrie();
+
+            if(currentNode->alphabets[index] == NULL){
+                while(true){
+                    printf("NODE TRIE ERROR MALLOC");
+                }
+            }
+        }
+        currentNode = currentNode->alphabets[index];
+    }
+    currentNode->isWord = true;
+    //je copie le directeur dans la liste de film
+    addFirstFilm(currentNode->films, film);
+
+}
+
 
 void deleteNodeTrie(struct NodeTrie** trie){
     if ((*trie) != NULL){
@@ -82,9 +93,30 @@ void deleteNodeTrie(struct NodeTrie** trie){
                     if((*trie)->alphabets[j]->films != NULL){
                         deleteListFilm(&((*trie)->alphabets[j]->films ));
                     }
+                    if( (*trie)->films != NULL && (*trie)->films->director != NULL){
+                        free((*trie)->films->director);
+                        (*trie)->films->director = NULL;
+                    }
                 deleteNodeTrie(&((*trie)->alphabets[j])); //appel récursif
             }
         }
+
+        //Je supprime le pointeur à film
+        if((*trie)->films != NULL && listSizeFilm((*trie)->films) != 0 ){
+            free((*trie)->films);
+            (*trie)->films = NULL;
+        }
+
+        //Je supprime le char director
+        if( (*trie)->films != NULL && (*trie)->films->director != NULL){
+            free((*trie)->films->director);
+            (*trie)->films->director = NULL;
+        }
+        //Je supprime le topDirector
+        if((*trie)->topDirector != NULL){
+            deleteDirector((*trie)->topDirector);
+        }
+        free(*trie);
         *trie = NULL;
     }
     else{
@@ -92,34 +124,13 @@ void deleteNodeTrie(struct NodeTrie** trie){
     }
 }
 
-bool findWord(struct NodeTrie* trie, char* word){
-    unsigned int n = strlen(word);
-    for (int i = 0; i < n; i++){
-        int index = word[i] - 'a';
-        if (trie->alphabets[index] == NULL){
-            return false;
-        }
-        trie = trie->alphabets[index];
-    }
-    return trie->isWord;
-}
-
-unsigned int numberOfWords(struct NodeTrie* trie){
-    unsigned int count = 0;
-    if (trie->isWord){
-        count++;
-    }
-    for (int i = 0; i < MAX_SIZE; i++){
-        if (trie->alphabets[i] != NULL){
-            count += numberOfWords(trie->alphabets[i]);
-        }
-    }
-    return count;
-}
 
 struct NodeTrie* readDict(char *filename, struct ListFilm** timeArray, struct NodeTrie* genres){
     struct NodeTrie* trie = createEmptyNodeTrie();
-    struct Director* topD = createDirector("init");
+    struct Director* d = malloc(sizeof(struct Director));
+    d->name = NULL;
+
+
     int bestSize = 0;
     FILE *request = fopen(filename, "r");
     if (request == NULL){
@@ -141,8 +152,9 @@ struct NodeTrie* readDict(char *filename, struct ListFilm** timeArray, struct No
         fscanf(request, "%[^;];%[^;];%d;%[^\n]\n", director, title, &duration, genre);
         genre[strcspn(genre, "\r")] = '\0'; //retire l'éventuel "\n"
         //création du film
-        struct CellFilm *film1 = createCellFilm(title, duration, genre);
-        struct CellFilm *film2 = createCellFilm(title, duration, genre);
+        struct CellFilm* film1 = createCellFilm(title, duration, genre);
+        struct CellFilm* film2 = createCellFilm(title, duration, genre);
+        struct CellFilm* film3 = createCellFilm(title, duration, genre);
         //Lower case
         for(int i = 0; director[i]; i++){
             director[i] = tolower(director[i]);
@@ -155,48 +167,15 @@ struct NodeTrie* readDict(char *filename, struct ListFilm** timeArray, struct No
         remove_schar(director);
         remove_spaces(genre);
         remove_schar(genre);
-        insertWord(trie, director, film1, topD, &bestSize);
-        insertWord(genres, genre, film2, NULL, NULL);
-        insertFilm(timeArray, title, duration, genre);
-
+        insertWord(trie, director, film1, d);
+        insertWordGenre(genres, genre, film2);
+        insertFilm(timeArray, film3);
     }
-    trie->topDirector = topD; //Je fais poiter le topDirector of topD trouvé
-
+    trie->topDirector = d;
     fclose(request);
     return trie;
 }
 
-void displayDict( struct NodeTrie* trie, char* preword, char* word, int index){
-    if (trie->isWord){
-        word[index] = '\0';
-        printf(" - %s%s", preword, word);
-    }
-    for (int i = 0; i < MAX_SIZE; i++){
-        if (trie->alphabets[i] != NULL){
-            word[index] = i + 'a';
-            displayDict(trie->alphabets[i], preword, word, index + 1);
-        }
-    }
-}
-
-void findWords(struct NodeTrie* dict, char* preword, char* letters, int index){
-    bool valid = true;
-    char prefix[32];
-    struct NodeTrie* currentNode = dict;
-    for (int i = 0; i < strlen(letters); i++) {
-        int ind = letters[i] - 'a';
-        if (currentNode->alphabets[ind] == NULL) { //Pas trouver, je renvoie le plus proche
-            valid = false;
-            printf("\nNo word %s in dictionary", letters);
-            break;
-        }
-        currentNode = currentNode->alphabets[ind];
-    }
-    if (valid == true) { //J'ai trouvé je renvoie la liste
-    printf("\nWords starting with %s : \n", letters);
-    displayDict(currentNode, preword, prefix, 0);
-    }
-}
 
 struct ListFilm* findDirector(struct NodeTrie* dict, char* preword, char* letters, int index){
     bool valid = true;
@@ -292,6 +271,7 @@ void preorderNmbFilms(struct NodeTrie* node, int* count) {
         preorderNmbFilms(node->alphabets[i], count);
     }
 }
+
 
 
 

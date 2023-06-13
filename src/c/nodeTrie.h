@@ -23,7 +23,8 @@ struct NodeTrie* readDict(char *filename, struct ListFilm** timeArray, struct No
 
 struct NodeTrie* createEmptyNodeTrie();
 bool isNodeTrieEmpty(struct NodeTrie* trie);
-void insertWord(struct NodeTrie* trie, char* word, struct CellFilm* film, struct Director* topDirector, int* maxSize);
+void insertWord(struct NodeTrie* trie, char* word, struct CellFilm* film, struct Director* d);
+void insertWordGenre(struct NodeTrie* trie, char* word, struct CellFilm* film); //same as insertWord but do not copy the director
 void deleteWord(struct NodeTrie* trie, char* word);
 bool findWord(struct NodeTrie* trie, char* word);
 void deleteNodeTrie(struct NodeTrie** trie);
@@ -37,4 +38,5 @@ void remove_schar(char* str);
 void preorderFilms(struct NodeTrie* node, FILE* result);
 void preorderDirector(struct NodeTrie* node, FILE* result);
 void preorderNmbFilms(struct NodeTrie* node, int* count);
+void preorderTopDirector(struct NodeTrie* node, int* count, char* director);
 #endif

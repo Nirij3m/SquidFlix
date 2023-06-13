@@ -28,7 +28,7 @@ struct CellFilm{
 struct Director* createDirector(char* name);
 struct CellFilm* createCellFilm(char* nomFilm, int duration, char* genre);
 struct ListFilm* createEmptyListFilm();
-void addFirstFilm(struct ListFilm* l, char* nomFilm, int duration, char* genre);
+void addFirstFilm(struct ListFilm* l, struct CellFilm* film);
 bool isListEmptyFilm(struct ListFilm* l);
 
 void deleteFirstFilm(struct ListFilm* l);
@@ -40,7 +40,7 @@ void deleteListFilm(struct ListFilm** l);
 void deleteDirector(struct Director* d);
 
 struct ListFilm** createTimeArray();
-bool insertFilm(struct ListFilm** timeArray, char* title, int duration, char* genre);
+bool insertFilm(struct ListFilm** timeArray, struct CellFilm* film);
 void freeTimeArray(struct ListFilm** timeArray);
 
 

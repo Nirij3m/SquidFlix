@@ -10,8 +10,9 @@ int main() {
     double time_spent = 0.0;
     clock_t begin = clock();
     struct ListFilm **timeArray = createTimeArray();
-    struct NodeTrie* genres = createEmptyNodeTrie();
+    struct NodeTrie *genres = createEmptyNodeTrie();
     struct NodeTrie *root = readDict("BD_medium.txt", timeArray, genres);
+
 
     clock_t end = clock();
     time_spent += (double) (end - begin) / CLOCKS_PER_SEC;
@@ -33,7 +34,7 @@ int main() {
     remove("results.txt");
     remove("ready.txt");
 
-    while(!stopInit) {
+    while (!stopInit) {
         printf("Listenning for incomming request...\n");
         FILE *request;
         request = fopen("request.txt", "r");
@@ -53,7 +54,7 @@ int main() {
 
             //Je teste toutes les fonctions possibles à appeler
             if (strcmp(functionCalled, "findByDirector") == 0) {
-                for(int i = 0; parameter[i]; i++){
+                for (int i = 0; parameter[i]; i++) {
                     parameter[i] = tolower(parameter[i]);
                 }
                 remove_spaces(parameter);
@@ -64,7 +65,7 @@ int main() {
             if (strcmp(functionCalled, "findByGenre") == 0) {
                 remove_spaces(parameter);
                 remove_schar(parameter);
-                for(int i = 0; parameter[i]; i++){
+                for (int i = 0; parameter[i]; i++) {
                     parameter[i] = tolower(parameter[i]);
                 }
                 findByGenre(parameter, genres, destination);
@@ -92,7 +93,7 @@ int main() {
                 printTopDirector(root, destination);
                 clearInput();
             }
-            if (strcmp(functionCalled, "deleteDatabase") == 0){
+            if (strcmp(functionCalled, "deleteDatabase") == 0) {
                 printf("Databsase clear procedure intialized");
                 stopInit = true; //will stop the infinite loop after the database have been cleared
                 freeTimeArray(timeArray);
@@ -110,5 +111,6 @@ int main() {
     }
     //END
 
-return 0;
+    return 0;
 }
+

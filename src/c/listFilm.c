@@ -54,14 +54,14 @@ struct ListFilm* createEmptyListFilm(){
     return l1;
 }
 
-void addFirstFilm(struct ListFilm* l, char* nomFilm, int duration, char* genre){
-    struct CellFilm* newLHead = createCellFilm(nomFilm, duration, genre);
-    if(newLHead==NULL){
+void addFirstFilm(struct ListFilm* l, struct CellFilm* film){
+
+    if(film==NULL){
         printf("head malloc error");
     }
 
-    newLHead -> next = l->head;
-    l->head = newLHead;
+    film -> next = l->head;
+    l->head = film;
     l->size++;
 
 }
@@ -104,6 +104,9 @@ void printListFilm(struct ListFilm* l){
 
 void deleteDirector(struct Director* d){
     free(d->name);
+    d->name = NULL;
+    free(d);
+    d = NULL;
 }
 
 
@@ -138,16 +141,16 @@ struct ListFilm** createTimeArray(){
     return timeArray;
 }
 
-bool insertFilm(struct ListFilm** timeArray, char* title, int duration, char* genre){
+bool insertFilm(struct ListFilm** timeArray, struct CellFilm* film){
     if(isListEmptyFilm(*timeArray)){
         return false;
     }
-    if(timeArray[duration] == NULL){
-        timeArray[duration] = createEmptyListFilm();
-        addFirstFilm(timeArray[duration], title, duration, genre);
+    if(timeArray[film->duration] == NULL){
+        timeArray[film->duration] = createEmptyListFilm();
+        addFirstFilm(timeArray[film->duration], film);
     }
     else{
-        addFirstFilm(timeArray[duration],title, duration, genre);
+        addFirstFilm(timeArray[film->duration], film);
     }
 
 }
