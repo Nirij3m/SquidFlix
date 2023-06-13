@@ -380,6 +380,27 @@ function results(txt){
 
 
 }
+
+
+function directorName(txt){
+    let n = txt.length;
+    let directors = "";
+
+    for(let i = 0; i < n; i++){
+
+        if(txt[0] === "D" && txt[i] != "\n" && i>1){
+            directors += txt[i];
+            console.log("réalisateur : " + directors);
+        }
+
+        if(txt[0] === "D" && txt[i] == "\n" && i>1){
+            var newDirectorItem = document.getElementsByClassName("listAuthor");
+            newDirectorItem.innerHTML = `<p class="listAuthor">${directors}</p>`
+        }
+    }
+}
+
+
 // -------------------------
 
 // -------------------------
