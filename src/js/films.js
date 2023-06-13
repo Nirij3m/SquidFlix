@@ -107,16 +107,6 @@ function results(txt){
 }
 
 function showCard(){
-    //if(document.getElementsByClassName("container")[0].children.length > 0){
-        //for(let k = 0; k < document.getElementsByClassName("container")[0].children.length; k++){
-            //document.getElementsByClassName("container")[0].removeChild(k);
-        //}
-
-        //Array.from(document.getElementsByClassName("container")[0].children).forEach(function (element) {
-            //document.getElementsByClassName("container")[0].removeChild(element);
-        //});
-    //}
-
     document.getElementsByClassName("container")[0].innerHTML = `<div class="card-box">
         <header class="cardHeader">
             <p></p>
@@ -153,8 +143,6 @@ function showCard(){
 function firstPage(){
     first = 0; //On retourne à la première page
     //console.log(first);
-    //results(readFile("src/c/cmake-build/debug/ready4.txt","src/c/cmake-build-debug/res_allFilms.txt"));
-    //results(readFile("src/js/ready3.txt","src/js/BD_small.txt"));
     showCard();
 }
 
@@ -162,8 +150,6 @@ function nextPage(){
     if(first + nbr_max <= nbr_element){
         first += nbr_max; //décale de -24 la position initiale
         //console.log(first);
-        //results(readFile("src/c/cmake-build/debug/ready4.txt","src/c/cmake-build-debug/res_allFilms.txt"));
-        //results(readFile("src/js/ready3.txt","src/js/BD_small.txt"));
         showCard();
     }
 }
@@ -172,8 +158,6 @@ function previous(){
     if(first - nbr_max >= 0){            // Condition pour éviter de dépasser
         first -= nbr_max; //décale de +24 la position initiale
         //console.log(first);
-        //results(readFile("src/c/cmake-build/debug/ready4.txt","src/c/cmake-build-debug/res_allFilms.txt"));
-        //results(readFile("src/js/ready3.txt","src/js/BD_small.txt"));
         showCard();
     }
 }
@@ -182,8 +166,6 @@ function lastPage(){
     let maxPages = Math.ceil(nbr_element / nbr_max);   // Nombre maximum du page générable
     first = (maxPages * nbr_max) - nbr_max;        // Indice de la dernière position
     //console.log(first);
-    //Results(readFile("src/c/cmake-build/debug/ready4.txt","src/c/cmake-build-debug/res_allFilms.txt"));
-    //results(readFile("src/js/ready3.txt","src/js/BD_small.txt"));
     showCard();
 }
 
