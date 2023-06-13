@@ -1,5 +1,5 @@
 #include "nodeTrie.h"
-#include "listDirector.h"
+
 #include "listFilm.h"
 
 struct NodeTrie* createEmptyNodeTrie(){
@@ -41,6 +41,7 @@ void insertWord(struct NodeTrie* trie, char* word, struct CellFilm* film, struct
     //Check the best director
     int listSize = listSizeFilm(currentNode->films);
     if(maxSize != NULL && listSize > *maxSize){
+
        *maxSize = listSize; //Nouvelle taille à comparer
        topDirector->nmbFilm = listSize; //Change la taille du directeur
        free(topDirector->name);
@@ -49,7 +50,8 @@ void insertWord(struct NodeTrie* trie, char* word, struct CellFilm* film, struct
        topDirector->films = currentNode->films; //Je fais pointer la listFilm du directeur actuel vers la nouvelle
     }
     if(topDirector != NULL) {
-        currentNode->films->director = malloc((strlen(word) + 1) * sizeof(char)); //Je copie le nom du directeur en rappel
+        currentNode->films->director = malloc((strlen(word) + 1) * sizeof(char));//Je copie le nom du directeur en rappel
+        memset(currentNode->films->director, '\0', strlen(word)+1 );
         strcpy(currentNode->films->director, word);
     }
     addFirstFilm(currentNode->films, film->nomFilm, film->duration, film->genre);
@@ -69,22 +71,29 @@ void deleteWord(struct NodeTrie* trie, char* word){
 
 void deleteNodeTrie(struct NodeTrie** trie){
     if ((*trie) != NULL){
-        for (int i = 0; i < MAX_SIZE; i++){
-            if ((*trie)->alphabets[i] != NULL){
+        for (int j = 0; j < MAX_SIZE; j++){
+            if ((*trie)->alphabets[j] != NULL){
 
                 struct ListFilm* l = (*trie)->films;
                 if(!(*trie)->isWord){
-                    free((*trie)->films);
+                    free(l);
+                    (*trie)->films = NULL;
+                    l = NULL;
                 }
                 else{
-                    if(l->director != NULL) { // Je regarde si'ol y a un nom dirctor à free
+                    if(l->director != NULL && strlen(l->director) != 0) { // Je regarde si'ol y a un nom dirctor à free
                         free(l->director);
+                        l->director = NULL;
                     }
                     unsigned int size = listSizeFilm(l);
                     for(int i = 0; i < size; i++){
                         deleteFirstFilm(l);
                     }
-                    free((*trie)->films);
+                    free(l);
+                    (*trie)->films = NULL;
+                    l = NULL;
+
+
                 }
 
                 if((*trie)->topDirector != NULL){ //Il y a un topDirector à free
@@ -95,7 +104,7 @@ void deleteNodeTrie(struct NodeTrie** trie){
                         deleteFirstFilm((*trie)->topDirector->films);
                     }
                 }
-                deleteNodeTrie(&((*trie)->alphabets[i]));
+                deleteNodeTrie(&((*trie)->alphabets[j])); //appel récursif
             }
         }
         *trie = NULL;
@@ -132,7 +141,7 @@ unsigned int numberOfWords(struct NodeTrie* trie){
 
 struct NodeTrie* readDict(char *filename, struct ListFilm** timeArray, struct NodeTrie* genres){
     struct NodeTrie* trie = createEmptyNodeTrie();
-    struct Director* topD = createCellDirector("init");
+    struct Director* topD = createDirector("init");
     int bestSize = 0;
     FILE *request = fopen(filename, "r");
     if (request == NULL){

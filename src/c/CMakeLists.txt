@@ -3,4 +3,4 @@ project(c C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(c databaseInit.c listDirector.c main.c hashTableFilmList.c accountManagement.c nodeTrie.c listFilm.c)
+add_executable(c databaseInit.c main.c  nodeTrie.c listFilm.c)

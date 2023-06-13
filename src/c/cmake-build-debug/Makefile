@@ -142,33 +142,6 @@ c/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/build
 .PHONY : c/fast
 
-accountManagement.o: accountManagement.c.o
-
-.PHONY : accountManagement.o
-
-# target to build an object file
-accountManagement.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/accountManagement.c.o
-.PHONY : accountManagement.c.o
-
-accountManagement.i: accountManagement.c.i
-
-.PHONY : accountManagement.i
-
-# target to preprocess a source file
-accountManagement.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/accountManagement.c.i
-.PHONY : accountManagement.c.i
-
-accountManagement.s: accountManagement.c.s
-
-.PHONY : accountManagement.s
-
-# target to generate assembly for a file
-accountManagement.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/accountManagement.c.s
-.PHONY : accountManagement.c.s
-
 databaseInit.o: databaseInit.c.o
 
 .PHONY : databaseInit.o
@@ -195,60 +168,6 @@ databaseInit.s: databaseInit.c.s
 databaseInit.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/databaseInit.c.s
 .PHONY : databaseInit.c.s
-
-hashTableFilmList.o: hashTableFilmList.c.o
-
-.PHONY : hashTableFilmList.o
-
-# target to build an object file
-hashTableFilmList.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/hashTableFilmList.c.o
-.PHONY : hashTableFilmList.c.o
-
-hashTableFilmList.i: hashTableFilmList.c.i
-
-.PHONY : hashTableFilmList.i
-
-# target to preprocess a source file
-hashTableFilmList.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/hashTableFilmList.c.i
-.PHONY : hashTableFilmList.c.i
-
-hashTableFilmList.s: hashTableFilmList.c.s
-
-.PHONY : hashTableFilmList.s
-
-# target to generate assembly for a file
-hashTableFilmList.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/hashTableFilmList.c.s
-.PHONY : hashTableFilmList.c.s
-
-listDirector.o: listDirector.c.o
-
-.PHONY : listDirector.o
-
-# target to build an object file
-listDirector.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/listDirector.c.o
-.PHONY : listDirector.c.o
-
-listDirector.i: listDirector.c.i
-
-.PHONY : listDirector.i
-
-# target to preprocess a source file
-listDirector.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/listDirector.c.i
-.PHONY : listDirector.c.i
-
-listDirector.s: listDirector.c.s
-
-.PHONY : listDirector.s
-
-# target to generate assembly for a file
-listDirector.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/c.dir/build.make CMakeFiles/c.dir/listDirector.c.s
-.PHONY : listDirector.c.s
 
 listFilm.o: listFilm.c.o
 
@@ -340,18 +259,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... c"
-	@echo "... accountManagement.o"
-	@echo "... accountManagement.i"
-	@echo "... accountManagement.s"
 	@echo "... databaseInit.o"
 	@echo "... databaseInit.i"
 	@echo "... databaseInit.s"
-	@echo "... hashTableFilmList.o"
-	@echo "... hashTableFilmList.i"
-	@echo "... hashTableFilmList.s"
-	@echo "... listDirector.o"
-	@echo "... listDirector.i"
-	@echo "... listDirector.s"
 	@echo "... listFilm.o"
 	@echo "... listFilm.i"
 	@echo "... listFilm.s"

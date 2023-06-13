@@ -441,6 +441,6 @@ function search(){
 }
 
 function main(){
-    directorName(readFile("src/c/cmake-build-debug/ready4.txt", "src/c/cmake-build-debug/res_allDirector.txt"));
+    directorName(readFile("src/c/cmake-build-debug/ready4.txt", "src/c/cmake-build-debug/res_allDirector.txt")); //On récupère directement le fichier contenant tous les Directeurs
 }
 main();
