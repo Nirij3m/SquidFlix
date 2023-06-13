@@ -74,35 +74,35 @@ function recup(){
     let genre = document.getElementById("searchGenre").value;
     //console.log(genre);
 
-    if(director == '' && time == "" && genre == "None"){ //Si rien de remplis
+    if(director === '' && time === "" && genre === "none"){ //Si rien de remplis
         counter = "000";
     }
     else {
-        if(director != '' && time != "" && genre != "None"){ // si tout remplis
+        if(director != '' && time != "" && genre != "none"){ // si tout remplis
             counter = "111";
         }
         else {
-            if(director != '' && time == "" && genre == "None"){ // si director seulement remplis
+            if(director != '' && time == "" && genre == "none"){ // si director seulement remplis
                 counter = "100";
             }
             else {
-                if(director == '' && time != "" && genre == "None"){ // si time seulement remplis
+                if(director == '' && time != "" && genre == "none"){ // si time seulement remplis
                     counter = "010";
                 }
                 else {
-                    if(director == '' && time == "" && genre != "None"){ // si genre seulement remplis
+                    if(director == '' && time == "" && genre != "none"){ // si genre seulement remplis
                         counter = "001";
                     }
                     else {
-                        if(director != '' && time != "" && genre == "None"){ //si director et time remplis
+                        if(director != '' && time != "" && genre == "none"){ //si director et time remplis
                             counter = "110";
                         }
                         else {
-                            if(director != '' && time == "" && genre != "None"){ //si director et genre remplis
+                            if(director != '' && time == "" && genre != "none"){ //si director et genre remplis
                                 counter = "101";
                             }
                             else {
-                                if(director == '' && time != "" && genre != "None"){ //si durer et genre remplis
+                                if(director == '' && time != "" && genre != "none"){ //si durer et genre remplis
                                     counter = "011";
                                 }
                             }
