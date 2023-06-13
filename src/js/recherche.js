@@ -368,7 +368,7 @@ function results(txt){
                 titre = "" ;
                 time = "" ;
                 genre = "" ;
-                director =""
+                director ="";
             }
         }
     }
