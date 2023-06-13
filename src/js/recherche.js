@@ -387,6 +387,14 @@ function results(txt){
     }
 }
 
+function capitalizeWords(str) {
+    let words = str.split(" ");
+    let capitalizedWords = words.map(function(word) {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    });
+    return capitalizedWords.join(" ");
+}
+
 
 function directorName(txt){
     let n = txt.length; //taille du texte
@@ -402,8 +410,9 @@ function directorName(txt){
         }
 
         if(txt[0] === "D" && txt[i] == "\n" && i>1){//Vérifie si c'est un retour à la ligne => fin du nom du directeur
-            directors = directors.charAt(0).toUpperCase();
-            newItem.innerHTML = directors; //Valeur dans la balise dans le HTML
+            //directors = directors.charAt(0).toUpperCase() + directors.slice(1);
+            let capitalizedDirectors = capitalizeWords(directors);
+            newItem.innerHTML = capitalizedDirectors; //Valeur dans la balise dans le HTML
             //console.log(newItem);
             document.getElementsByClassName("listAuthor")[0].parentNode.appendChild(newItem); //ajoute le newItem
             //console.log(document.getElementsByClassName("listAuthor")[0].parentNode);
@@ -426,10 +435,8 @@ function search(){
     if ( counter !== "000"){ // si au moins un champ est remplis
 
         //readFile();
-        //let myresults = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt"); //on réccupère les résultats de la fonction readFile
+        let myresults = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt"); //on réccupère les résultats de la fonction readFile
         //console.log(myresults);
-
-        let myresults = readFile("src/js/ready3.txt","src/js/BD_small.txt");
 
         results(myresults); // Fonction pour l'affichage des résultats
         setTimeout(() =>{}, "1000"); //pause
