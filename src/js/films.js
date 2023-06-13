@@ -179,7 +179,7 @@ function main() {
         });
     });
 
-    topDirector(readFile());
+    topDirector(readFile("/src/c/cmake-build/debug/ready3.txt","/src/c/cmake-build-debug/res_director.txt"));
 
 }
 

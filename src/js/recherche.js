@@ -169,6 +169,8 @@ function find(){
 
     let counter = recup();
 
+    clear();
+
     if ( counter == "000" ){
         console.log("Veuillez entrez quelque chose avant de rechercher\nPour voir l'intégralité de notre catalogue vous pouvez aller dans la catégorie Films.")
     }
