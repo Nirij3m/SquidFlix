@@ -21,7 +21,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d184d65e-da4e-4206-8a11-0ad225943aa9" name="Changes" comment="Serveur backend terminé et opérationnel">
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/ready4.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/projetCIR1_groupe_7.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/projetCIR1_groupe_7.iml" afterDir="false" />
@@ -54,7 +53,6 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
@@ -77,8 +75,6 @@
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nodeTrie.c" beforeDir="false" afterPath="$PROJECT_DIR$/nodeTrie.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nodeTrie.h" beforeDir="false" afterPath="$PROJECT_DIR$/nodeTrie.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../card_test/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/../card_test/card.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../card_test/card.html" beforeDir="false" afterPath="$PROJECT_DIR$/../card_test/card.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../css/compte.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/compte.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../css/films.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/films.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/index.css" afterDir="false" />
@@ -171,7 +167,7 @@
       <workItem from="1686598089209" duration="9050000" />
       <workItem from="1686640047374" duration="2521000" />
       <workItem from="1686644568194" duration="84000" />
-      <workItem from="1686644791399" duration="3627000" />
+      <workItem from="1686644791399" duration="5139000" />
     </task>
     <servers />
   </component>
