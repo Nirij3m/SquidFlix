@@ -28,19 +28,20 @@ window.onclick = function(event) {
 
 
 //Ecriture dans un fichier
-
+//Fonction pour réccupérer les valeurs entrer dans le form
 function recup(){
 
     //console.log("octopus");
 
-    let counter = "000" ;
+    let counter = "000" ; //si 000 alors rien d'entrée nul part
     //console.log(counter);
 
-    let director = document.getElementById("searchDirector").value;
+    let director = document.getElementById("searchDirector").value; //On réccupère ce qui est dans director
     let size = director.length ;
     //console.log("length : " + size);
     //console.log(director);
 
+    // Ajouter une majuscule au début - Mise en Page
     if(director != ''){
         let director2 = "";
         for( let i = 0 ; i < size ; i ++ ){
@@ -54,6 +55,7 @@ function recup(){
         //console.log(director2);
         document.getElementById("searchDirector").value = director2 ;
     }
+    //Mise en page
 
     let time = document.getElementById("searchTime").value;
     //console.log(time);
@@ -173,6 +175,7 @@ function find(){
 
     if ( counter == "000" ){
         console.log("Veuillez entrez quelque chose avant de rechercher\nPour voir l'intégralité de notre catalogue vous pouvez aller dans la catégorie Films.")
+        return;
     }
     else{
         if ( counter == "100" ){
@@ -302,6 +305,20 @@ function results(txt){
                     newCard.id ="";
                     console.log(newCard);
 
+                    // Pour avoir une majuscule ( mise en page )
+                    let size = director.length ;
+                    let director2 = "";
+                    for( let i = 0 ; i < size ; i ++ ){
+                        if ( i == 0 ){
+                            director2 += director[i].toUpperCase();
+                        }
+                        else{
+                            director2 += director[i].toLowerCase();
+                        }
+                    }
+                    //console.log(director2);
+                    // Mise en page
+
                     newCard.children[0].children[1].innerHTML = titre ;
                     newCard.children[0].children[2].innerHTML = genre ;
                     newCard.children[1].children[0].innerHTML = time ;
@@ -321,6 +338,20 @@ function results(txt){
                     newCard.id ="";
                     console.log(newCard);
 
+                    // Pour avoir une majuscule ( mise en page )
+                    let size = director.length ;
+                    let director2 = "";
+                    for( let i = 0 ; i < size ; i ++ ){
+                        if ( i == 0 ){
+                            director2 += director[i].toUpperCase();
+                        }
+                        else{
+                            director2 += director[i].toLowerCase();
+                        }
+                    }
+                    //console.log(director2);
+                    // Mise en page
+
                     newCard.children[0].children[1].innerHTML = titre ;
                     newCard.children[0].children[2].innerHTML = genre ;
                     newCard.children[1].children[0].innerHTML = time ;
@@ -338,6 +369,7 @@ function results(txt){
                 titre = "" ;
                 time = "" ;
                 genre = "" ;
+                director = "";
             }
         }
     }
