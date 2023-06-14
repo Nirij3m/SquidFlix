@@ -330,17 +330,6 @@ function results(txt){
 
                 console.log("Poulpe");
 
-                /*if ( suggestion == 1 ){ //Première carte de film
-                    suggestion += 1;
-                    document.getElementById("searchGenre").value = genre ; //On choisis le genre du premier film
-                    console.log(document.getElementById("searchGenre2").value);
-                    setTimeout(() => {
-                        console.log("Bloup2");
-                        writeFile(1,['searchGenre2'],["findByGenre"], "S");
-                    }, 3000); //On attend 1 seconde pour être sur que la requete soit fini
-
-                }*/
-
                 let newCard = document.getElementsByClassName("card-box1")[0].cloneNode(true); //On clone une nouvelle carte pour faire pareil
                 newCard.id = ""; //Id à rien, car sinon display none
                 //console.log(newCard);
@@ -375,42 +364,6 @@ function results(txt){
 
                 document.getElementById("temps_exe").innerHTML = " " + exe + " s";
             }
-
-            /*if ( txt[0] === "S"){ //Si c'est pour une suggestion
-
-                let newCard = document.getElementsByClassName("card-box2")[0].cloneNode(true); //On créer un clone pour ajouter des cartes de films
-                newCard.id = ""; //Id à vide pour pas avoir de display none
-                //console.log(newCard);
-
-                // Pour avoir une majuscule ( mise en page )
-                let size = director.length ;
-                let director2 = "";
-                for( let i = 0 ; i < size ; i ++ ){
-                    if ( i == 0 ){
-                        director2 += director[i].toUpperCase();
-                    }
-                    else{
-                        director2 += director[i].toLowerCase();
-                    }
-                }
-                //console.log(director2);
-                // Mise en page
-
-                newCard.children[0].children[1].innerHTML = titre ; //On insert les informations du film
-                newCard.children[0].children[2].innerHTML = genre ; //On insert les informations du film
-                newCard.children[1].children[0].innerHTML = time ; //On insert les informations du film
-                newCard.children[1].children[1].innerHTML = director ; //On insert les informations du film
-
-                let randomImage = 'https://source.unsplash.com/random/?Films/' + Math.random(); //Obtention d'une image aléatoire
-
-                newCard.children[2].setAttribute("src", randomImage); //On change le src afin d'avoir une image aléatoire pour chaque film
-
-                document.getElementsByClassName("container2")[0].appendChild(newCard); //On ajoute la carte au container pour l'affihcer
-                //console.log("bloup");
-
-                animateCards();
-
-            }*/
 
             titre = "" ; //Réinitalisation des champs
             time = "" ; //Réinitalisation des champs
