@@ -463,8 +463,6 @@ function search(){
 
         results(myresults); // Fonction pour l'affichage des résultats
 
-        setTimeout(() =>{}, "1000000"); //pause
-
         let Sug = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt"); //On réccupère les résultats pour faire une suggestion à partir du genre du premier film resortie
         //console.log(Sug);
 
