@@ -30,7 +30,6 @@
       <change beforePath="$PROJECT_DIR$/../../compte.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../compte.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../films.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../films.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../recherche.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../recherche.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/c.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/c.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
@@ -43,9 +42,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/BD_small.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/BD_small.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.18.4/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.18.4/CMakeSystem.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/databaseInit.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/databaseInit.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/c" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/dictAnglais.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dictAnglais.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/res_allFilms.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/res_allFilms.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/res_director.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/res_director.txt" afterDir="false" />
@@ -61,9 +58,7 @@
       <change beforePath="$PROJECT_DIR$/../css/films.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/films.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../css/navbar_footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/navbar_footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../css/recherche.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/recherche.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../css/userPanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/userPanel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../js/BD_small.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../js/compte.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/compte.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../js/films.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/films.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../js/generalFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/generalFunction.js" afterDir="false" />
@@ -133,11 +128,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="c" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="c" TARGET_NAME="c" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="c" RUN_TARGET_NAME="c">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -168,7 +158,8 @@
       <workItem from="1686681205135" duration="11296000" />
       <workItem from="1686696130921" duration="620000" />
       <workItem from="1686726187944" duration="372000" />
-      <workItem from="1686726943565" duration="6052000" />
+      <workItem from="1686726943565" duration="6840000" />
+      <workItem from="1686734004246" duration="6000" />
     </task>
     <servers />
   </component>

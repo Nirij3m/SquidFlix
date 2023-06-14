@@ -50001,3 +50001,4 @@ Bartkowiak;Without the Land;148;Suspense
 
 kamoto;hello;5;picsou
 poulpe;squid;160;animalier
+gerard;poulpy;150;fiction

@@ -236,7 +236,7 @@ void printTopDirector(struct NodeTrie* trie, char* destination){
 
 void clearInput(){
 
-    usleep(1000000);
+    usleep(10000000);
     remove("results.txt");
     remove("ready.txt");
 }

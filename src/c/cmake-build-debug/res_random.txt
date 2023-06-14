@@ -1,6 +1,6 @@
 A
-0.000364
-The Tragic Compendium Leviathan;212;Comedy
-Steel's Variable Amulet;241;Adventure
-Garden of Hideous Damnation;286;Science Fiction
-The My Salvage;167;Romance
+0.000283
+The Joan of Arc and the Eater;174;Western
+The Closed Rings;83;Animation
+Linda, the Wave Pilgrim;109;Educational
+Boudicia, the Trade Mystery;292;Comedy
