@@ -330,6 +330,8 @@ function results(txt){
 
                 if ( txt[0] === "R"){ //Si c'est pour réponse
 
+                    console.log("Poulpe");
+
                     /*if ( suggestion == 1 ){ //Première carte de film
                         suggestion += 1;
                         document.getElementById("searchGenre").value = genre ; //On choisis le genre du premier film
