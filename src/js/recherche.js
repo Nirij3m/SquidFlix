@@ -329,11 +329,24 @@ function results(txt){
 
                 if ( txt[0] === "R"){ //Si c'est pour réponse
 
+
                     if ( suggestion === 1 ){ //Première carte de film
                         document.getElementById("searchGenre2").value = genre ; //On choisis le genre du premier film
                         //setTimeout(() => {  console.log("World!"); }, 10000); //On attend 1 seconde pour être sur que la requete soit fini
                         //writeFile(1,['searchGenre2'],["findByGenre"], "S"); //On renvoie une seconde requetes
                         suggestion += 1 ; //On met suggestion à 2 pour être sur de le faire qu'une fois
+
+                let newCard = document.getElementsByClassName("card-box1")[0].cloneNode(true); //On clone une nouvelle carte pour faire pareil
+                newCard.id = ""; //Id à rien, car sinon display none
+                //console.log(newCard);
+
+                // Pour avoir une majuscule ( mise en page )
+                let size = director.length ; //taille
+                let director2 = ""; //vide
+                for( let i = 0 ; i < size ; i ++ ){
+                    if ( i == 0 ){
+                        director2 += director[i].toUpperCase(); //Majuscule
+
                     }
 
                     let newCard = document.getElementsByClassName("card-box1")[0].cloneNode(true); //On clone une nouvelle carte pour faire pareil
@@ -408,6 +421,12 @@ function results(txt){
                 genre = "" ; //Réinitalisation des champs
                 director = ""; //Réinitalisation des champs
             }
+                    
+            titre = "" ; //Réinitalisation des champs
+            time = "" ; //Réinitalisation des champs
+            genre = "" ; //Réinitalisation des champs
+            director = ""; //Réinitalisation des champs
+
         }
     }
 }
