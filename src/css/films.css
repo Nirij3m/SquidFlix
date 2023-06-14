@@ -191,4 +191,6 @@ p {
 
 /*  Fin CSS des cartes*/
 
-
+#hidden {
+    display: none;
+}

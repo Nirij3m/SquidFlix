@@ -272,8 +272,8 @@ function topDirector(txt){
 function main() {
 
     topDirector(readFile("src/c/cmake-build-debug/ready0.txt","src/c/cmake-build-debug/res_director.txt")); //Lancement au démarage
-    //results(readFile("src/c/cmake-build/debug/ready4.txt","src/c/cmake-build-debug/res_allFilms.txt"));
-    results(readFile("src/js/ready3.txt","src/js/BD_small.txt"));
+    results(readFile("src/c/cmake-build-debug/ready4.txt","src/c/cmake-build-debug/res_allFilms.txt"));
+    //results(readFile("src/js/ready3.txt","src/js/BD_small.txt"));
     showCard();
 
 }
