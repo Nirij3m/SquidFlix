@@ -475,7 +475,7 @@ function search(){
     else{
         alert("Champ(s) vide(s)!") //Si champ vide une alert car on peut pas chercher
     }
-    animateCards();
+    //animateCards();
 }
 
 function main(){
@@ -483,4 +483,4 @@ function main(){
     //directorName(readFile("src/js/ready3.txt","src/js/res_allDirector.txt"));
 }
 main();
-animateCards(); //On lance l'animation des cartes
+//animateCards(); //On lance l'animation des cartes
