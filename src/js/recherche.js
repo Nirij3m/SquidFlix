@@ -280,7 +280,7 @@ function results(txt){
     let n = txt.length ; // taille
     let count = 0 ; //compteur pour savoir ce que nous écrivons ( lettre, exe, director...)
     let counter = 0; //compteur pour le nombre de ligne
-    let suggestion = 1 ; //Pour lancer la suggestion
+    //let suggestion = 1 ; //Pour lancer la suggestion
 
     let lettre = ""; //Pour savoir où écrire
     let exe = ""; //Temps d'exécution
