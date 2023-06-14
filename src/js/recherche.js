@@ -337,7 +337,6 @@ function results(txt){
                         setTimeout(() => {
                             console.log("Bloup2");
                             writeFile(1,['searchGenre2'],["findByGenre"], "S");
-
                         }, 3000); //On attend 1 seconde pour être sur que la requete soit fini
 
                     }*/
