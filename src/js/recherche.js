@@ -369,8 +369,7 @@ function results(txt){
 
                     animateCards();
 
-                    console.log(exe)
-                    document.getElementsByClassName("exe").innerHTML = exe ;
+                    document.getElementById("temps_exe").innerHTML = exe ;
                 }
 
                 if ( txt[0] === "S"){ //Si c'est pour une suggestion
