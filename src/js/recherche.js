@@ -366,7 +366,7 @@ function results(txt){
                     document.getElementsByClassName("container1")[0].appendChild(newCard); //On ajoute la nouvelle card
                     //console.log("bloup");
 
-                    document.getElementsByClassName("exe").innerHTML = exe ;
+                    document.getElementById("temps_exe").innerHTML = " " + exe + " s";
                 }
 
                 if ( txt[0] === "S"){ //Si c'est pour une suggestion
