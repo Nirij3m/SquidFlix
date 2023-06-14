@@ -294,11 +294,11 @@ function results(txt){
         if ( counter === 1 || counter === 0 ){ //Une des 2 premières ligne
             if ( counter === 0 && txt[i] != "\n"){ //lettre pour savoir où écrire c'est txt[i=0]
                 lettre += txt[i];
-                console.log("Lettre : " + lettre);
+                //console.log("Lettre : " + lettre);
             }
             if ( counter === 1 && txt[i] != "\n"){ //Temps d'exe
                 exe += txt[i] ;
-                console.log("exe : " + exe);
+                //console.log("exe : " + exe);
             }
             if ( txt[i] == "\n"){//On change de ligne
                 counter += 1 ;
@@ -319,7 +319,7 @@ function results(txt){
             }
             if ( count == 3 && txt[i] != "\n" && txt[i] != ";"){ //genre du film
                 genre += txt[i] ;
-                console.log("genre : " + genre);
+                //console.log("genre : " + genre);
             }
             if ( txt[i] == ";" ){ //on change de champ
                 count = ( count + 1 ) % 4 ;
