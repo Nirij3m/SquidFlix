@@ -319,7 +319,7 @@ function results(txt){
             }
             if ( count == 3 && txt[i] != "\n" && txt[i] != ";"){ //genre du film
                 genre += txt[i] ;
-                //console.log("genre : " + genre);
+                console.log("genre : " + genre);
             }
             if ( txt[i] == ";" ){ //on change de champ
                 count = ( count + 1 ) % 4 ;
