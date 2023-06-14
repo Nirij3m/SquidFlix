@@ -1,6 +1,6 @@
 F
-0.002908
-50001
+0.003409
+50002
 The Cemetery of Claim;223;Sports
 Eons Mars;303;Adventure
 Chance of Fear;268;Educational
@@ -35524,6 +35524,7 @@ Steel of Automatic Hate;333;Western
 The Underwater Fangs Cape;118;Adventure
 Piper of Edible Plague;102;Adventure
 The Blade and the Destroying Thing;159;Adventure
+squid;160;animalier
 The Dreamed Link;226;Suspense
 The Age-Bones;79;Drama
 The Revolt Daughter;121;Action

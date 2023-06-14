@@ -1,6 +1,6 @@
 function animateCards(){
     console.log("updated");
-    Array.from(document.getElementsByClassName("card-box1")).forEach((card) => {
+    Array.from(document.getElementsByClassName("card-box")).forEach((card) => {
         card.addEventListener("mouseover", () => { //Je over la card
             card.children[0].classList.add("fade-in-bg");
             card.children[1].classList.add("fade-in-bg");
@@ -146,9 +146,9 @@ function clear(){
 
     card = document.getElementById("test1"); // On réccupère le code d'une carte par défaut
     document.getElementsByClassName("container1")[0].innerHTML = ""; // On supprime tout ce qu'il y a dans le container
-    //document.getElementsByClassName("container2")[0].innerHTML = ""; // On supprime tout ce qu'il y a dans le container
+    document.getElementsByClassName("container2")[0].innerHTML = ""; // On supprime tout ce qu'il y a dans le container
     document.getElementsByClassName("container1")[0].appendChild(card); //On re-ajoute la carte ( pour recommencer )
-    //document.getElementsByClassName("container2")[0].appendChild(card); //On re-ajoute la carte ( qui est invisible car display : none )
+    document.getElementsByClassName("container2")[0].appendChild(card); //On re-ajoute la carte ( qui est invisible car display : none )
 
 }
 
@@ -280,7 +280,7 @@ function results(txt){
     let n = txt.length ; // taille
     let count = 0 ; //compteur pour savoir ce que nous écrivons ( lettre, exe, director...)
     let counter = 0; //compteur pour le nombre de ligne
-    //let suggestion = 1 ; //Pour lancer la suggestion
+    let suggestion = 1 ; //Pour lancer la suggestion
 
     let lettre = ""; //Pour savoir où écrire
     let exe = ""; //Temps d'exécution
@@ -294,7 +294,6 @@ function results(txt){
         if ( counter === 1 || counter === 0 ){ //Une des 2 premières ligne
             if ( counter === 0 && txt[i] != "\n"){ //lettre pour savoir où écrire c'est txt[i=0]
                 lettre += txt[i];
-                //console.log("Lettre : " + lettre);
             }
             if ( counter === 1 && txt[i] != "\n"){ //Temps d'exe
                 exe += txt[i] ;
@@ -328,94 +327,87 @@ function results(txt){
 
                 count = 0 ; //On remet le count à 0 pour être sur
 
-                console.log("Poulpe");
+                if ( txt[0] === "R"){ //Si c'est pour réponse
 
-                /*if ( suggestion == 1 ){ //Première carte de film
-                    suggestion += 1;
-                    document.getElementById("searchGenre").value = genre ; //On choisis le genre du premier film
-                    console.log(document.getElementById("searchGenre2").value);
-                    setTimeout(() => {
-                        console.log("Bloup2");
-                        writeFile(1,['searchGenre2'],["findByGenre"], "S");
-                    }, 3000); //On attend 1 seconde pour être sur que la requete soit fini
-
-                }*/
-
-                let newCard = document.getElementsByClassName("card-box1")[0].cloneNode(true); //On clone une nouvelle carte pour faire pareil
-                newCard.id = ""; //Id à rien, car sinon display none
-                //console.log(newCard);
-
-                // Pour avoir une majuscule ( mise en page )
-                let size = director.length ; //taille
-                let director2 = ""; //vide
-                for( let i = 0 ; i < size ; i ++ ){
-                    if ( i == 0 ){
-                        director2 += director[i].toUpperCase(); //Majuscule
+                    if ( suggestion === 1 ){ //Première carte de film
+                        document.getElementById("searchGenre2").value = genre ; //On choisis le genre du premier film
+                        //setTimeout(() => {  console.log("World!"); }, 10000); //On attend 1 seconde pour être sur que la requete soit fini
+                        //writeFile(1,['searchGenre2'],["findByGenre"], "S"); //On renvoie une seconde requetes
+                        suggestion += 1 ; //On met suggestion à 2 pour être sur de le faire qu'une fois
                     }
-                    else{
-                        director2 += director[i].toLowerCase(); //minuscule
+
+                    let newCard = document.getElementsByClassName("card-box1")[0].cloneNode(true); //On clone une nouvelle carte pour faire pareil
+                    newCard.id = ""; //Id à rien, car sinon display none
+                    //console.log(newCard);
+
+                    // Pour avoir une majuscule ( mise en page )
+                    let size = director.length ; //taille
+                    let director2 = ""; //vide
+                    for( let i = 0 ; i < size ; i ++ ){
+                        if ( i == 0 ){
+                            director2 += director[i].toUpperCase(); //Majuscule
+                        }
+                        else{
+                            director2 += director[i].toLowerCase(); //minuscule
+                        }
                     }
+                    //console.log(director2);
+                    // Mise en page
+
+                    newCard.children[0].children[1].innerHTML = titre ; //On insert les informations du film
+                    newCard.children[0].children[2].innerHTML = genre ; //On insert les informations du film
+                    newCard.children[1].children[0].innerHTML = time ; //On insert les informations du film
+                    newCard.children[1].children[1].innerHTML = director ; //On insert les informations du film
+
+                    let randomImage = 'https://source.unsplash.com/random/?Squid/' + Math.random(); //Obtention d'une image aléatoire
+
+                    newCard.children[2].setAttribute("src", randomImage); //On change le src pour avoir une image random 
+
+                    document.getElementsByClassName("container1")[0].appendChild(newCard); //On ajoute la nouvelle card
+                    //console.log("bloup");
+
+                    document.getElementsByClassName("exe").innerHTML = exe ;
                 }
-                //console.log(director2);
-                // Mise en page
 
-                newCard.children[0].children[1].innerHTML = titre ; //On insert les informations du film
-                newCard.children[0].children[2].innerHTML = genre ; //On insert les informations du film
-                newCard.children[1].children[0].innerHTML = time ; //On insert les informations du film
-                newCard.children[1].children[1].innerHTML = director ; //On insert les informations du film
+                if ( txt[0] === "S"){ //Si c'est pour une suggestion
 
-                let randomImage = 'https://source.unsplash.com/random/?Films/' + Math.random(); //Obtention d'une image aléatoire
+                    let newCard = document.getElementsByClassName("card-box2")[0].cloneNode(true); //On créer un clone pour ajouter des cartes de films
+                    newCard.id = ""; //Id à vide pour pas avoir de display none
+                    //console.log(newCard);
 
-                newCard.children[2].setAttribute("src", randomImage); //On change le src pour avoir une image random 
+                    // Pour avoir une majuscule ( mise en page )
+                    let size = director.length ;
+                    let director2 = "";
+                    for( let i = 0 ; i < size ; i ++ ){
+                        if ( i == 0 ){
+                            director2 += director[i].toUpperCase();
+                        }
+                        else{
+                            director2 += director[i].toLowerCase();
+                        }
+                    }
+                    //console.log(director2);
+                    // Mise en page
 
-                document.getElementsByClassName("container1")[0].appendChild(newCard); //On ajoute la nouvelle card
-                //console.log("bloup");
+                    newCard.children[0].children[1].innerHTML = titre ; //On insert les informations du film
+                    newCard.children[0].children[2].innerHTML = genre ; //On insert les informations du film
+                    newCard.children[1].children[0].innerHTML = time ; //On insert les informations du film
+                    newCard.children[1].children[1].innerHTML = director ; //On insert les informations du film
 
-                animateCards();
+                    let randomImage = 'https://source.unsplash.com/random/?Octopus/' + Math.random(); //Obtention d'une image aléatoire
 
-                document.getElementById("temps_exe").innerHTML = " " + exe + " s";
+                    newCard.children[2].setAttribute("src", randomImage); //On change le src afin d'avoir une image aléatoire pour chaque film
+
+                    document.getElementsByClassName("container2")[0].appendChild(newCard); //On ajoute la carte au container pour l'affihcer
+                    //console.log("bloup");
+
+                }
+
+                titre = "" ; //Réinitalisation des champs
+                time = "" ; //Réinitalisation des champs
+                genre = "" ; //Réinitalisation des champs
+                director = ""; //Réinitalisation des champs
             }
-
-            /*if ( txt[0] === "S"){ //Si c'est pour une suggestion
-
-                let newCard = document.getElementsByClassName("card-box2")[0].cloneNode(true); //On créer un clone pour ajouter des cartes de films
-                newCard.id = ""; //Id à vide pour pas avoir de display none
-                //console.log(newCard);
-
-                // Pour avoir une majuscule ( mise en page )
-                let size = director.length ;
-                let director2 = "";
-                for( let i = 0 ; i < size ; i ++ ){
-                    if ( i == 0 ){
-                        director2 += director[i].toUpperCase();
-                    }
-                    else{
-                        director2 += director[i].toLowerCase();
-                    }
-                }
-                //console.log(director2);
-                // Mise en page
-
-                newCard.children[0].children[1].innerHTML = titre ; //On insert les informations du film
-                newCard.children[0].children[2].innerHTML = genre ; //On insert les informations du film
-                newCard.children[1].children[0].innerHTML = time ; //On insert les informations du film
-                newCard.children[1].children[1].innerHTML = director ; //On insert les informations du film
-
-                let randomImage = 'https://source.unsplash.com/random/?Films/' + Math.random(); //Obtention d'une image aléatoire
-
-                newCard.children[2].setAttribute("src", randomImage); //On change le src afin d'avoir une image aléatoire pour chaque film
-
-                document.getElementsByClassName("container2")[0].appendChild(newCard); //On ajoute la carte au container pour l'affihcer
-                //console.log("bloup");
-
-                animateCards();
-
-            }*/
-
-            titre = "" ; //Réinitalisation des champs
-            time = "" ; //Réinitalisation des champs
-            genre = "" ; //Réinitalisation des champs
-            director = ""; //Réinitalisation des champs
         }
     }
 }
@@ -461,19 +453,20 @@ function search(){
 
         //readFile();
         let myresults = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt"); //on réccupère les résultats de la fonction readFile
-        console.log(myresults);
+        //console.log(myresults);
 
         results(myresults); // Fonction pour l'affichage des résultats
+        setTimeout(() =>{}, "1000"); //pause
 
-        //let Sug = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt"); //On réccupère les résultats pour faire une suggestion à partir du genre du premier film resortie
+        let Sug = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt"); //On réccupère les résultats pour faire une suggestion à partir du genre du premier film resortie
         //console.log(Sug);
 
-        //results(Sug); //On affiche
+        results(Sug); //On affiche
     }
     else{
         alert("Champ(s) vide(s)!") //Si champ vide une alert car on peut pas chercher
     }
-    //animateCards();
+    animateCards();
 }
 
 function main(){
@@ -481,4 +474,4 @@ function main(){
     //directorName(readFile("src/js/ready3.txt","src/js/res_allDirector.txt"));
 }
 main();
-//animateCards(); //On lance l'animation des cartes
+animateCards(); //On lance l'animation des cartes

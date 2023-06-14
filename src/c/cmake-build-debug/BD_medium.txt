@@ -50000,3 +50000,4 @@ Leandron;The Army of Leandron;173;Action
 Bartkowiak;Without the Land;148;Suspense
 
 kamoto;hello;5;picsou
+poulpe;squid;160;animalier

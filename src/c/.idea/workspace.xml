@@ -43,7 +43,9 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/BD_small.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/BD_small.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.18.4/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.18.4/CMakeSystem.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/databaseInit.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/databaseInit.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/c" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/dictAnglais.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dictAnglais.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/res_allFilms.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/res_allFilms.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/res_director.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/res_director.txt" afterDir="false" />
@@ -61,7 +63,7 @@
       <change beforePath="$PROJECT_DIR$/../css/navbar_footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/navbar_footer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../css/recherche.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/recherche.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../css/userPanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/userPanel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../js/BD_small.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../js/BD_small.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/BD_small.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../js/compte.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/compte.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../js/films.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/films.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../js/generalFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/generalFunction.js" afterDir="false" />
@@ -166,7 +168,7 @@
       <workItem from="1686681205135" duration="11296000" />
       <workItem from="1686696130921" duration="620000" />
       <workItem from="1686726187944" duration="372000" />
-      <workItem from="1686726943565" duration="3992000" />
+      <workItem from="1686726943565" duration="6052000" />
     </task>
     <servers />
   </component>

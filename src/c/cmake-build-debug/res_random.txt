@@ -1,6 +1,6 @@
 A
-0.000391
-On the Feast;201;Parody
-The Equation On the Wolf;150;Adventure
-Slabs and Touchs ;227;Fantasy
-Futures and Idols ;204;Disaster
+0.000364
+The Tragic Compendium Leviathan;212;Comedy
+Steel's Variable Amulet;241;Adventure
+Garden of Hideous Damnation;286;Science Fiction
+The My Salvage;167;Romance
