@@ -42,11 +42,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/BD_small.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/BD_small.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.18.4/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.18.4/CMakeSystem.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/dictAnglais.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dictAnglais.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/res_allFilms.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/res_allFilms.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/res_director.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/res_director.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/res_random.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/res_random.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/databaseInit.c" beforeDir="false" afterPath="$PROJECT_DIR$/databaseInit.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/databaseInit.h" beforeDir="false" afterPath="$PROJECT_DIR$/databaseInit.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/listFilm.c" beforeDir="false" afterPath="$PROJECT_DIR$/listFilm.c" afterDir="false" />
@@ -64,7 +60,6 @@
       <change beforePath="$PROJECT_DIR$/../js/generalFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/generalFunction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../js/read_write.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/read_write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../js/recherche.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/recherche.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../js/res_allDirector.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../js/res_allDirector.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../js/res_director.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../js/res_director.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../js/res_random.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../js/res_random.txt" afterDir="false" />
@@ -159,7 +154,7 @@
       <workItem from="1686696130921" duration="620000" />
       <workItem from="1686726187944" duration="372000" />
       <workItem from="1686726943565" duration="6840000" />
-      <workItem from="1686734004246" duration="6000" />
+      <workItem from="1686734004246" duration="451000" />
     </task>
     <servers />
   </component>

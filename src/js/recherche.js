@@ -1,6 +1,6 @@
 function animateCards(){
     console.log("updated");
-    Array.from(document.getElementsByClassName("card-box")).forEach((card) => {
+    Array.from(document.getElementsByClassName("card-box1")).forEach((card) => {
         card.addEventListener("mouseover", () => { //Je over la card
             card.children[0].classList.add("fade-in-bg");
             card.children[1].classList.add("fade-in-bg");
