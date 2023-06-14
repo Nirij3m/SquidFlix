@@ -332,7 +332,7 @@ function results(txt){
 
                     if ( suggestion == 1 ){ //Première carte de film
                         suggestion += 1;
-                        document.getElementById("searchGenre2").value = genre ; //On choisis le genre du premier film
+                        document.getElementById("searchGenre").value = genre ; //On choisis le genre du premier film
                         console.log(document.getElementById("searchGenre2").value);
                         setTimeout(() => {
                             console.log("Bloup2");
