@@ -377,7 +377,7 @@ function results(txt){
                     document.getElementById("temps_exe").innerHTML = " " + exe + " s";
                 }
 
-                if ( txt[0] === "S"){ //Si c'est pour une suggestion
+                /*if ( txt[0] === "S"){ //Si c'est pour une suggestion
 
                     let newCard = document.getElementsByClassName("card-box2")[0].cloneNode(true); //On créer un clone pour ajouter des cartes de films
                     newCard.id = ""; //Id à vide pour pas avoir de display none
@@ -411,7 +411,7 @@ function results(txt){
 
                     animateCards();
 
-                }
+                }*/
 
                 titre = "" ; //Réinitalisation des champs
                 time = "" ; //Réinitalisation des champs
