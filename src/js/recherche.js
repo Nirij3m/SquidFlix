@@ -365,7 +365,7 @@ function results(txt){
                     newCard.children[1].children[0].innerHTML = time ; //On insert les informations du film
                     newCard.children[1].children[1].innerHTML = director ; //On insert les informations du film
 
-                    let randomImage = 'https://source.unsplash.com/random/?Squid/' + Math.random(); //Obtention d'une image aléatoire
+                    let randomImage = 'https://source.unsplash.com/random/?Films/' + Math.random(); //Obtention d'une image aléatoire
 
                     newCard.children[2].setAttribute("src", randomImage); //On change le src pour avoir une image random 
 
@@ -402,7 +402,7 @@ function results(txt){
                     newCard.children[1].children[0].innerHTML = time ; //On insert les informations du film
                     newCard.children[1].children[1].innerHTML = director ; //On insert les informations du film
 
-                    let randomImage = 'https://source.unsplash.com/random/?Octopus/' + Math.random(); //Obtention d'une image aléatoire
+                    let randomImage = 'https://source.unsplash.com/random/?Films/' + Math.random(); //Obtention d'une image aléatoire
 
                     newCard.children[2].setAttribute("src", randomImage); //On change le src afin d'avoir une image aléatoire pour chaque film
 
