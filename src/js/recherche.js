@@ -330,9 +330,10 @@ function results(txt){
 
                 if ( txt[0] === "R"){ //Si c'est pour réponse
 
-                    if ( suggestion === 1 ){ //Première carte de film
+                    if ( suggestion == 1 ){ //Première carte de film
+                        console.log("Bloup");
                         document.getElementById("searchGenre2").value = genre ; //On choisis le genre du premier film
-                        setTimeout(() => {  console.log("World!"); }, 100000); //On attend 1 seconde pour être sur que la requete soit fini
+                        setTimeout(() => {  console.log("World!"); }, 1000000); //On attend 1 seconde pour être sur que la requete soit fini
                         writeFile(1,['searchGenre2'],["findByGenre"], "S"); //On renvoie une seconde requetes
                         suggestion += 1 ; //On met suggestion à 2 pour être sur de le faire qu'une fois
                     }
