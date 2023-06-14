@@ -321,7 +321,7 @@ function results(txt){
                 console.log("genre : " + genre);
             }
             if ( txt[i] == ";" ){ //on change de champ
-                //count = ( count + 1 ) % 4 ;
+                count = ( count + 1 ) % 4 ;
             }
             if ( txt[i] == "\n" || i == ( n - 1 ) ){//Retour à la ligne ou fin du texte, on imprime car fin du film 
 
