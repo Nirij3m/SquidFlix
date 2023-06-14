@@ -870,6 +870,7 @@ geday
 genet
 gens
 gentilomo
+gerard
 gerber
 german
 germi

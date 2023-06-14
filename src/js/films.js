@@ -144,7 +144,7 @@ function results(txt){
 function showCard(){
     //-------------------------------------------------------------------------------------------
     // On remet notre carte comme model
-    document.getElementsByClassName("container")[0].innerHTML = `<div class="card-box">
+    document.getElementsByClassName("container")[0].innerHTML = `<div class="card-box" id="hidden">
         <header class="cardHeader">
             <p></p>
             <p class="title">TITRE</p>
@@ -160,7 +160,7 @@ function showCard(){
     for(let j = first; j < first + nbr_max; j++){ //Parcourt les cartes par indice en fonction de la valeur de first
         if(j < nbr_element){
             let newCard = document.getElementsByClassName("card-box")[0].cloneNode(true); //Clone la carte modèle
-
+            newCard.id = "";
             newCard.children[0].children[1].innerHTML = tabInformationEachCard[j][0] ; //Renseigne le titre dans la carte
             newCard.children[0].children[2].innerHTML = tabInformationEachCard[j][1] ; //Renseigne le genre dans la carte
             newCard.children[1].children[0].innerHTML = tabInformationEachCard[j][2] ; //Renseigne la durée dans la carte

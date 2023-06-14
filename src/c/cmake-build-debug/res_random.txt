@@ -1,6 +1,6 @@
 A
-0.000283
-The Joan of Arc and the Eater;174;Western
-The Closed Rings;83;Animation
-Linda, the Wave Pilgrim;109;Educational
-Boudicia, the Trade Mystery;292;Comedy
+0.000481
+The New Watcher For the Warlord;259;War
+The Journey's Earth;120;Horror
+For the Tarnished Black;252;Disaster
+The Comet Was Path;341;Science Fiction
