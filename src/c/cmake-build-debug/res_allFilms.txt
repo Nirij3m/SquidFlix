@@ -1,5 +1,5 @@
 F
-0.000825
+0.002472
 50001
 The Cemetery of Claim;223;Sports
 Eons Mars;303;Adventure

@@ -1,6 +1,6 @@
 A
-0.000132
-Stranger of Blood;256;Thriller
-Return of Radiant Bite;205;Action
-The Power-Cry;366;Educational
-The Abbey From the Airship;340;Romance
+0.000544
+Fifth Daughters;345;Drama
+The Weaving Scar;238;Musical
+The Scar and the Door;90;Educational
+Out Of the Gambit and the Call;230;Parody
