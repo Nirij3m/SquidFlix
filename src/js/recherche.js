@@ -467,12 +467,10 @@ function search(){
 
         results(myresults); // Fonction pour l'affichage des résultats
 
-
-
-        let Sug = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt"); //On réccupère les résultats pour faire une suggestion à partir du genre du premier film resortie
+        //let Sug = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt"); //On réccupère les résultats pour faire une suggestion à partir du genre du premier film resortie
         //console.log(Sug);
 
-        results(Sug); //On affiche
+        //results(Sug); //On affiche
     }
     else{
         alert("Champ(s) vide(s)!") //Si champ vide une alert car on peut pas chercher
