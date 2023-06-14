@@ -330,7 +330,7 @@ function results(txt){
 
                 if ( txt[0] === "R"){ //Si c'est pour réponse
 
-                    if ( suggestion == 1 ){ //Première carte de film
+                    /*if ( suggestion == 1 ){ //Première carte de film
                         suggestion += 1;
                         document.getElementById("searchGenre").value = genre ; //On choisis le genre du premier film
                         console.log(document.getElementById("searchGenre2").value);
@@ -340,7 +340,7 @@ function results(txt){
 
                         }, 3000); //On attend 1 seconde pour être sur que la requete soit fini
 
-                    }
+                    }*/
 
                     let newCard = document.getElementsByClassName("card-box1")[0].cloneNode(true); //On clone une nouvelle carte pour faire pareil
                     newCard.id = ""; //Id à rien, car sinon display none
