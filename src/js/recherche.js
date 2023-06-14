@@ -146,9 +146,9 @@ function clear(){
 
     card = document.getElementById("test1"); // On réccupère le code d'une carte par défaut
     document.getElementsByClassName("container1")[0].innerHTML = ""; // On supprime tout ce qu'il y a dans le container
-    document.getElementsByClassName("container2")[0].innerHTML = ""; // On supprime tout ce qu'il y a dans le container
+    //document.getElementsByClassName("container2")[0].innerHTML = ""; // On supprime tout ce qu'il y a dans le container
     document.getElementsByClassName("container1")[0].appendChild(card); //On re-ajoute la carte ( pour recommencer )
-    document.getElementsByClassName("container2")[0].appendChild(card); //On re-ajoute la carte ( qui est invisible car display : none )
+    //document.getElementsByClassName("container2")[0].appendChild(card); //On re-ajoute la carte ( qui est invisible car display : none )
 
 }
 
