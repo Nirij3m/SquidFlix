@@ -282,3 +282,14 @@ input {
 }
 
 /*  Fin CSS des cartes*/
+
+#exePlaceHolder {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+#exePlaceHolder > h4 {
+	color: #F2EDEB;
+	margin-top : 5%;
+
+}

@@ -21,7 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d184d65e-da4e-4206-8a11-0ad225943aa9" name="Changes" comment="Serveur backend terminé et opérationnel">
-      <change afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/projetCIR1_groupe_7.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/projetCIR1_groupe_7.iml" afterDir="false" />
@@ -43,12 +43,10 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/BD_small.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/BD_small.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.18.4/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.18.4/CMakeSystem.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/databaseInit.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c.dir/databaseInit.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/c" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/dictAnglais.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dictAnglais.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/res_allDirector.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/res_allDirector.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/res_allFilms.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/res_allFilms.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/res_director.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/res_director.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/res_random.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/res_random.txt" afterDir="false" />
@@ -170,7 +168,7 @@
       <workItem from="1686681205135" duration="11296000" />
       <workItem from="1686696130921" duration="620000" />
       <workItem from="1686726187944" duration="372000" />
-      <workItem from="1686726943565" duration="142000" />
+      <workItem from="1686726943565" duration="2449000" />
     </task>
     <servers />
   </component>
