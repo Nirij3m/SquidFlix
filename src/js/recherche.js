@@ -294,6 +294,7 @@ function results(txt){
         if ( counter === 1 || counter === 0 ){ //Une des 2 premières ligne
             if ( counter === 0 && txt[i] != "\n"){ //lettre pour savoir où écrire c'est txt[i=0]
                 lettre += txt[i];
+                //console.log("lettre : " + lettre);
             }
             if ( counter === 1 && txt[i] != "\n"){ //Temps d'exe
                 exe += txt[i] ;
@@ -306,19 +307,19 @@ function results(txt){
         else {            //On commence à lire des lignes avec les films
             if ( count == 0 && txt[i] != "\n" && txt[i] != ";"){ //Nom du directeur
                 director += txt[i] ;
-                console.log("director : " + director);
+                //console.log("director : " + director);
             }
             if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){ //Titre du film
                 titre += txt[i] ;
-                console.log("titre : " + titre);
+                //console.log("titre : " + titre);
             }
             if ( count == 2 && txt[i] != "\n" && txt[i] != ";"){ //durer du film
                 time += txt[i] ;
-                console.log("time : " + time);
+                //console.log("time : " + time);
             }
             if ( count == 3 && txt[i] != "\n" && txt[i] != ";"){ //genre du film
                 genre += txt[i] ;
-                console.log("genre : " + genre);
+                //console.log("genre : " + genre);
             }
             if ( txt[i] == ";" ){ //on change de champ
                 count = ( count + 1 ) % 4 ;
@@ -335,6 +336,7 @@ function results(txt){
                         //setTimeout(() => {  console.log("World!"); }, 10000); //On attend 1 seconde pour être sur que la requete soit fini
                         //writeFile(1,['searchGenre2'],["findByGenre"], "S"); //On renvoie une seconde requetes
                         suggestion += 1 ; //On met suggestion à 2 pour être sur de le faire qu'une fois
+                    }
 
                 let newCard = document.getElementsByClassName("card-box1")[0].cloneNode(true); //On clone une nouvelle carte pour faire pareil
                 newCard.id = ""; //Id à rien, car sinon display none
