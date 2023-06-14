@@ -306,19 +306,19 @@ function results(txt){
         else {            //On commence à lire des lignes avec les films
             if ( count == 0 && txt[i] != "\n" && txt[i] != ";"){ //Nom du directeur
                 director += txt[i] ;
-                //console.log("director : " + director);
+                console.log("director : " + director);
             }
             if ( count == 1 && txt[i] != "\n" && txt[i] != ";"){ //Titre du film
                 titre += txt[i] ;
-                //console.log("titre : " + titre);
+                console.log("titre : " + titre);
             }
             if ( count == 2 && txt[i] != "\n" && txt[i] != ";"){ //durer du film
                 time += txt[i] ;
-                //console.log("time : " + time);
+                console.log("time : " + time);
             }
             if ( count == 3 && txt[i] != "\n" && txt[i] != ";"){ //genre du film
                 genre += txt[i] ;
-                //console.log("genre : " + genre);
+                console.log("genre : " + genre);
             }
             if ( txt[i] == ";" ){ //on change de champ
                 //count = ( count + 1 ) % 4 ;
