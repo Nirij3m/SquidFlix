@@ -423,7 +423,7 @@ function directorName(txt){
 
         if(txt[0] === "D" && txt[i] != "\n" && i>1){ //Vérifie si c'est un caractère
             directors += txt[i];
-            console.log("réalisateur : " + directors);
+            //console.log("réalisateur : " + directors);
         }
 
         if(txt[0] === "D" && txt[i] == "\n" && i>1){//Vérifie si c'est un retour à la ligne => fin du nom du directeur
