@@ -416,21 +416,16 @@ function results(txt){
                     document.getElementsByClassName("container2")[0].appendChild(newCard); //On ajoute la carte au container pour l'affihcer
                     //console.log("bloup");
 
-                }
-
                 titre = "" ; //Réinitalisation des champs
                 time = "" ; //Réinitalisation des champs
                 genre = "" ; //Réinitalisation des champs
                 director = ""; //Réinitalisation des champs
-            }
-                    
-            titre = "" ; //Réinitalisation des champs
-            time = "" ; //Réinitalisation des champs
-            genre = "" ; //Réinitalisation des champs
-            director = ""; //Réinitalisation des champs
 
+                }
+            }
         }
     }
+}
 }
 
 
