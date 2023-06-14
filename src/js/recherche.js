@@ -332,8 +332,8 @@ function results(txt){
 
                     if ( suggestion === 1 ){ //Première carte de film
                         document.getElementById("searchGenre2").value = genre ; //On choisis le genre du premier film
-                        //setTimeout(() => {  console.log("World!"); }, 10000); //On attend 1 seconde pour être sur que la requete soit fini
-                        //writeFile(1,['searchGenre2'],["findByGenre"], "S"); //On renvoie une seconde requetes
+                        setTimeout(() => {  console.log("World!"); }, 100000); //On attend 1 seconde pour être sur que la requete soit fini
+                        writeFile(1,['searchGenre2'],["findByGenre"], "S"); //On renvoie une seconde requetes
                         suggestion += 1 ; //On met suggestion à 2 pour être sur de le faire qu'une fois
                     }
 
@@ -461,7 +461,8 @@ function search(){
         //console.log(myresults);
 
         results(myresults); // Fonction pour l'affichage des résultats
-        setTimeout(() =>{}, "1000"); //pause
+
+        setTimeout(() =>{}, "1000000"); //pause
 
         let Sug = readFile("src/c/cmake-build-debug/ready.txt", "src/c/cmake-build-debug/results.txt"); //On réccupère les résultats pour faire une suggestion à partir du genre du premier film resortie
         //console.log(Sug);
