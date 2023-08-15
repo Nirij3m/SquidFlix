@@ -1,1 +1,0 @@
-/usr/bin/cc -g CMakeFiles/c.dir/databaseInit.c.o CMakeFiles/c.dir/main.c.o CMakeFiles/c.dir/nodeTrie.c.o CMakeFiles/c.dir/listFilm.c.o -o c 

@@ -1,3 +1,0 @@
-/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/c/Users/nirin/Documents/GitHub/projetCIR1_groupe_7/src/c/cmake-build-debug/CMakeFiles/c.dir
