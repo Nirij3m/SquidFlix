@@ -1,9 +1,8 @@
-# projetCIR1_groupe_7
-Projet de fin d'année ISEN Nantes CIR1
-Filmothèque SquidFlix
+### Filmothèque SquidFlix
+Dans le cadre de notre projet de fin d'année en CIR1 à l'ISEN, nous devions réaliser une filmothèque permettant de naviguer parmi une grande liste de film. SquidFlix propose ainsi une base de donnée allant jusqu'à 1 million de film vous permettant de rechercher par genre, titre et même de bénéificer d'un compte abonné.
 
 Initialisation
-- Ouvrir le dossier c: /src/c dans un compilateur type CLion afin de créer le dossier cmake-build-debug (cmake-build-debug doit être dans le dossier /c)
+- Ouvrir le dossier c: /src/c dans un IDE type CLion afin de créer le dossier cmake-build-debug (cmake-build-debug doit être dans le dossier /c)
 - Déposer la base de donnée souhaitée "BD_X.txt" dans le dossier cmake-build-debug 
 - Dans le fichier "dataBaseInit.h", vous pouvez changer la variable DB afin de séléctionner la base de donnée à initaliser
 - Executer le fichier "main.c", des fichiers textes devraient se créer dans le dossier cmake-build-debug
